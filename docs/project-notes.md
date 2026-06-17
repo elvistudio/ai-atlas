@@ -13,9 +13,28 @@ The first goal is to create a stable Level 1 and Level 2 model that can be revie
 - Transformers are not Level 1.
 - Deep Learning is under Machine Learning.
 - Reinforcement Learning is under Machine Learning.
-- Large Language Models are under Foundation and General-Purpose Models.
+- Continual Learning is under Machine Learning.
+- Large Language Models are under Foundation Models and General-Purpose AI.
+- Autonomous Agents are under Agentic and Multi-Agent Systems, not only under future AI.
 - Generative AI remains Level 1 because it is a major cross-cutting modern AI category.
 - AI Safety, Alignment and Governance remains Level 1 because it cuts across the whole field.
+
+## Expert cleanup before Level 3
+
+Before expanding to Level 3, the Level 1–Level 2 taxonomy was reviewed and cleaned up.
+
+Applied cleanup decisions:
+
+- `Multi-Agent Systems` was renamed to `Agentic and Multi-Agent Systems`.
+- `Foundation and General-Purpose Models` was renamed to `Foundation Models and General-Purpose AI`.
+- `Autonomous Agents` was moved from `AGI and Future AI` to `Agentic and Multi-Agent Systems`.
+- `Continual Learning` was moved from `AGI and Future AI` to `Machine Learning`.
+- `Knowledge Representation` remains canonical under `Knowledge and Reasoning`.
+- `Symbolic Knowledge Representation` is used under `Symbolic AI` to avoid an exact duplicate.
+- `Text Generation` remains under `Generative AI`.
+- `Natural Language Generation` is used under `Natural Language and Speech` to avoid an exact duplicate.
+- `Representation Learning` and `Data-Centric AI` were added under `Machine Learning`.
+- Several names were clarified before Level 3 expansion.
 
 ## Typed knowledge map
 
