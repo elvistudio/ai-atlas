@@ -26,7 +26,7 @@ The machine-readable metadata lives in:
 - Rule-Based Systems
 - Expert Systems
 - Logic Programming
-- Knowledge Representation
+- Symbolic Knowledge Representation
 - Automated Reasoning
 - Constraint Satisfaction
 - Knowledge Graphs
@@ -40,12 +40,15 @@ The machine-readable metadata lives in:
 - Self-Supervised Learning
 - Reinforcement Learning
 - Deep Learning
+- Representation Learning
 - Transfer Learning
 - Federated Learning
 - Online Learning
 - Active Learning
 - Meta-Learning
 - Ensemble Learning
+- Continual Learning
+- Data-Centric AI
 
 ### 3. Search, Planning and Optimization
 
@@ -71,7 +74,7 @@ The machine-readable metadata lives in:
 
 ### 5. Robotics and Embodied AI
 
-- Classical Control
+- Control Systems
 - Robot Perception
 - Localization and Mapping
 - Motion Planning
@@ -89,7 +92,7 @@ The machine-readable metadata lives in:
 - Dialogue Systems
 - Information Retrieval
 - Machine Translation
-- Text Generation
+- Natural Language Generation
 - Language Understanding
 
 ### 7. Computer Vision and Perception
@@ -112,21 +115,22 @@ The machine-readable metadata lives in:
 - Code Generation
 - 3D Generation
 - Synthetic Data Generation
-- Generative Model Families
+- Generative Modeling
 
-### 9. Foundation and General-Purpose Models
+### 9. Foundation Models and General-Purpose AI
 
 - Large Language Models
 - Vision Foundation Models
 - Multimodal Foundation Models
 - Audio Foundation Models
 - Video Foundation Models
-- Code Models
+- Code Foundation Models
 - Scientific Foundation Models
 - World Models
 
-### 10. Multi-Agent Systems
+### 10. Agentic and Multi-Agent Systems
 
+- Autonomous Agents
 - Cooperative Multi-Agent Systems
 - Competitive Multi-Agent Systems
 - Agent Communication
@@ -144,7 +148,7 @@ The machine-readable metadata lives in:
 - Interactive Machine Learning
 - Personalization
 - Decision Support Systems
-- Human Feedback
+- Human Feedback and Preference Learning
 - AI UX and Trust
 
 ### 12. AI Safety, Alignment and Governance
@@ -152,7 +156,7 @@ The machine-readable metadata lives in:
 - AI Alignment
 - Robustness
 - Interpretability
-- Evaluation and Benchmarking
+- Evaluation, Measurement and Benchmarking
 - Bias and Fairness
 - Privacy and Security
 - Misuse Prevention
@@ -161,8 +165,6 @@ The machine-readable metadata lives in:
 ### 13. AGI and Future AI
 
 - Artificial General Intelligence
-- Autonomous Agents
-- Continual Learning
 - Self-Improving Systems
 - AI Scientists
 - Human-AI Symbiosis
