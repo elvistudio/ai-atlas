@@ -9,7 +9,7 @@
 | Hierarchy level | 1 |
 | Hierarchy level name | Major Area |
 | Concept type | Cross-Cutting Area |
-| Stability | stable |
+| Stability | emerging |
 
 ## Parent
 
@@ -17,7 +17,7 @@
 
 ## Description
 
-AI systems that create new content such as text, images, audio, video, code, or 3D objects.
+AI systems and methods that generate new text, images, audio, video, code, data, or other artifacts.
 
 ## Level 2 branches
 
@@ -28,7 +28,7 @@ AI systems that create new content such as text, images, audio, video, code, or 
 - [[Level 2/Code Generation|Code Generation]]
 - [[Level 2/3D Generation|3D Generation]]
 - [[Level 2/Synthetic Data Generation|Synthetic Data Generation]]
-- [[Level 2/Generative Model Families|Generative Model Families]]
+- [[Level 2/Generative Modeling|Generative Modeling]]
 
 ## Notes
 
