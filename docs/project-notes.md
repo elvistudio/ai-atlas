@@ -28,24 +28,61 @@ This means:
 
 This prepares the project for future Level 3, Level 4, and visual formats such as posters, Markmap, Mermaid, Obsidian, and a possible website.
 
-## Future versions
+## Roadmap
 
-### v0.2
+### v0.1 — Clean Level 1–Level 2 taxonomy
 
-Review and refine Level 1 and Level 2.
+Create the initial clean hierarchy:
 
-### v0.3
+- Level 0 — Field
+- Level 1 — Major Areas
+- Level 2 — Subfields
 
-Add Level 3.
+### v0.2 — Typed concept model and visual grammar
 
-### v0.4
+Add metadata and visual structure:
 
-Generate Obsidian vault.
+- hierarchy level names,
+- concept types,
+- stability metadata,
+- visual grammar,
+- mixed licensing model.
 
-### v0.5
+### v0.3 — Level 3 encyclopedia draft
 
-Generate website version.
+Add Level 3 concepts for personal understanding and exploration.
 
-### v1.0
+This should be treated as an encyclopedia draft, not the final canonical taxonomy.
 
-Publish a stable public AI Atlas.
+### v0.4 — Validation and generated views
+
+Add validation and synchronization tools:
+
+- JSON schema,
+- taxonomy validation script,
+- generated Markmap,
+- generated Mermaid,
+- generated Obsidian vault updates.
+
+### v0.5 — Website or public preview
+
+Create a public-facing version of AI Atlas.
+
+Possible outputs:
+
+- static website,
+- interactive graph,
+- public documentation,
+- early visual preview.
+
+### v1.0 — Stable public AI Atlas
+
+Publish a stable public version suitable for broader review and use.
+
+This version should have:
+
+- reviewed taxonomy,
+- clear licensing,
+- contribution process,
+- validation workflow,
+- public presentation format.
