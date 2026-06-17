@@ -8,7 +8,7 @@
 |---|---|
 | Hierarchy level | 1 |
 | Hierarchy level name | Major Area |
-| Concept type | Major Area |
+| Concept type | Cross-Cutting Area |
 | Stability | stable |
 
 ## Parent
@@ -17,7 +17,7 @@
 
 ## Description
 
-How humans use, guide, trust, correct, and collaborate with AI systems.
+Human interaction with AI systems.
 
 ## Level 2 branches
 
@@ -27,11 +27,5 @@ How humans use, guide, trust, correct, and collaborate with AI systems.
 - [[Level 2/Interactive Machine Learning|Interactive Machine Learning]]
 - [[Level 2/Personalization|Personalization]]
 - [[Level 2/Decision Support Systems|Decision Support Systems]]
-- [[Level 2/Human Feedback|Human Feedback]]
+- [[Level 2/Human Feedback and Preference Learning|Human Feedback and Preference Learning]]
 - [[Level 2/AI UX and Trust|AI UX and Trust]]
-
-## Notes
-
-This page intentionally stops at Level 2.
-
-Level 3 should be added later only after Level 1 and Level 2 are reviewed.
