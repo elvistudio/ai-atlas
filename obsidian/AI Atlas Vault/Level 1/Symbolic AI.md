@@ -24,7 +24,7 @@ AI based on explicit symbols, rules, logic, and structured knowledge.
 - [[Level 2/Rule-Based Systems|Rule-Based Systems]]
 - [[Level 2/Expert Systems|Expert Systems]]
 - [[Level 2/Logic Programming|Logic Programming]]
-- [[Level 2/Knowledge Representation|Knowledge Representation]]
+- [[Level 2/Symbolic Knowledge Representation|Symbolic Knowledge Representation]]
 - [[Level 2/Automated Reasoning|Automated Reasoning]]
 - [[Level 2/Constraint Satisfaction|Constraint Satisfaction]]
 - [[Level 2/Knowledge Graphs|Knowledge Graphs]]
