@@ -8,7 +8,7 @@
 
 ### Logic Programming
 
-### Knowledge Representation
+### Symbolic Knowledge Representation
 
 ### Automated Reasoning
 
@@ -32,6 +32,8 @@
 
 ### Deep Learning
 
+### Representation Learning
+
 ### Transfer Learning
 
 ### Federated Learning
@@ -43,6 +45,10 @@
 ### Meta-Learning
 
 ### Ensemble Learning
+
+### Continual Learning
+
+### Data-Centric AI
 
 ## Search, Planning and Optimization
 
@@ -82,7 +88,7 @@
 
 ## Robotics and Embodied AI
 
-### Classical Control
+### Control Systems
 
 ### Robot Perception
 
@@ -114,7 +120,7 @@
 
 ### Machine Translation
 
-### Text Generation
+### Natural Language Generation
 
 ### Language Understanding
 
@@ -152,9 +158,9 @@
 
 ### Synthetic Data Generation
 
-### Generative Model Families
+### Generative Modeling
 
-## Foundation and General-Purpose Models
+## Foundation Models and General-Purpose AI
 
 ### Large Language Models
 
@@ -166,13 +172,15 @@
 
 ### Video Foundation Models
 
-### Code Models
+### Code Foundation Models
 
 ### Scientific Foundation Models
 
 ### World Models
 
-## Multi-Agent Systems
+## Agentic and Multi-Agent Systems
+
+### Autonomous Agents
 
 ### Cooperative Multi-Agent Systems
 
@@ -204,7 +212,7 @@
 
 ### Decision Support Systems
 
-### Human Feedback
+### Human Feedback and Preference Learning
 
 ### AI UX and Trust
 
@@ -216,7 +224,7 @@
 
 ### Interpretability
 
-### Evaluation and Benchmarking
+### Evaluation, Measurement and Benchmarking
 
 ### Bias and Fairness
 
@@ -229,10 +237,6 @@
 ## AGI and Future AI
 
 ### Artificial General Intelligence
-
-### Autonomous Agents
-
-### Continual Learning
 
 ### Self-Improving Systems
 
