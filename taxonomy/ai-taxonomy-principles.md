@@ -74,3 +74,19 @@ Examples:
 - ChatGPT would be a later Level 5 node and concept type `Product / Concrete System`.
 
 This separation helps prevent the taxonomy from becoming confused when deeper levels are added.
+
+## 7. Level means hierarchy depth, not concept type
+
+The word `Level` describes hierarchy depth only.
+
+It does not describe what kind of concept a node is.
+
+This means that nodes in the same level can have different concept types.
+
+Examples:
+
+- A Level 1 node can be a `Major Area`, `Cross-Cutting Area`, or `Future Area`.
+- A Level 2 node can be a `Subfield`, `Paradigm`, `Model Family`, `Application Area`, `Safety Concept`, `Evaluation Concept`, or another appropriate concept type.
+- Future Level 3 nodes may include methods, architectures, model families, system patterns, techniques, or other deeper concepts.
+
+Folder names such as `Level 1`, `Level 2`, and future `Level 3` represent hierarchy depth for navigation and generation. They should not be treated as folders for concept types.
