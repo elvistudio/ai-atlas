@@ -8,28 +8,16 @@
 |---|---|
 | Hierarchy level | 2 |
 | Hierarchy level name | Subfield |
-| Concept type | Method |
+| Concept type | Paradigm |
 | Stability | stable |
 
 ## Parent branch
 
-- [[Level 1/AGI and Future AI|AGI and Future AI]]
+- [[Level 1/Machine Learning|Machine Learning]]
 
 ## Description
 
-Continual Learning is a Level 2 Method within AGI and Future AI in the AI Atlas clean hierarchy.
-
-## Scope
-
-This page is part of the clean Level 1–Level 2 hierarchy.
-
-The vault intentionally stops here for now.
-
-## Future Level 3
-
-Level 3 concepts will be added later.
-
-Do not add them yet.
+Continual Learning is a Level 2 concept within Machine Learning.
 
 ## Related
 
