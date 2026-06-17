@@ -17,11 +17,11 @@
 
 ## Description
 
-AI connected to physical agents that perceive, decide, and act in the real world.
+AI systems that perceive, act, and learn in physical or embodied environments.
 
 ## Level 2 branches
 
-- [[Level 2/Classical Control|Classical Control]]
+- [[Level 2/Control Systems|Control Systems]]
 - [[Level 2/Robot Perception|Robot Perception]]
 - [[Level 2/Localization and Mapping|Localization and Mapping]]
 - [[Level 2/Motion Planning|Motion Planning]]
