@@ -34,6 +34,8 @@ Applied cleanup decisions:
 - `Text Generation` remains under `Generative AI`.
 - `Natural Language Generation` is used under `Natural Language and Speech` to avoid an exact duplicate.
 - `Representation Learning` and `Data-Centric AI` were added under `Machine Learning`.
+- `AI UX and Trust` was renamed to `AI User Experience and Trust`.
+- Level 2 hierarchy terminology was clarified from `Subfield` to `Main Subarea`.
 - Several names were clarified before Level 3 expansion.
 
 ## Typed knowledge map
@@ -55,7 +57,7 @@ Create the initial clean hierarchy:
 
 - Level 0 — Field
 - Level 1 — Major Areas
-- Level 2 — Subfields
+- Level 2 — Main Subareas
 
 ### v0.2 — Typed concept model and visual grammar
 
@@ -69,7 +71,7 @@ Add metadata and visual structure:
 
 ### v0.3 — Level 3 encyclopedia draft
 
-Add Level 3 concepts for personal understanding and exploration.
+Add Level 3 concepts for understanding and exploration.
 
 This should be treated as an encyclopedia draft, not the final canonical taxonomy.
 
