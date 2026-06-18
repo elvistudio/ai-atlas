@@ -1,0 +1,39 @@
+name: Validate taxonomy
+
+on:
+  pull_request:
+    paths:
+      - 'taxonomy/**'
+      - 'markmap/**'
+      - 'mermaid/**'
+      - 'obsidian/**'
+      - 'scripts/validate_taxonomy.py'
+      - '.github/workflows/validate-taxonomy.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'taxonomy/**'
+      - 'markmap/**'
+      - 'mermaid/**'
+      - 'obsidian/**'
+      - 'scripts/validate_taxonomy.py'
+      - '.github/workflows/validate-taxonomy.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-taxonomy:
+    name: Validate taxonomy consistency
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate taxonomy JSON, Markdown, generated views, and Obsidian vault
+        run: python3 scripts/validate_taxonomy.py
