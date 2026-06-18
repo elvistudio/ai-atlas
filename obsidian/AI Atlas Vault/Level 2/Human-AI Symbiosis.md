@@ -17,7 +17,7 @@
 
 ## Description
 
-Human-AI Symbiosis is a Level 2 Future Concept within AGI and Future AI in the AI Atlas clean hierarchy.
+Human-AI Symbiosis is a Level 2 Future Concept within AGI and Future AI.
 
 ## Scope
 

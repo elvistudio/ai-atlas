@@ -17,7 +17,7 @@
 
 ## Description
 
-Temporal Reasoning is a Level 2 Method within Knowledge and Reasoning in the AI Atlas clean hierarchy.
+Temporal Reasoning is a Level 2 Method within Knowledge and Reasoning.
 
 ## Scope
 

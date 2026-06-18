@@ -13,11 +13,11 @@
 
 ## Parent branch
 
-- [[Level 1/Multi-Agent Systems|Multi-Agent Systems]]
+- [[Level 1/Agentic and Multi-Agent Systems|Agentic and Multi-Agent Systems]]
 
 ## Description
 
-Agent Communication is a Level 2 Method within Multi-Agent Systems in the AI Atlas clean hierarchy.
+Agent Communication is a Level 2 Method within Agentic and Multi-Agent Systems.
 
 ## Scope
 

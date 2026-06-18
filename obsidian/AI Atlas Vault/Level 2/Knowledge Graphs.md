@@ -17,7 +17,7 @@
 
 ## Description
 
-Knowledge Graphs is a Level 2 System Pattern within Symbolic AI in the AI Atlas clean hierarchy.
+Knowledge Graphs is a Level 2 System Pattern within Symbolic AI.
 
 ## Scope
 

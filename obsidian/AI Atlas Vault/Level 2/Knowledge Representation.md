@@ -17,9 +17,20 @@
 
 ## Description
 
-Knowledge Representation is the canonical Level 2 concept under Knowledge and Reasoning.
+Knowledge Representation is a Level 2 Subfield within Knowledge and Reasoning.
+
+## Scope
+
+This page is part of the clean Level 1–Level 2 hierarchy.
+
+The vault intentionally stops here for now.
+
+## Future Level 3
+
+Level 3 concepts will be added later.
+
+Do not add them yet.
 
 ## Related
 
-- [[Level 2/Symbolic Knowledge Representation|Symbolic Knowledge Representation]]
 - [[00 Artificial Intelligence]]

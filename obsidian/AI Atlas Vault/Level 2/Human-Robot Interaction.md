@@ -17,7 +17,7 @@
 
 ## Description
 
-Human-Robot Interaction is a Level 2 Subfield within Robotics and Embodied AI in the AI Atlas clean hierarchy.
+Human-Robot Interaction is a Level 2 Subfield within Robotics and Embodied AI.
 
 ## Scope
 

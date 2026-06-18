@@ -1,4 +1,4 @@
-# Evaluation and Benchmarking
+# Generative Modeling
 
 #level-2 #ai-atlas
 
@@ -8,16 +8,16 @@
 |---|---|
 | Hierarchy level | 2 |
 | Hierarchy level name | Subfield |
-| Concept type | Evaluation Concept |
+| Concept type | Paradigm |
 | Stability | stable |
 
 ## Parent branch
 
-- [[Level 1/AI Safety, Alignment and Governance|AI Safety, Alignment and Governance]]
+- [[Level 1/Generative AI|Generative AI]]
 
 ## Description
 
-Evaluation and Benchmarking is a Level 2 Evaluation Concept within AI Safety, Alignment and Governance in the AI Atlas clean hierarchy.
+Generative Modeling is a Level 2 Paradigm within Generative AI.
 
 ## Scope
 

@@ -1,1 +1,36 @@
-# Feedback Preference Learning
+# Human Feedback and Preference Learning
+
+#level-2 #ai-atlas
+
+## Metadata
+
+| Field | Value |
+|---|---|
+| Hierarchy level | 2 |
+| Hierarchy level name | Subfield |
+| Concept type | Method |
+| Stability | emerging |
+
+## Parent branch
+
+- [[Level 1/Human-AI Interaction|Human-AI Interaction]]
+
+## Description
+
+Human Feedback and Preference Learning is a Level 2 Method within Human-AI Interaction.
+
+## Scope
+
+This page is part of the clean Level 1–Level 2 hierarchy.
+
+The vault intentionally stops here for now.
+
+## Future Level 3
+
+Level 3 concepts will be added later.
+
+Do not add them yet.
+
+## Related
+
+- [[00 Artificial Intelligence]]

@@ -17,7 +17,7 @@
 
 ## Description
 
-Long-Term AI Futures is a Level 2 Future Concept within AGI and Future AI in the AI Atlas clean hierarchy.
+Long-Term AI Futures is a Level 2 Future Concept within AGI and Future AI.
 
 ## Scope
 

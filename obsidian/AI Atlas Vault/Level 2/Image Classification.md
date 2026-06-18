@@ -17,7 +17,7 @@
 
 ## Description
 
-Image Classification is a Level 2 Application Area within Computer Vision and Perception in the AI Atlas clean hierarchy.
+Image Classification is a Level 2 Application Area within Computer Vision and Perception.
 
 ## Scope
 

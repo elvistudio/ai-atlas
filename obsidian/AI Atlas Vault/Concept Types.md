@@ -70,7 +70,7 @@ Examples:
 
 - [[Level 2/Deep Learning|Deep Learning]]
 - [[Level 2/Natural Language Processing|Natural Language Processing]]
-- [[Level 1/Computer Vision and Perception|Computer Vision and Perception]]
+- Computer Vision
 
 ### Paradigm
 
@@ -89,7 +89,7 @@ A specific approach or family of approaches.
 Future examples:
 
 - Retrieval-Augmented Generation
-- Policy Optimization
+- Policy [[Level 2/Optimization|Optimization]]
 - [[Level 2/Constraint Satisfaction|Constraint Satisfaction]]
 
 ### Architecture
@@ -170,7 +170,7 @@ A concept related to measuring, interpreting, or testing AI systems.
 
 Examples:
 
-- [[Level 2/Evaluation and Benchmarking|Evaluation and Benchmarking]]
+- [[Level 2/Evaluation, Measurement and Benchmarking|Evaluation, Measurement and Benchmarking]]
 - [[Level 2/Interpretability|Interpretability]]
 - [[Level 2/Explainable AI|Explainable AI]]
 

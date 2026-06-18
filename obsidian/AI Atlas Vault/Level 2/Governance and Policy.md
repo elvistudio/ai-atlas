@@ -17,7 +17,7 @@
 
 ## Description
 
-Governance and Policy is a Level 2 Governance Concept within AI Safety, Alignment and Governance in the AI Atlas clean hierarchy.
+Governance and Policy is a Level 2 Governance Concept within AI Safety, Alignment and Governance.
 
 ## Scope
 

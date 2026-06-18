@@ -17,7 +17,7 @@
 
 ## Description
 
-Automated Reasoning is a Level 2 Subfield within Symbolic AI in the AI Atlas clean hierarchy.
+Automated Reasoning is a Level 2 Subfield within Symbolic AI.
 
 ## Scope
 

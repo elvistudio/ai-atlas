@@ -17,7 +17,7 @@
 
 ## Description
 
-Unsupervised Learning is a Level 2 Paradigm within Machine Learning in the AI Atlas clean hierarchy.
+Unsupervised Learning is a Level 2 Paradigm within Machine Learning.
 
 ## Scope
 

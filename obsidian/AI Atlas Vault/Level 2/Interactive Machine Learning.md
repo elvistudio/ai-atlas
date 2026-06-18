@@ -17,7 +17,7 @@
 
 ## Description
 
-Interactive Machine Learning is a Level 2 Method within Human-AI Interaction in the AI Atlas clean hierarchy.
+Interactive Machine Learning is a Level 2 Method within Human-AI Interaction.
 
 ## Scope
 

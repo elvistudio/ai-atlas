@@ -17,7 +17,7 @@
 
 ## Description
 
-Scene Understanding is a Level 2 Application Area within Computer Vision and Perception in the AI Atlas clean hierarchy.
+Scene Understanding is a Level 2 Application Area within Computer Vision and Perception.
 
 ## Scope
 

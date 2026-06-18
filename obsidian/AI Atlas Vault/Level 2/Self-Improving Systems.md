@@ -17,7 +17,7 @@
 
 ## Description
 
-Self-Improving Systems is a Level 2 Future Concept within AGI and Future AI in the AI Atlas clean hierarchy.
+Self-Improving Systems is a Level 2 Future Concept within AGI and Future AI.
 
 ## Scope
 

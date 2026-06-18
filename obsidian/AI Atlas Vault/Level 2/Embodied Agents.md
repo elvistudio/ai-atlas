@@ -17,7 +17,7 @@
 
 ## Description
 
-Embodied Agents is a Level 2 System Pattern within Robotics and Embodied AI in the AI Atlas clean hierarchy.
+Embodied Agents is a Level 2 System Pattern within Robotics and Embodied AI.
 
 ## Scope
 

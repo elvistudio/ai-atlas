@@ -17,7 +17,7 @@
 
 ## Description
 
-Interpretability is a Level 2 Evaluation Concept within AI Safety, Alignment and Governance in the AI Atlas clean hierarchy.
+Interpretability is a Level 2 Evaluation Concept within AI Safety, Alignment and Governance.
 
 ## Scope
 

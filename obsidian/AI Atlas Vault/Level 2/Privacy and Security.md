@@ -17,7 +17,7 @@
 
 ## Description
 
-Privacy and Security is a Level 2 Safety Concept within AI Safety, Alignment and Governance in the AI Atlas clean hierarchy.
+Privacy and Security is a Level 2 Safety Concept within AI Safety, Alignment and Governance.
 
 ## Scope
 

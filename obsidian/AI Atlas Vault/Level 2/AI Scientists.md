@@ -17,7 +17,7 @@
 
 ## Description
 
-AI Scientists is a Level 2 Future Concept within AGI and Future AI in the AI Atlas clean hierarchy.
+AI Scientists is a Level 2 Future Concept within AGI and Future AI.
 
 ## Scope
 

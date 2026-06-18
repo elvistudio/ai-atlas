@@ -17,7 +17,7 @@
 
 ## Description
 
-Scheduling is a Level 2 Method within Search, Planning and Optimization in the AI Atlas clean hierarchy.
+Scheduling is a Level 2 Method within Search, Planning and Optimization.
 
 ## Scope
 

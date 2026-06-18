@@ -17,7 +17,7 @@
 
 ## Description
 
-Autonomous Vehicles is a Level 2 Application Area within Robotics and Embodied AI in the AI Atlas clean hierarchy.
+Autonomous Vehicles is a Level 2 Application Area within Robotics and Embodied AI.
 
 ## Scope
 

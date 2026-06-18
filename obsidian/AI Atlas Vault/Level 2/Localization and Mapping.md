@@ -17,7 +17,7 @@
 
 ## Description
 
-Localization and Mapping is a Level 2 Method within Robotics and Embodied AI in the AI Atlas clean hierarchy.
+Localization and Mapping is a Level 2 Method within Robotics and Embodied AI.
 
 ## Scope
 

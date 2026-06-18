@@ -17,7 +17,7 @@
 
 ## Description
 
-Motion Planning is a Level 2 Method within Robotics and Embodied AI in the AI Atlas clean hierarchy.
+Motion Planning is a Level 2 Method within Robotics and Embodied AI.
 
 ## Scope
 

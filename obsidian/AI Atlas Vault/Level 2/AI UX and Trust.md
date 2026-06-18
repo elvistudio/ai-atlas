@@ -17,7 +17,7 @@
 
 ## Description
 
-AI UX and Trust is a Level 2 Subfield within Human-AI Interaction in the AI Atlas clean hierarchy.
+AI UX and Trust is a Level 2 Subfield within Human-AI Interaction.
 
 ## Scope
 

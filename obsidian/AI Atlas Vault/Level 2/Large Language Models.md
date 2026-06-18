@@ -13,11 +13,11 @@
 
 ## Parent branch
 
-- [[Level 1/Foundation and General-Purpose Models|Foundation and General-Purpose Models]]
+- [[Level 1/Foundation Models and General-Purpose AI|Foundation Models and General-Purpose AI]]
 
 ## Description
 
-Large Language Models is a Level 2 Model Family within Foundation and General-Purpose Models in the AI Atlas clean hierarchy.
+Large Language Models is a Level 2 Model Family within Foundation Models and General-Purpose AI.
 
 ## Scope
 

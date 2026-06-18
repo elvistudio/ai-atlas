@@ -17,7 +17,7 @@
 
 ## Description
 
-Explainable AI is a Level 2 Evaluation Concept within Knowledge and Reasoning in the AI Atlas clean hierarchy.
+Explainable AI is a Level 2 Evaluation Concept within Knowledge and Reasoning.
 
 ## Scope
 

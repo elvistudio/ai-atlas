@@ -17,7 +17,7 @@
 
 ## Description
 
-Machine Translation is a Level 2 Application Area within Natural Language and Speech in the AI Atlas clean hierarchy.
+Machine Translation is a Level 2 Application Area within Natural Language and Speech.
 
 ## Scope
 

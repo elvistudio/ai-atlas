@@ -17,7 +17,7 @@
 
 ## Description
 
-Video Generation is a Level 2 Application Area within Generative AI in the AI Atlas clean hierarchy.
+Video Generation is a Level 2 Application Area within Generative AI.
 
 ## Scope
 

@@ -17,7 +17,7 @@
 
 ## Description
 
-AI Assistants is a Level 2 System Pattern within Human-AI Interaction in the AI Atlas clean hierarchy.
+AI Assistants is a Level 2 System Pattern within Human-AI Interaction.
 
 ## Scope
 

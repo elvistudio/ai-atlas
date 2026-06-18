@@ -13,11 +13,11 @@
 
 ## Parent branch
 
-- [[Level 1/Multi-Agent Systems|Multi-Agent Systems]]
+- [[Level 1/Agentic and Multi-Agent Systems|Agentic and Multi-Agent Systems]]
 
 ## Description
 
-Cooperative Multi-Agent Systems is a Level 2 System Pattern within Multi-Agent Systems in the AI Atlas clean hierarchy.
+Cooperative Multi-Agent Systems is a Level 2 System Pattern within Agentic and Multi-Agent Systems.
 
 ## Scope
 

@@ -17,7 +17,19 @@
 
 ## Description
 
-Autonomous Agents is a Level 2 concept within Agentic and Multi-Agent Systems.
+Autonomous Agents is a Level 2 System Pattern within Agentic and Multi-Agent Systems.
+
+## Scope
+
+This page is part of the clean Level 1–Level 2 hierarchy.
+
+The vault intentionally stops here for now.
+
+## Future Level 3
+
+Level 3 concepts will be added later.
+
+Do not add them yet.
 
 ## Related
 

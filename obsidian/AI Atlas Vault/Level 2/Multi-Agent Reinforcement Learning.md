@@ -13,11 +13,11 @@
 
 ## Parent branch
 
-- [[Level 1/Multi-Agent Systems|Multi-Agent Systems]]
+- [[Level 1/Agentic and Multi-Agent Systems|Agentic and Multi-Agent Systems]]
 
 ## Description
 
-Multi-Agent Reinforcement Learning is a Level 2 Method within Multi-Agent Systems in the AI Atlas clean hierarchy.
+Multi-Agent Reinforcement Learning is a Level 2 Method within Agentic and Multi-Agent Systems.
 
 ## Scope
 

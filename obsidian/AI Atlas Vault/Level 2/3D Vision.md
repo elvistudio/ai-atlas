@@ -17,7 +17,7 @@
 
 ## Description
 
-3D Vision is a Level 2 Subfield within Computer Vision and Perception in the AI Atlas clean hierarchy.
+3D Vision is a Level 2 Subfield within Computer Vision and Perception.
 
 ## Scope
 

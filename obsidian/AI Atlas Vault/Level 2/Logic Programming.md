@@ -17,7 +17,7 @@
 
 ## Description
 
-Logic Programming is a Level 2 Paradigm within Symbolic AI in the AI Atlas clean hierarchy.
+Logic Programming is a Level 2 Paradigm within Symbolic AI.
 
 ## Scope
 

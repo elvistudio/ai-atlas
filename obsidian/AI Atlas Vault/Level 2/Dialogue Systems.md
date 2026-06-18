@@ -17,7 +17,7 @@
 
 ## Description
 
-Dialogue Systems is a Level 2 System Pattern within Natural Language and Speech in the AI Atlas clean hierarchy.
+Dialogue Systems is a Level 2 System Pattern within Natural Language and Speech.
 
 ## Scope
 

@@ -17,7 +17,7 @@
 
 ## Description
 
-Natural Language Processing is a Level 2 Subfield within Natural Language and Speech in the AI Atlas clean hierarchy.
+Natural Language Processing is a Level 2 Subfield within Natural Language and Speech.
 
 ## Scope
 

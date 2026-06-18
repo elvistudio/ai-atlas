@@ -17,7 +17,7 @@
 
 ## Description
 
-Deep Learning is a Level 2 Subfield within Machine Learning in the AI Atlas clean hierarchy.
+Deep Learning is a Level 2 Subfield within Machine Learning.
 
 ## Scope
 

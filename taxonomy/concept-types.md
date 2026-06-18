@@ -168,7 +168,7 @@ A concept related to measuring, interpreting, or testing AI systems.
 
 Examples:
 
-- Evaluation and Benchmarking
+- Evaluation, Measurement and Benchmarking
 - Interpretability
 - Explainable AI
 

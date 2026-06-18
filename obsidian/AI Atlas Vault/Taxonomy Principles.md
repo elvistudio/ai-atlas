@@ -27,8 +27,10 @@ Examples:
 
 - [[Level 2/Deep Learning|Deep Learning]] belongs under [[Level 1/Machine Learning|Machine Learning]].
 - [[Level 2/Reinforcement Learning|Reinforcement Learning]] belongs under [[Level 1/Machine Learning|Machine Learning]].
-- Transformers should appear later under Deep Learning or Foundation Models, not at Level 1.
-- [[Level 2/Large Language Models|Large Language Models]] belong under [[Level 1/Foundation and General-Purpose Models|Foundation and General-Purpose Models]].
+- [[Level 2/Continual Learning|Continual Learning]] belongs under [[Level 1/Machine Learning|Machine Learning]], not under future AI.
+- [[Level 2/Autonomous Agents|Autonomous Agents]] belong under [[Level 1/Agentic and Multi-Agent Systems|Agentic and Multi-Agent Systems]], not only under future AI.
+- Transformers should appear later under [[Level 2/Deep Learning|Deep Learning]] or Foundation Models, not at Level 1.
+- [[Level 2/Large Language Models|Large Language Models]] belong under [[Level 1/Foundation Models and General-Purpose AI|Foundation Models and General-Purpose AI]].
 
 ## 3. Allow cross-cutting branches when necessary
 
@@ -68,12 +70,40 @@ A node has both:
 Examples:
 
 - [[Level 1/Machine Learning|Machine Learning]] is Level 1 and concept type `Major Area`.
+- [[Level 1/Generative AI|Generative AI]] is Level 1 and concept type `Cross-Cutting Area`.
 - [[Level 2/Deep Learning|Deep Learning]] is Level 2 and concept type `Subfield`.
 - [[Level 2/Reinforcement Learning|Reinforcement Learning]] is Level 2 and concept type `Paradigm`.
 - Transformers will probably be Level 3 and concept type `Architecture`.
 - ChatGPT would be a later Level 5 node and concept type `Product / Concrete System`.
 
 This separation helps prevent the taxonomy from becoming confused when deeper levels are added.
+
+## 7. Level means hierarchy depth, not concept type
+
+The word `Level` describes hierarchy depth only.
+
+It does not describe what kind of concept a node is.
+
+This means that nodes in the same level can have different concept types.
+
+Examples:
+
+- A Level 1 node can be a `Major Area`, `Cross-Cutting Area`, or `Future Area`.
+- A Level 2 node can be a `Subfield`, `Paradigm`, `Model Family`, `Application Area`, `Safety Concept`, `Evaluation Concept`, or another appropriate concept type.
+- Future Level 3 nodes may include methods, architectures, model families, system patterns, techniques, or other deeper concepts.
+
+Folder names such as `Level 1`, `Level 2`, and future `Level 3` represent hierarchy depth for navigation and generation. They should not be treated as folders for concept types.
+
+## 8. Resolve duplicates before expanding depth
+
+Before adding Level 3, exact duplicate Level 2 names should be resolved or intentionally documented as cross-cutting concepts.
+
+Current cleanup decisions:
+
+- `[[Level 2/Knowledge Representation|Knowledge Representation]]` is canonical under `[[Level 1/Knowledge and Reasoning|Knowledge and Reasoning]]`.
+- The [[Level 1/Symbolic AI|Symbolic AI]] branch uses `[[Level 2/Symbolic Knowledge Representation|Symbolic Knowledge Representation]]` to avoid an exact duplicate.
+- `[[Level 2/Text Generation|Text Generation]]` is kept under `[[Level 1/Generative AI|Generative AI]]`.
+- The language branch uses `[[Level 2/Natural Language Generation|Natural Language Generation]]` to avoid an exact duplicate.
 
 ## Related
 

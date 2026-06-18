@@ -17,7 +17,7 @@
 
 ## Description
 
-Supervised Learning is a Level 2 Paradigm within Machine Learning in the AI Atlas clean hierarchy.
+Supervised Learning is a Level 2 Paradigm within Machine Learning.
 
 ## Scope
 

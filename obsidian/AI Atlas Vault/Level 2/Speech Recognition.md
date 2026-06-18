@@ -17,7 +17,7 @@
 
 ## Description
 
-Speech Recognition is a Level 2 Application Area within Natural Language and Speech in the AI Atlas clean hierarchy.
+Speech Recognition is a Level 2 Application Area within Natural Language and Speech.
 
 ## Scope
 

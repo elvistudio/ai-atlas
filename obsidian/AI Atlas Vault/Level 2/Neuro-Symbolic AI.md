@@ -17,7 +17,7 @@
 
 ## Description
 
-Neuro-Symbolic AI is a Level 2 Paradigm within Symbolic AI in the AI Atlas clean hierarchy.
+Neuro-Symbolic AI is a Level 2 Paradigm within Symbolic AI.
 
 ## Scope
 

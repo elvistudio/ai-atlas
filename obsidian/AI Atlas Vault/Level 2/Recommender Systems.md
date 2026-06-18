@@ -17,7 +17,7 @@
 
 ## Description
 
-Recommender Systems is a Level 2 Application Area within Human-AI Interaction in the AI Atlas clean hierarchy.
+Recommender Systems is a Level 2 Application Area within Human-AI Interaction.
 
 ## Scope
 

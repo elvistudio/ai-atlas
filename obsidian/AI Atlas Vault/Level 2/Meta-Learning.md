@@ -17,7 +17,7 @@
 
 ## Description
 
-Meta-Learning is a Level 2 Method within Machine Learning in the AI Atlas clean hierarchy.
+Meta-Learning is a Level 2 Method within Machine Learning.
 
 ## Scope
 

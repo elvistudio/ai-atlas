@@ -17,7 +17,7 @@
 
 ## Description
 
-Semi-Supervised Learning is a Level 2 Paradigm within Machine Learning in the AI Atlas clean hierarchy.
+Semi-Supervised Learning is a Level 2 Paradigm within Machine Learning.
 
 ## Scope
 

@@ -17,9 +17,20 @@
 
 ## Description
 
-Text Generation is a Level 2 concept under Generative AI.
+Text Generation is a Level 2 Application Area within Generative AI.
+
+## Scope
+
+This page is part of the clean Level 1–Level 2 hierarchy.
+
+The vault intentionally stops here for now.
+
+## Future Level 3
+
+Level 3 concepts will be added later.
+
+Do not add them yet.
 
 ## Related
 
-- [[Level 2/Natural Language Generation|Natural Language Generation]]
 - [[00 Artificial Intelligence]]

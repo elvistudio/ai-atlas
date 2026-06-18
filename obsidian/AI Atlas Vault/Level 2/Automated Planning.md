@@ -17,7 +17,7 @@
 
 ## Description
 
-Automated Planning is a Level 2 Method within Search, Planning and Optimization in the AI Atlas clean hierarchy.
+Automated Planning is a Level 2 Method within Search, Planning and Optimization.
 
 ## Scope
 

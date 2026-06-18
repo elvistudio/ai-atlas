@@ -17,7 +17,7 @@
 
 ## Description
 
-Transfer Learning is a Level 2 Method within Machine Learning in the AI Atlas clean hierarchy.
+Transfer Learning is a Level 2 Method within Machine Learning.
 
 ## Scope
 

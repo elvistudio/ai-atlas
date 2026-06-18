@@ -18,7 +18,7 @@ Some branches are cross-cutting concerns.
 
 Examples:
 
-- [[Level 1/Generative AI|Generative AI]] overlaps with [[Level 1/Foundation and General-Purpose Models|Foundation and General-Purpose Models]].
+- [[Level 1/Generative AI|Generative AI]] overlaps with [[Level 1/Foundation Models and General-Purpose AI|Foundation Models and General-Purpose AI]].
 - [[Level 1/Natural Language and Speech|Natural Language and Speech]] overlaps with [[Level 1/Machine Learning|Machine Learning]].
 - [[Level 1/AI Safety, Alignment and Governance|AI Safety, Alignment and Governance]] cuts across almost everything.
 

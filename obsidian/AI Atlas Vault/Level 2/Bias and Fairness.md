@@ -17,7 +17,7 @@
 
 ## Description
 
-Bias and Fairness is a Level 2 Safety Concept within AI Safety, Alignment and Governance in the AI Atlas clean hierarchy.
+Bias and Fairness is a Level 2 Safety Concept within AI Safety, Alignment and Governance.
 
 ## Scope
 

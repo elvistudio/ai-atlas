@@ -17,7 +17,7 @@
 
 ## Description
 
-Multimodal Perception is a Level 2 Subfield within Computer Vision and Perception in the AI Atlas clean hierarchy.
+Multimodal Perception is a Level 2 Subfield within Computer Vision and Perception.
 
 ## Scope
 

@@ -17,7 +17,7 @@
 
 ## Description
 
-Rule-Based Systems is a Level 2 Method within Symbolic AI in the AI Atlas clean hierarchy.
+Rule-Based Systems is a Level 2 Method within Symbolic AI.
 
 ## Scope
 

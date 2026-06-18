@@ -17,7 +17,7 @@
 
 ## Description
 
-Video Understanding is a Level 2 Application Area within Computer Vision and Perception in the AI Atlas clean hierarchy.
+Video Understanding is a Level 2 Application Area within Computer Vision and Perception.
 
 ## Scope
 

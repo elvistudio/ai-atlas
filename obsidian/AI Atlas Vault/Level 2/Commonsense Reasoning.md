@@ -17,7 +17,7 @@
 
 ## Description
 
-Commonsense Reasoning is a Level 2 Subfield within Knowledge and Reasoning in the AI Atlas clean hierarchy.
+Commonsense Reasoning is a Level 2 Subfield within Knowledge and Reasoning.
 
 ## Scope
 

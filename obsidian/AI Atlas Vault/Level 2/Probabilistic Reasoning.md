@@ -17,7 +17,7 @@
 
 ## Description
 
-Probabilistic Reasoning is a Level 2 Method within Knowledge and Reasoning in the AI Atlas clean hierarchy.
+Probabilistic Reasoning is a Level 2 Method within Knowledge and Reasoning.
 
 ## Scope
 

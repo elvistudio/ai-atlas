@@ -17,7 +17,7 @@
 
 ## Description
 
-Human-in-the-Loop AI is a Level 2 System Pattern within Human-AI Interaction in the AI Atlas clean hierarchy.
+Human-in-the-Loop AI is a Level 2 System Pattern within Human-AI Interaction.
 
 ## Scope
 
