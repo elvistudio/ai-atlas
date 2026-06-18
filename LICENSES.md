@@ -1,22 +1,13 @@
 # Licensing
 
-AI Atlas uses mixed licensing because the repository contains both code and content.
+AI Atlas public content is licensed under Creative Commons Attribution-ShareAlike 4.0 International unless otherwise stated.
 
 ## Summary
 
 | Material | License |
 |---|---|
-| Code, scripts, validators, generators | MIT License |
-| Taxonomy content, Markdown, JSON, Obsidian notes, Markmap exports, Mermaid exports, documentation | CC BY-SA 4.0 |
+| Taxonomy content, Markdown, JSON, Obsidian notes, Markmap exports, Mermaid exports, and public documentation | CC BY-SA 4.0 |
 | AI Atlas name, logo, brand assets, official paid print/PDF designs | Not automatically licensed for commercial reuse unless explicitly stated |
-
-## Code license
-
-Code and scripts are licensed under the MIT License.
-
-See:
-
-- [CODE_LICENSE](CODE_LICENSE)
 
 ## Content license
 
@@ -40,10 +31,3 @@ This allows the project to remain open for community contribution while still pr
 - premium PDF editions,
 - curated visual maps,
 - official design packs.
-
-## Contributions
-
-By contributing to this repository, you agree that your contributions will be licensed under the applicable project licenses:
-
-- code contributions under MIT,
-- taxonomy/content contributions under CC BY-SA 4.0.
