@@ -4,6 +4,12 @@ AI Atlas uses documented review-agent roles to make taxonomy review more systema
 
 These agents are reviewer personas and checklists, not autonomous maintainers. They help humans and coding assistants review the current repository state from different perspectives.
 
+For the current named AI Atlas agent team and recommended review workflows, see
+[`../agent-team.md`](../agent-team.md). This directory contains detailed
+reviewer role files, checklists, and output formats. Some files use generic or
+legacy role names; the current named agents may use those procedures, and the
+roles may be consolidated or aligned more closely in a future cleanup.
+
 ## Source of truth
 
 Review agents must use the repository as the source of truth, especially:

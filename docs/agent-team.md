@@ -17,6 +17,35 @@ The agent team helps AI Atlas stay:
 
 The agents should not replace human review. They provide repeatable internal review passes before community review.
 
+## Canonical overview and detailed role files
+
+This document is the canonical overview of the current named AI Atlas agent
+team and its recommended review workflows.
+
+The [`docs/review-agents/`](review-agents/README.md) directory contains detailed,
+reusable reviewer role checklists and review formats. Where names overlap, this
+document defines the current named agent identity and workflow, while the role
+files define the detailed review procedure. Some role files use generic or
+legacy reviewer names and may be used by one or more named agents.
+
+The closest current mappings are:
+
+| Named agent | Closest detailed role file |
+|---|---|
+| John | [`docs/review-agents/john-senior-ai-reviewer.md`](review-agents/john-senior-ai-reviewer.md) |
+| Clara | [`docs/review-agents/taxonomy-architect.md`](review-agents/taxonomy-architect.md), [`docs/review-agents/concept-type-auditor.md`](review-agents/concept-type-auditor.md) |
+| Max | No exact detailed role file yet |
+| Mira | [`docs/review-agents/ontology-knowledge-graph-reviewer.md`](review-agents/ontology-knowledge-graph-reviewer.md) |
+| Noah | [`docs/review-agents/documentation-community-editor.md`](review-agents/documentation-community-editor.md) |
+| Vera | [`docs/review-agents/repo-consistency-qa.md`](review-agents/repo-consistency-qa.md) |
+| Ada | [`docs/review-agents/documentation-community-editor.md`](review-agents/documentation-community-editor.md) |
+| Iris | [`docs/review-agents/visual-map-print-designer.md`](review-agents/visual-map-print-designer.md) |
+
+Future cleanup may align named agents and detailed role files one-to-one. Until
+then, use this document to select the named agent and workflow, then use the
+mapped role file for its detailed checklist. Existing files are intentionally
+not renamed as part of this clarification.
+
 ## Current agent team
 
 ### John — senior AI expert reviewer
