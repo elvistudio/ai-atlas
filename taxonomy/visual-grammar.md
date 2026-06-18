@@ -10,7 +10,7 @@ The map should use visual cues to distinguish hierarchy depth and concept type.
 |---|---|---|---|
 | 0 | Field | The whole domain | Black |
 | 1 | Major Area | Large AI areas | Blue |
-| 2 | Subfield | Main subareas | Green |
+| 2 | Main Subarea | Primary concept areas | Green |
 | 3 | Method / Architecture / Model Family | Deeper technical families | Orange |
 | 4 | Technique / Component / Variant | Internal mechanisms | Red |
 | 5 | System / Product / Concrete Model | Concrete systems or examples | Purple |
