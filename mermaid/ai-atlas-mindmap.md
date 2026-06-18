@@ -110,7 +110,7 @@ mindmap
       Personalization
       Decision Support Systems
       Human Feedback and Preference Learning
-      AI UX and Trust
+      AI User Experience and Trust
     AI Safety, Alignment and Governance
       AI Alignment
       Robustness
