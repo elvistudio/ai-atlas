@@ -15,8 +15,8 @@
     },
     {
       "level": 2,
-      "name": "Subfield",
-      "description": "Main subareas inside each major area."
+      "name": "Main Subarea",
+      "description": "Primary concept areas inside each major area."
     },
     {
       "level": 3,
@@ -80,7 +80,7 @@
         {
           "name": "Rule-Based Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Symbolic AI",
           "children": [],
@@ -90,7 +90,7 @@
         {
           "name": "Expert Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Symbolic AI",
           "children": [],
@@ -100,7 +100,7 @@
         {
           "name": "Logic Programming",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Symbolic AI",
           "children": [],
@@ -110,7 +110,7 @@
         {
           "name": "Symbolic Knowledge Representation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Symbolic AI",
           "children": [],
@@ -120,7 +120,7 @@
         {
           "name": "Automated Reasoning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Symbolic AI",
           "children": [],
@@ -130,7 +130,7 @@
         {
           "name": "Constraint Satisfaction",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Symbolic AI",
           "children": [],
@@ -140,7 +140,7 @@
         {
           "name": "Knowledge Graphs",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Symbolic AI",
           "children": [],
@@ -150,7 +150,7 @@
         {
           "name": "Neuro-Symbolic AI",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Symbolic AI",
           "children": [],
@@ -188,7 +188,7 @@
         {
           "name": "Supervised Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Machine Learning",
           "children": [],
@@ -198,7 +198,7 @@
         {
           "name": "Unsupervised Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Machine Learning",
           "children": [],
@@ -208,7 +208,7 @@
         {
           "name": "Semi-Supervised Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Machine Learning",
           "children": [],
@@ -218,7 +218,7 @@
         {
           "name": "Self-Supervised Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Machine Learning",
           "children": [],
@@ -228,7 +228,7 @@
         {
           "name": "Reinforcement Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Machine Learning",
           "children": [],
@@ -238,7 +238,7 @@
         {
           "name": "Deep Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Machine Learning",
           "children": [],
@@ -248,7 +248,7 @@
         {
           "name": "Representation Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Machine Learning",
           "children": [],
@@ -258,7 +258,7 @@
         {
           "name": "Transfer Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Machine Learning",
           "children": [],
@@ -268,7 +268,7 @@
         {
           "name": "Federated Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Machine Learning",
           "children": [],
@@ -278,7 +278,7 @@
         {
           "name": "Online Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Machine Learning",
           "children": [],
@@ -288,7 +288,7 @@
         {
           "name": "Active Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Machine Learning",
           "children": [],
@@ -298,7 +298,7 @@
         {
           "name": "Meta-Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Machine Learning",
           "children": [],
@@ -308,7 +308,7 @@
         {
           "name": "Ensemble Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Machine Learning",
           "children": [],
@@ -318,7 +318,7 @@
         {
           "name": "Continual Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Machine Learning",
           "children": [],
@@ -328,7 +328,7 @@
         {
           "name": "Data-Centric AI",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Machine Learning",
           "children": [],
@@ -359,7 +359,7 @@
         {
           "name": "State-Space Search",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Search, Planning and Optimization",
           "children": [],
@@ -369,7 +369,7 @@
         {
           "name": "Heuristic Search",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Search, Planning and Optimization",
           "children": [],
@@ -379,7 +379,7 @@
         {
           "name": "Adversarial Search",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Search, Planning and Optimization",
           "children": [],
@@ -389,7 +389,7 @@
         {
           "name": "Automated Planning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Search, Planning and Optimization",
           "children": [],
@@ -399,7 +399,7 @@
         {
           "name": "Scheduling",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Search, Planning and Optimization",
           "children": [],
@@ -409,7 +409,7 @@
         {
           "name": "Optimization",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Search, Planning and Optimization",
           "children": [],
@@ -419,7 +419,7 @@
         {
           "name": "Evolutionary Computation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Search, Planning and Optimization",
           "children": [],
@@ -429,7 +429,7 @@
         {
           "name": "Monte Carlo Tree Search",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Search, Planning and Optimization",
           "children": [],
@@ -460,7 +460,7 @@
         {
           "name": "Commonsense Reasoning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Knowledge and Reasoning",
           "children": [],
@@ -470,7 +470,7 @@
         {
           "name": "Probabilistic Reasoning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Knowledge and Reasoning",
           "children": [],
@@ -480,7 +480,7 @@
         {
           "name": "Causal Reasoning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Knowledge and Reasoning",
           "children": [],
@@ -490,7 +490,7 @@
         {
           "name": "Temporal Reasoning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Knowledge and Reasoning",
           "children": [],
@@ -500,7 +500,7 @@
         {
           "name": "Spatial Reasoning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Knowledge and Reasoning",
           "children": [],
@@ -510,7 +510,7 @@
         {
           "name": "Explainable AI",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Evaluation Concept",
           "parent": "Knowledge and Reasoning",
           "children": [],
@@ -520,7 +520,7 @@
         {
           "name": "Knowledge Representation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Knowledge and Reasoning",
           "children": [],
@@ -530,7 +530,7 @@
         {
           "name": "Ontologies",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Knowledge and Reasoning",
           "children": [],
@@ -562,7 +562,7 @@
         {
           "name": "Control Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -572,7 +572,7 @@
         {
           "name": "Robot Perception",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -582,7 +582,7 @@
         {
           "name": "Localization and Mapping",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -592,7 +592,7 @@
         {
           "name": "Motion Planning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -602,7 +602,7 @@
         {
           "name": "Manipulation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -612,7 +612,7 @@
         {
           "name": "Autonomous Vehicles",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -622,7 +622,7 @@
         {
           "name": "Human-Robot Interaction",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -632,7 +632,7 @@
         {
           "name": "Robot Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -642,7 +642,7 @@
         {
           "name": "Embodied Agents",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Robotics and Embodied AI",
           "children": [],
@@ -673,7 +673,7 @@
         {
           "name": "Natural Language Processing",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Natural Language and Speech",
           "children": [],
@@ -683,7 +683,7 @@
         {
           "name": "Speech Recognition",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Natural Language and Speech",
           "children": [],
@@ -693,7 +693,7 @@
         {
           "name": "Speech Synthesis",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Natural Language and Speech",
           "children": [],
@@ -703,7 +703,7 @@
         {
           "name": "Dialogue Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Natural Language and Speech",
           "children": [],
@@ -713,7 +713,7 @@
         {
           "name": "Information Retrieval",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Natural Language and Speech",
           "children": [],
@@ -723,7 +723,7 @@
         {
           "name": "Machine Translation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Natural Language and Speech",
           "children": [],
@@ -733,7 +733,7 @@
         {
           "name": "Natural Language Generation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Natural Language and Speech",
           "children": [],
@@ -743,7 +743,7 @@
         {
           "name": "Language Understanding",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Natural Language and Speech",
           "children": [],
@@ -774,7 +774,7 @@
         {
           "name": "Image Classification",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Computer Vision and Perception",
           "children": [],
@@ -784,7 +784,7 @@
         {
           "name": "Object Detection",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Computer Vision and Perception",
           "children": [],
@@ -794,7 +794,7 @@
         {
           "name": "Image Segmentation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Computer Vision and Perception",
           "children": [],
@@ -804,7 +804,7 @@
         {
           "name": "Video Understanding",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Computer Vision and Perception",
           "children": [],
@@ -814,7 +814,7 @@
         {
           "name": "3D Vision",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Computer Vision and Perception",
           "children": [],
@@ -824,7 +824,7 @@
         {
           "name": "Multimodal Perception",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Computer Vision and Perception",
           "children": [],
@@ -834,7 +834,7 @@
         {
           "name": "Scene Understanding",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Computer Vision and Perception",
           "children": [],
@@ -844,7 +844,7 @@
         {
           "name": "Optical Character Recognition",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Computer Vision and Perception",
           "children": [],
@@ -875,7 +875,7 @@
         {
           "name": "Text Generation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Generative AI",
           "children": [],
@@ -885,7 +885,7 @@
         {
           "name": "Image Generation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Generative AI",
           "children": [],
@@ -895,7 +895,7 @@
         {
           "name": "Audio Generation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Generative AI",
           "children": [],
@@ -905,7 +905,7 @@
         {
           "name": "Video Generation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Generative AI",
           "children": [],
@@ -915,7 +915,7 @@
         {
           "name": "Code Generation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Generative AI",
           "children": [],
@@ -925,7 +925,7 @@
         {
           "name": "3D Generation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Generative AI",
           "children": [],
@@ -935,7 +935,7 @@
         {
           "name": "Synthetic Data Generation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Generative AI",
           "children": [],
@@ -945,7 +945,7 @@
         {
           "name": "Generative Modeling",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Generative AI",
           "children": [],
@@ -976,7 +976,7 @@
         {
           "name": "Large Language Models",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Model Family",
           "parent": "Foundation Models and General-Purpose AI",
           "children": [],
@@ -986,7 +986,7 @@
         {
           "name": "Vision Foundation Models",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Model Family",
           "parent": "Foundation Models and General-Purpose AI",
           "children": [],
@@ -996,7 +996,7 @@
         {
           "name": "Multimodal Foundation Models",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Model Family",
           "parent": "Foundation Models and General-Purpose AI",
           "children": [],
@@ -1006,7 +1006,7 @@
         {
           "name": "Audio Foundation Models",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Model Family",
           "parent": "Foundation Models and General-Purpose AI",
           "children": [],
@@ -1016,7 +1016,7 @@
         {
           "name": "Video Foundation Models",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Model Family",
           "parent": "Foundation Models and General-Purpose AI",
           "children": [],
@@ -1026,7 +1026,7 @@
         {
           "name": "Code Foundation Models",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Model Family",
           "parent": "Foundation Models and General-Purpose AI",
           "children": [],
@@ -1036,7 +1036,7 @@
         {
           "name": "Scientific Foundation Models",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Model Family",
           "parent": "Foundation Models and General-Purpose AI",
           "children": [],
@@ -1046,7 +1046,7 @@
         {
           "name": "World Models",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Model Family",
           "parent": "Foundation Models and General-Purpose AI",
           "children": [],
@@ -1078,7 +1078,7 @@
         {
           "name": "Autonomous Agents",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1088,7 +1088,7 @@
         {
           "name": "Cooperative Multi-Agent Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1098,7 +1098,7 @@
         {
           "name": "Competitive Multi-Agent Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1108,7 +1108,7 @@
         {
           "name": "Agent Communication",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1118,7 +1118,7 @@
         {
           "name": "Coordination and Negotiation",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1128,7 +1128,7 @@
         {
           "name": "Multi-Agent Reinforcement Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1138,7 +1138,7 @@
         {
           "name": "Swarm Intelligence",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Paradigm",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1148,7 +1148,7 @@
         {
           "name": "Agent Societies",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1158,7 +1158,7 @@
         {
           "name": "Market-Based Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Agentic and Multi-Agent Systems",
           "children": [],
@@ -1181,7 +1181,7 @@
         "Personalization",
         "Decision Support Systems",
         "Human Feedback and Preference Learning",
-        "AI UX and Trust"
+        "AI User Experience and Trust"
       ],
       "stability": "stable",
       "description": "Human interaction with AI systems.",
@@ -1189,7 +1189,7 @@
         {
           "name": "AI Assistants",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Human-AI Interaction",
           "children": [],
@@ -1199,7 +1199,7 @@
         {
           "name": "Recommender Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Human-AI Interaction",
           "children": [],
@@ -1209,7 +1209,7 @@
         {
           "name": "Human-in-the-Loop AI",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "System Pattern",
           "parent": "Human-AI Interaction",
           "children": [],
@@ -1219,7 +1219,7 @@
         {
           "name": "Interactive Machine Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Human-AI Interaction",
           "children": [],
@@ -1229,7 +1229,7 @@
         {
           "name": "Personalization",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Human-AI Interaction",
           "children": [],
@@ -1239,7 +1239,7 @@
         {
           "name": "Decision Support Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Application Area",
           "parent": "Human-AI Interaction",
           "children": [],
@@ -1249,7 +1249,7 @@
         {
           "name": "Human Feedback and Preference Learning",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Method",
           "parent": "Human-AI Interaction",
           "children": [],
@@ -1257,14 +1257,14 @@
           "description": "Human Feedback and Preference Learning is a Level 2 Method within Human-AI Interaction."
         },
         {
-          "name": "AI UX and Trust",
+          "name": "AI User Experience and Trust",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Subfield",
           "parent": "Human-AI Interaction",
           "children": [],
           "stability": "stable",
-          "description": "AI UX and Trust is a Level 2 Subfield within Human-AI Interaction."
+          "description": "AI User Experience and Trust is a Level 2 Subfield within Human-AI Interaction."
         }
       ]
     },
@@ -1290,7 +1290,7 @@
         {
           "name": "AI Alignment",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Safety Concept",
           "parent": "AI Safety, Alignment and Governance",
           "children": [],
@@ -1300,7 +1300,7 @@
         {
           "name": "Robustness",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Safety Concept",
           "parent": "AI Safety, Alignment and Governance",
           "children": [],
@@ -1310,7 +1310,7 @@
         {
           "name": "Interpretability",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Evaluation Concept",
           "parent": "AI Safety, Alignment and Governance",
           "children": [],
@@ -1320,7 +1320,7 @@
         {
           "name": "Evaluation, Measurement and Benchmarking",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Evaluation Concept",
           "parent": "AI Safety, Alignment and Governance",
           "children": [],
@@ -1330,7 +1330,7 @@
         {
           "name": "Bias and Fairness",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Safety Concept",
           "parent": "AI Safety, Alignment and Governance",
           "children": [],
@@ -1340,7 +1340,7 @@
         {
           "name": "Privacy and Security",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Safety Concept",
           "parent": "AI Safety, Alignment and Governance",
           "children": [],
@@ -1350,7 +1350,7 @@
         {
           "name": "Misuse Prevention",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Governance Concept",
           "parent": "AI Safety, Alignment and Governance",
           "children": [],
@@ -1360,7 +1360,7 @@
         {
           "name": "Governance and Policy",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Governance Concept",
           "parent": "AI Safety, Alignment and Governance",
           "children": [],
@@ -1389,7 +1389,7 @@
         {
           "name": "Artificial General Intelligence",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Future Concept",
           "parent": "AGI and Future AI",
           "children": [],
@@ -1399,7 +1399,7 @@
         {
           "name": "Self-Improving Systems",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Future Concept",
           "parent": "AGI and Future AI",
           "children": [],
@@ -1409,7 +1409,7 @@
         {
           "name": "AI Scientists",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Future Concept",
           "parent": "AGI and Future AI",
           "children": [],
@@ -1419,7 +1419,7 @@
         {
           "name": "Human-AI Symbiosis",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Future Concept",
           "parent": "AGI and Future AI",
           "children": [],
@@ -1429,7 +1429,7 @@
         {
           "name": "Superintelligence",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Future Concept",
           "parent": "AGI and Future AI",
           "children": [],
@@ -1439,7 +1439,7 @@
         {
           "name": "Long-Term AI Futures",
           "hierarchy_level": 2,
-          "hierarchy_level_name": "Subfield",
+          "hierarchy_level_name": "Main Subarea",
           "concept_type": "Future Concept",
           "parent": "AGI and Future AI",
           "children": [],

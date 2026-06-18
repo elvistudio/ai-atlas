@@ -28,7 +28,7 @@ Human interaction with AI systems.
 - [[Level 2/Personalization|Personalization]]
 - [[Level 2/Decision Support Systems|Decision Support Systems]]
 - [[Level 2/Human Feedback and Preference Learning|Human Feedback and Preference Learning]]
-- [[Level 2/AI UX and Trust|AI UX and Trust]]
+- [[Level 2/AI User Experience and Trust|AI User Experience and Trust]]
 
 ## Notes
 

@@ -1,4 +1,4 @@
-# AI UX and Trust
+# AI User Experience and Trust
 
 #level-2 #ai-atlas
 
@@ -7,7 +7,7 @@
 | Field | Value |
 |---|---|
 | Hierarchy level | 2 |
-| Hierarchy level name | Subfield |
+| Hierarchy level name | Main Subarea |
 | Concept type | Subfield |
 | Stability | stable |
 
@@ -17,7 +17,7 @@
 
 ## Description
 
-AI UX and Trust is a Level 2 Subfield within Human-AI Interaction.
+AI User Experience and Trust is a Level 2 Subfield within Human-AI Interaction.
 
 ## Scope
 
