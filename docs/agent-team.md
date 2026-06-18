@@ -12,6 +12,7 @@ The agent team helps AI Atlas stay:
 - academically stable,
 - useful for engineers,
 - understandable for learners,
+- visually readable,
 - structurally consistent,
 - ready for public review.
 
@@ -128,6 +129,22 @@ Ada checks:
 
 Ada helps balance completeness with public clarity.
 
+### Leo — educational visual design agent
+
+Leo reviews visual communication, poster design, and learner-friendly information design.
+
+Leo checks:
+
+- whether a poster or visual map is readable from the intended viewing distance,
+- whether hierarchy, color, size, spacing, and typography encode meaning clearly,
+- whether the design is simple enough for schools, kids, and beginners without becoming misleading,
+- whether visual emphasis is objective and explained rather than based on vague importance or popularity,
+- whether the layout works for the target format, such as A3, A2, A1, PDF, slide, or web,
+- whether the design feels inviting, calm, and non-intimidating while preserving AI Atlas accuracy,
+- whether print and screen versions remain legible, accessible, and visually consistent.
+
+Leo should be used for educational posters, beginner maps, print-ready layouts, visual systems, and public-facing design drafts. Leo does not decide taxonomy meaning; he checks whether the taxonomy is communicated clearly and honestly.
+
 ## Recommended review workflow
 
 ### For Level 1 and Level 2 changes
@@ -148,12 +165,22 @@ Ada helps balance completeness with public clarity.
 5. Vera checks repository consistency.
 6. John decides whether the Level 3 draft is ready to proceed.
 
+### For educational posters and public visual maps
+
+1. Noah defines the learner-first explanation goal.
+2. Ada defines public scope and editorial positioning.
+3. Leo designs or reviews visual hierarchy, layout, readability, and print/screen suitability.
+4. Mira checks that visual structure does not distort taxonomy hierarchy or concept types.
+5. Vera checks consistency with canonical taxonomy files and generated views.
+6. John reviews only if the visual design changes taxonomy meaning or public conceptual framing.
+
 ### For generated views and repository cleanup
 
 1. Vera checks consistency first.
 2. Mira checks structure and graph-readiness.
 3. Ada checks public readability.
-4. John reviews only if the cleanup changes taxonomy meaning.
+4. Leo checks visual readability when generated outputs are intended for public or educational use.
+5. John reviews only if the cleanup changes taxonomy meaning.
 
 ## John review format
 
@@ -238,4 +265,5 @@ Mira — ontology / knowledge graph reviewer
 Noah — educator / explainer
 Vera — repo consistency validator
 Ada — product / editorial strategist
+Leo — educational visual design agent
 ```
