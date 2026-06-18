@@ -3,8 +3,8 @@
 
 The generator uses only the Python standard library and reads the canonical
 Level 1-Level 2 taxonomy JSON. The layout is an experimental radial atlas:
-Level 0 sits at the center, Level 1 areas form the inner ring, and Level 2
-concepts occupy staggered lanes in the outer ring.
+Level 0 sits at the center, Level 1 areas form the inner ring, and detailed
+mode groups Level 2 concepts into horizontal mini-lists inside their sectors.
 """
 
 from __future__ import annotations
@@ -149,69 +149,108 @@ def sector_path(
     )
 
 
-def label_rotation(angle: float) -> float:
-    rotation = angle + 90
-    normalized = angle % 360
-    if 0 < normalized < 180:
-        rotation += 180
-    return rotation
-
-
-def draw_level_2_labels(
+def draw_sector_card(
     branch: dict[str, Any],
     *,
     cx: float,
     cy: float,
-    angle_start: float,
-    angle_end: float,
-    lane_radii: list[tuple[float, float]],
+    angle: float,
+    radius_x: float,
+    radius_y: float,
+    fill: str,
     accent: str,
     scale: float,
-) -> list[str]:
+    mode: str,
+) -> str:
+    name = str(branch.get("name", "Untitled"))
     nodes = branch.get("level_2", [])
     if not isinstance(nodes, list):
-        return []
+        nodes = []
 
-    lanes: list[list[dict[str, Any]]] = [[] for _ in lane_radii]
-    for index, node in enumerate(nodes):
-        if isinstance(node, dict):
-            lanes[index % len(lane_radii)].append(node)
-
-    parts: list[str] = []
-    padding = min(3.0, (angle_end - angle_start) * 0.13)
-    usable_start = angle_start + padding
-    usable_end = angle_end - padding
-
-    for lane_index, lane in enumerate(lanes):
-        if not lane:
-            continue
-        rx, ry = lane_radii[lane_index]
-        for slot, node in enumerate(lane):
-            fraction = (slot + 0.5) / len(lane)
-            angle = usable_start + (usable_end - usable_start) * fraction
-            x, y = point(cx, cy, rx, ry, angle)
-            name = str(node.get("name", "Untitled"))
-            lines = wrap_label(name, width=25, max_lines=2)
-            radians = math.radians(angle)
-            dot_x = x - math.sin(radians) * 3.2 * scale
-            dot_y = y + math.cos(radians) * 3.2 * scale
-            parts.append(
-                f'<g data-level="2" data-name="{esc(name)}">'
-                f'<circle cx="{dot_x:.2f}" cy="{dot_y:.2f}" r="{0.72 * scale:.2f}" fill="{accent}" />'
-                + text_element(
-                    x,
-                    y,
-                    lines,
-                    size=2.55 * scale,
-                    weight=500,
-                    rotation=label_rotation(angle),
-                )
-                + "</g>"
+    x, y = point(cx, cy, radius_x, radius_y, angle)
+    if mode == "overview":
+        card_width = 78 * scale
+        title_lines = wrap_label(name, width=26, max_lines=3)
+        card_height = max(24, 10 + len(title_lines) * 4.3) * scale
+        return (
+            f'<g data-level="1" data-name="{esc(name)}">'
+            f'<rect x="{x - card_width / 2:.2f}" y="{y - card_height / 2:.2f}" '
+            f'width="{card_width:.2f}" height="{card_height:.2f}" rx="{5 * scale:.2f}" '
+            f'fill="{fill}" stroke="{accent}" stroke-width="{1.15 * scale:.2f}" />'
+            + text_element(
+                x,
+                y,
+                title_lines,
+                size=3.7 * scale,
+                weight=750,
             )
-    return parts
+            + "</g>"
+        )
+
+    card_width = 110 * scale
+    card_height = 62 * scale
+    card_x = x - card_width / 2
+    card_y = y - card_height / 2
+    padding = 4.2 * scale
+    title_lines = wrap_label(name, width=31, max_lines=2)
+    title_size = 3.25 * scale
+    title_line_height = title_size * 1.16
+    title_block_height = max(8.5 * scale, len(title_lines) * title_line_height)
+    divider_y = card_y + padding + title_block_height + 1.5 * scale
+    list_top = divider_y + 4.0 * scale
+    column_gap = 3.0 * scale
+    column_width = (card_width - 2 * padding - column_gap) / 2
+    rows = math.ceil(len(nodes) / 2)
+    row_height = 5.15 * scale
+
+    parts = [
+        f'<g data-level="1" data-name="{esc(name)}">',
+        f'<rect x="{card_x:.2f}" y="{card_y:.2f}" width="{card_width:.2f}" '
+        f'height="{card_height:.2f}" rx="{4.5 * scale:.2f}" fill="#FFFFFF" '
+        f'fill-opacity="0.94" stroke="{accent}" stroke-width="{0.9 * scale:.2f}" />',
+        f'<rect x="{card_x:.2f}" y="{card_y:.2f}" width="{card_width:.2f}" '
+        f'height="{(divider_y - card_y):.2f}" rx="{4.5 * scale:.2f}" fill="{fill}" />',
+        text_element(
+            x,
+            card_y + padding + title_block_height / 2,
+            title_lines,
+            size=title_size,
+            weight=750,
+        ),
+        f'<line x1="{card_x + padding:.2f}" y1="{divider_y:.2f}" '
+        f'x2="{card_x + card_width - padding:.2f}" y2="{divider_y:.2f}" '
+        f'stroke="{accent}" stroke-width="{0.45 * scale:.2f}" />',
+    ]
+
+    for index, node in enumerate(nodes):
+        if not isinstance(node, dict):
+            continue
+        column = index // rows
+        row = index % rows
+        item_name = str(node.get("name", "Untitled"))
+        item_x = card_x + padding + column * (column_width + column_gap)
+        item_y = list_top + row * row_height
+        item_size = (2.12 if len(item_name) > 31 else 2.35) * scale
+        parts.append(
+            f'<g data-level="2" data-name="{esc(item_name)}">'
+            f'<circle cx="{item_x + 0.8 * scale:.2f}" cy="{item_y - 0.7 * scale:.2f}" '
+            f'r="{0.62 * scale:.2f}" fill="{accent}" />'
+            + text_element(
+                item_x + 2.6 * scale,
+                item_y,
+                [item_name],
+                size=item_size,
+                weight=500,
+                anchor="start",
+            )
+            + "</g>"
+        )
+
+    parts.append("</g>")
+    return "\n".join(parts)
 
 
-def generate_svg(data: dict[str, Any], *, size_name: str) -> str:
+def generate_svg(data: dict[str, Any], *, size_name: str, mode: str) -> str:
     width, height = SIZES_MM[size_name]
     level_0 = data["level_0"]
     branches = data["level_1"]
@@ -224,12 +263,13 @@ def generate_svg(data: dict[str, Any], *, size_name: str) -> str:
     cy = height / 2 + 10 * scale
     outer_rx = width * 0.445
     outer_ry = height * 0.405
-    sector_inner_rx = outer_rx * 0.31
-    sector_inner_ry = outer_ry * 0.31
-    level_1_rx = outer_rx * 0.41
-    level_1_ry = outer_ry * 0.41
-    lane_factors = [0.57, 0.66, 0.75, 0.84, 0.93]
-    lane_radii = [(outer_rx * factor, outer_ry * factor) for factor in lane_factors]
+    # The first prototype used 31% of the atlas radius for the center. Reducing
+    # that to 21.5% frees roughly 31% of the former center footprint for labels.
+    sector_inner_rx = outer_rx * 0.215
+    sector_inner_ry = outer_ry * 0.215
+    card_radius_factor = 0.70 if mode == "detailed" else 0.59
+    card_radius_x = outer_rx * card_radius_factor
+    card_radius_y = outer_ry * card_radius_factor
 
     project = str(data.get("project", "AI Atlas"))
     root_name = str(level_0.get("name", "Artificial Intelligence"))
@@ -244,7 +284,7 @@ def generate_svg(data: dict[str, Any], *, size_name: str) -> str:
         f'<rect x="0" y="0" width="{width}" height="{height}" fill="#FFFFFF" />',
         '<style>text { font-family: Inter, Arial, Helvetica, sans-serif; }</style>',
         f'<text x="{margin:.2f}" y="{17 * scale:.2f}" font-size="{8.8 * scale:.2f}" font-weight="800" fill="#111111">{esc(project)} · Radial Atlas</text>',
-        f'<text x="{margin:.2f}" y="{26 * scale:.2f}" font-size="{3.4 * scale:.2f}" fill="#444444">Draft radial atlas prototype · Level 0–2 · not final public poster</text>',
+        f'<text x="{margin:.2f}" y="{26 * scale:.2f}" font-size="{3.4 * scale:.2f}" fill="#444444">Draft radial atlas prototype · {esc(mode)} mode · not final public poster</text>',
     ]
 
     for index, branch in enumerate(branches):
@@ -270,46 +310,29 @@ def generate_svg(data: dict[str, Any], *, size_name: str) -> str:
     )
 
     for index, branch in enumerate(branches):
-        angle_start = start_offset + index * sector_span
-        angle_end = start_offset + (index + 1) * sector_span
-        angle = (angle_start + angle_end) / 2
+        angle = start_offset + (index + 0.5) * sector_span
         fill = SECTOR_COLORS[index % len(SECTOR_COLORS)]
         stroke = SECTOR_STROKES[index % len(SECTOR_STROKES)]
-        name = str(branch.get("name", "Untitled"))
-        x, y = point(cx, cy, level_1_rx, level_1_ry, angle)
-        label_width = 55 * scale
-        label_height = 20 * scale
         parts.append(
-            f'<g data-level="1" data-name="{esc(name)}">'
-            f'<rect x="{x - label_width / 2:.2f}" y="{y - label_height / 2:.2f}" '
-            f'width="{label_width:.2f}" height="{label_height:.2f}" rx="{4 * scale:.2f}" '
-            f'fill="{fill}" stroke="{stroke}" stroke-width="{0.9 * scale:.2f}" />'
-            + text_element(
-                x,
-                y,
-                wrap_label(name, width=23, max_lines=3),
-                size=3.25 * scale,
-                weight=750,
-            )
-            + "</g>"
-        )
-        parts.extend(
-            draw_level_2_labels(
+            draw_sector_card(
                 branch,
                 cx=cx,
                 cy=cy,
-                angle_start=angle_start,
-                angle_end=angle_end,
-                lane_radii=lane_radii,
+                angle=angle,
+                radius_x=card_radius_x,
+                radius_y=card_radius_y,
+                fill=fill,
                 accent=stroke,
                 scale=scale,
+                mode=mode,
             )
         )
 
     legend_y = height - 13 * scale
     legend = (
-        "Legend: center = Level 0 field · inner ring labels = Level 1 areas · "
-        "outer labels = Level 2 concepts · draft radial atlas prototype, not final public poster"
+        "Legend: center = Level 0 field · sector cards = Level 1 areas"
+        + (" with Level 2 mini-lists" if mode == "detailed" else "")
+        + " · draft radial atlas prototype, not final public poster"
     )
     parts.append(
         f'<text x="{margin:.2f}" y="{legend_y:.2f}" font-size="{2.8 * scale:.2f}" fill="#444444">{esc(legend)}</text>'
@@ -343,6 +366,12 @@ def parse_args() -> argparse.Namespace:
         default="A1_LANDSCAPE",
         help="Printable target size. Default: A1_LANDSCAPE.",
     )
+    parser.add_argument(
+        "--mode",
+        choices=("overview", "detailed"),
+        default="detailed",
+        help="Content density. Default: detailed.",
+    )
     return parser.parse_args()
 
 
@@ -351,7 +380,7 @@ def main() -> int:
     input_path = args.input if args.input.is_absolute() else ROOT / args.input
     output_path = args.output if args.output.is_absolute() else ROOT / args.output
     data = load_taxonomy(input_path)
-    svg = generate_svg(data, size_name=args.size)
+    svg = generate_svg(data, size_name=args.size, mode=args.mode)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(svg, encoding="utf-8")
     try:

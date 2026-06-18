@@ -36,7 +36,15 @@ The default A1 landscape output is:
 build/print/ai-atlas-l1-l2-radial-atlas.svg
 ```
 
+Detailed mode is the default and includes all Level 1 and Level 2 concepts.
+Overview mode shows the center and all Level 1 areas without Level 2 lists:
+
+```bash
+python3 scripts/generate_radial_poster.py --mode overview \
+  --output build/print/ai-atlas-radial-overview.svg
+```
+
 The radial generator also supports A0 landscape and a large square format; run
-it with `--help` for input, output, and size options. This output is a draft
-visual-direction prototype, not a final public poster, and remains uncommitted
-under `build/`.
+it with `--help` for input, output, mode, and size options. These outputs are
+draft visual-direction prototypes, not final public posters, and remain
+uncommitted under `build/`.
