@@ -25,6 +25,7 @@ Supporting taxonomy documentation:
 - `taxonomy/ai-taxonomy-principles.md`
 - `taxonomy/concept-types.md`
 - `taxonomy/visual-grammar.md`
+- `taxonomy/level-3-draft-policy.md`
 
 Generated public views:
 
@@ -58,6 +59,8 @@ Early Level 3 material should be treated as draft/review work until it is explic
 4. validated,
 5. promoted into the public canonical taxonomy.
 
+See: `taxonomy/level-3-draft-policy.md`.
+
 Level 3 should prefer stable, academically recognizable, technically useful concepts.
 
 Level 3 should not include specific products, company names, temporary marketing labels, or concrete model versions unless AI Atlas explicitly decides to include such concrete examples at a deeper level later.
@@ -82,5 +85,6 @@ The following decisions are still open before canonical Level 3 promotion:
 
 - The public taxonomy currently remains Level 1 and Level 2 only.
 - Level 3 is explicitly draft/review work until promoted.
+- Public Level 3 draft policy lives at `taxonomy/level-3-draft-policy.md`.
 - Obsidian hierarchy terminology uses `Level 2 — Main Subarea`.
 - Concept type `Subfield` remains valid as a concept type, separate from hierarchy level name.
