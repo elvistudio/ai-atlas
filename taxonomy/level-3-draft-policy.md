@@ -116,6 +116,20 @@ Future graph relations may include:
 - `applies-to`
 - `implemented-by`
 
+## Generated views policy
+
+Canonical public generated views should remain aligned with the current canonical taxonomy scope.
+
+Until Level 3 is promoted:
+
+- public Markmap, Mermaid, and Obsidian views should remain Level 1–Level 2 only,
+- draft Level 3 views, if generated, should live separately from canonical public views,
+- draft Level 3 views must be clearly marked as draft,
+- Obsidian draft Level 3 notes should not be mixed into the canonical Obsidian vault unless promotion is approved,
+- README and project notes should make clear which views are canonical and which are draft.
+
+After Level 3 promotion, generated views may include Level 3 only if they can represent the deeper hierarchy without confusing the stable Level 1–Level 2 structure.
+
 ## Stability rule
 
 Level 3 should prefer stable technical names.
