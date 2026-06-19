@@ -12,6 +12,8 @@ v0.1 — Clean hierarchy draft, Level 1 and Level 2 only.
 
 Level 3 work has not been promoted to the public canonical taxonomy yet. Early Level 3 material should be treated as draft/review work until it is explicitly reviewed, cleaned, and promoted.
 
+See also: [Level 3 draft policy](taxonomy/level-3-draft-policy.md).
+
 ## What this is
 
 AI Atlas is an open AI taxonomy project.
