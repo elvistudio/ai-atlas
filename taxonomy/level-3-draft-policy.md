@@ -1,0 +1,130 @@
+# Level 3 Draft Policy
+
+This policy defines how AI Atlas should treat early Level 3 taxonomy work.
+
+Level 3 is not yet part of the public canonical taxonomy. Until explicitly reviewed and promoted, Level 3 material is draft/review work.
+
+## Current status
+
+Current public canonical taxonomy scope:
+
+- Level 0 — Field
+- Level 1 — Major Area
+- Level 2 — Main Subarea
+
+Current canonical source files:
+
+- `taxonomy/ai-taxonomy-l1-l2.json`
+- `taxonomy/ai-taxonomy-l1-l2.md`
+
+Level 3 work must not destabilize Level 1 or Level 2.
+
+## Purpose of Level 3
+
+Level 3 should add deeper technical concepts under existing Level 2 nodes.
+
+Good Level 3 candidates are usually stable, reusable concepts such as:
+
+- methods,
+- architectures,
+- model families,
+- system patterns,
+- broad techniques when they are important enough to sit directly below a Level 2 area.
+
+Level 3 should help readers understand how AI research areas, methods, architectures, and system patterns fit together.
+
+It should not turn AI Atlas into a list of products, companies, temporary labels, or concrete model versions.
+
+## Allowed Level 3 concept types
+
+Allowed by default:
+
+- Method
+- Architecture
+- Model Family
+- System Pattern
+- Technique, when broad and stable enough
+- Component, when it is a major reusable system component
+- Evaluation Concept, when placed under an evaluation-related parent
+- Safety Concept, when placed under a safety/alignment parent
+
+Allowed with caution:
+
+- Application Area, only if it is genuinely a technical subarea below an existing Level 2 parent
+- Future Concept, only inside future-facing branches and clearly marked
+
+Not allowed at Level 3 by default:
+
+- Product
+- Company
+- Concrete Model
+- Concrete Model Version
+- Temporary Marketing Label
+- Vendor-Specific Feature
+
+## Product and model-version rule
+
+Do not add specific products, company names, commercial systems, or concrete model versions to Level 3.
+
+They may be considered later at deeper levels only if AI Atlas explicitly decides to include concrete systems, products, or examples.
+
+## Promotion criteria
+
+A Level 3 candidate may be promoted only if:
+
+- its name is stable and academically or technically recognizable,
+- it is not a product, company, or concrete model version,
+- it has a clear primary parent,
+- its concept type is explicit,
+- its short description is understandable,
+- it does not duplicate an existing concept,
+- known overlaps are documented,
+- cross-links are proposed where needed,
+- it can be represented without confusing the Level 1 and Level 2 structure.
+
+## Rejection or deferral criteria
+
+A candidate should be rejected or deferred if:
+
+- it is mostly a product, company, vendor label, or product feature,
+- it is a concrete model version,
+- it is a temporary hype term,
+- it belongs better at Level 4 or Level 5,
+- it duplicates an existing concept,
+- it has no stable parent,
+- it would force a misleading hierarchy,
+- it needs cross-link support before a primary parent can be chosen.
+
+## Cross-link policy
+
+Some Level 3 concepts naturally touch multiple branches.
+
+For draft Level 3 work:
+
+1. Choose one primary parent when possible.
+2. Record alternative possible parents.
+3. Record related concepts.
+4. Do not duplicate the same concept under multiple parents unless explicitly justified.
+5. If placement is unclear, keep the concept in draft review instead of forcing it into the tree.
+
+Future graph relations may include:
+
+- `related-to`
+- `uses`
+- `part-of`
+- `evaluates`
+- `applies-to`
+- `implemented-by`
+
+## Stability rule
+
+Level 3 should prefer stable technical names.
+
+Use `emerging` only when the concept is important but still settling.
+Use `speculative` only inside future-facing branches or when the concept is explicitly not mature.
+
+## Level 1 and Level 2 stability rule
+
+Level 3 work must not casually rewrite Level 1 or Level 2.
+
+If Level 3 work reveals a Level 1 or Level 2 issue, record it as a finding. Do not fix it inside a Level 3 draft unless the task explicitly includes Level 1/Level 2 cleanup and passes the appropriate review process.
