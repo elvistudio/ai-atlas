@@ -67,6 +67,14 @@ Level 3 should prefer stable, academically recognizable, technically useful conc
 
 Level 3 should not include specific products, company names, temporary marketing labels, or concrete model versions unless AI Atlas explicitly decides to include such concrete examples at a deeper level later.
 
+## Validation policy status
+
+Current canonical validation should remain focused on the public Level 0–Level 2 taxonomy until Level 3 is promoted.
+
+Draft Level 3 validation may be added separately. Draft validation should distinguish draft files from canonical files and should not make the current public taxonomy appear invalid merely because draft files are incomplete.
+
+A future Level 3 validator should check parent-child consistency, duplicate names, required fields, valid hierarchy levels, valid concept types, stable parent references, product/model-version exclusions, and overlap or cross-link notes for high-risk concepts.
+
 ## Public/private separation
 
 The public repository contains public outputs only.
@@ -78,7 +86,6 @@ Internal workflows, reusable review agents, raw draft notes, private links, and 
 The following decisions are still open before canonical Level 3 promotion:
 
 - where the first public Level 3 draft should live,
-- how validation should distinguish canonical taxonomy files from draft files,
 - how cross-links should be represented beyond parent-child hierarchy,
 - when Level 3 is mature enough to become part of the public canonical taxonomy.
 
@@ -88,5 +95,6 @@ The following decisions are still open before canonical Level 3 promotion:
 - Level 3 is explicitly draft/review work until promoted.
 - Public Level 3 draft policy lives at `taxonomy/level-3-draft-policy.md`.
 - Canonical public generated views remain Level 1–Level 2 only until Level 3 is promoted; draft Level 3 views must be separate and clearly marked.
+- Draft Level 3 validation should be separate from canonical validation until Level 3 is promoted.
 - Obsidian hierarchy terminology uses `Level 2 — Main Subarea`.
 - Concept type `Subfield` remains valid as a concept type, separate from hierarchy level name.
