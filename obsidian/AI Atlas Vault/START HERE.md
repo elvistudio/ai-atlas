@@ -8,7 +8,7 @@ This vault contains the clean AI hierarchy at:
 
 - Level 0 — Field
 - Level 1 — Major Area
-- Level 2 — Subfield
+- Level 2 — Main Subarea
 
 This vault intentionally does **not** include Level 3 yet.
 
