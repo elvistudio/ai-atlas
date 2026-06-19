@@ -10,6 +10,8 @@ To build an open, community-reviewed map of modern AI that helps people understa
 
 v0.1 — Clean hierarchy draft, Level 1 and Level 2 only.
 
+Level 3 work has not been promoted to the public canonical taxonomy yet. Early Level 3 material should be treated as draft/review work until it is explicitly reviewed, cleaned, and promoted.
+
 ## What this is
 
 AI Atlas is an open AI taxonomy project.
