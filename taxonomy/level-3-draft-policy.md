@@ -4,6 +4,17 @@ This policy defines how AI Atlas should treat early Level 3 taxonomy work.
 
 Level 3 is not yet part of the public canonical taxonomy. Until explicitly reviewed and promoted, Level 3 material is draft/review work.
 
+## Related architecture policies
+
+Level 3 draft work should follow these public architecture documents:
+
+- `taxonomy/architecture.md` — overall taxonomy architecture.
+- `taxonomy/relations.md` — relation model and primary-parent / cross-link policy.
+- `taxonomy/node-schema.md` — node fields, stable IDs, and validation-facing expectations.
+- `taxonomy/naming-and-aliases.md` — canonical names, aliases, and naming exclusions.
+- `taxonomy/status-and-lifecycle.md` — status lifecycle, stability, promotion, rejection, and deprecation.
+- `taxonomy/concept-types.md` — concept type definitions and governance.
+
 ## Current status
 
 Current public canonical taxonomy scope:
@@ -107,14 +118,7 @@ For draft Level 3 work:
 4. Do not duplicate the same concept under multiple parents unless explicitly justified.
 5. If placement is unclear, keep the concept in draft review instead of forcing it into the tree.
 
-Future graph relations may include:
-
-- `related-to`
-- `uses`
-- `part-of`
-- `evaluates`
-- `applies-to`
-- `implemented-by`
+Use `taxonomy/relations.md` for the full relation model.
 
 ## Generated views policy
 
@@ -140,6 +144,8 @@ Until Level 3 is promoted:
 - draft Level 3 files should not break canonical validation unless the validator is explicitly configured to validate drafts,
 - draft Level 3 validation may run separately from canonical validation,
 - draft validation errors should not imply that the public canonical taxonomy is invalid.
+
+Use `taxonomy/node-schema.md` for general node schema and validation-facing expectations.
 
 A future Level 3 validator should check at least:
 
