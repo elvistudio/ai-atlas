@@ -130,6 +130,43 @@ Until Level 3 is promoted:
 
 After Level 3 promotion, generated views may include Level 3 only if they can represent the deeper hierarchy without confusing the stable Level 1–Level 2 structure.
 
+## Validation expectations
+
+Validators should distinguish canonical taxonomy files from draft taxonomy files.
+
+Until Level 3 is promoted:
+
+- canonical validation should continue to validate the current Level 0–Level 2 taxonomy,
+- draft Level 3 files should not break canonical validation unless the validator is explicitly configured to validate drafts,
+- draft Level 3 validation may run separately from canonical validation,
+- draft validation errors should not imply that the public canonical taxonomy is invalid.
+
+A future Level 3 validator should check at least:
+
+- parent-child consistency,
+- duplicate concept names within the same validation scope,
+- required fields for each node,
+- valid hierarchy level values,
+- valid hierarchy level names,
+- valid concept types,
+- stable parent references,
+- no product/company/concrete-model/version nodes at Level 3,
+- documented overlap or cross-link notes for high-risk concepts.
+
+Recommended required fields for a Level 3 draft node:
+
+- `name`
+- `hierarchy_level`
+- `hierarchy_level_name`
+- `concept_type`
+- `parent`
+- `children`
+- `stability`
+- `description`
+- `overlap_notes` or equivalent review notes when cross-branch risk exists
+
+Canonical Level 3 promotion should wait until validation can check Level 3 structure without weakening or confusing existing Level 1–Level 2 validation.
+
 ## Stability rule
 
 Level 3 should prefer stable technical names.
