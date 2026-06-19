@@ -13,6 +13,7 @@ Some AI concepts are fields.
 Some are major areas.
 Some are subfields.
 Some are paradigms.
+Some are tasks or problem types.
 Some are methods.
 Some are architectures.
 Some are model families.
@@ -128,6 +129,31 @@ Typical hierarchy use:
 - Level 1: normally not used unless it is large enough to function as a major area.
 - Level 2: allowed.
 - Future Level 3: allowed when it is a more specific paradigm inside a Level 2 area.
+
+### Task
+
+A problem type or objective that AI systems are trained, evaluated, or used to perform.
+
+Examples:
+
+- Classification
+- Regression
+- Object Detection
+- Machine Translation
+- Speech Recognition
+
+Typical hierarchy use:
+
+- Level 1: not allowed by default.
+- Level 2: allowed only when the task is broad enough to serve as a main subarea.
+- Future Level 3: allowed when the task is a stable and recognizable problem type below a Level 2 parent.
+
+A task is not the same as a method. A task describes what problem is being solved. A method describes how it is solved.
+
+For example:
+
+- `Classification` is a task.
+- `Logistic Regression`, `Decision Trees`, or `Neural Networks` may be methods or model families used for classification.
 
 ### Method
 
@@ -335,6 +361,18 @@ Example:
 
 - `Transformers` should not be Level 1.
 
+### Task confused with method
+
+Bad pattern:
+
+- treating a problem type as if it were the method used to solve it.
+
+Examples:
+
+- `Classification` is a task, not a method.
+- `Regression` is a task, not a method.
+- `Object Detection` is a task, while specific detector families or architectures are methods, model families, or architectures.
+
 ### Application mixed with architecture
 
 Bad pattern:
@@ -372,7 +410,7 @@ A concrete model version may be useful as an example at a later level only if co
 Before assigning or changing a concept type, ask:
 
 - What kind of thing is this concept?
-- Is it a field, area, subfield, paradigm, method, architecture, model family, technique, component, system pattern, application area, safety concept, evaluation concept, governance concept, or future concept?
+- Is it a field, area, subfield, paradigm, task, method, architecture, model family, technique, component, system pattern, application area, safety concept, evaluation concept, governance concept, or future concept?
 - Is its hierarchy level justified independently of its concept type?
 - Is it too specific for Level 1 or Level 2?
 - Is it a product, company, model version, or temporary marketing label?
