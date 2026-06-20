@@ -26,7 +26,7 @@ Do not present this release as a complete AI taxonomy, canonical Level 3 release
 | Canonical source files are clear | Pass | Public docs identify `taxonomy/ai-taxonomy-l1-l2.json` and `taxonomy/ai-taxonomy-l1-l2.md` as canonical source files. |
 | Public/private separation is preserved | Pass | Public docs say the public repo contains public outputs only and private workflows/prompts/reviews stay outside. |
 | Level 3 boundaries are explicit | Pass | Level 3 is consistently described as draft/review work until reviewed and promoted. |
-| Public review request is focused | Pass with caution | README review questions focus on Level 1 and Level 2. Launch copy should repeat the same boundary. |
+| Public review request is focused | Pass | `PUBLIC_REVIEW.md` now gives reviewers a focused Level 1–Level 2 scope and feedback format. |
 | Generated views are release-safe | Pass with caution | Public policy says generated views must stay aligned with Level 1–Level 2. Draft/prototype visual work should not be framed as final product. |
 | Open issues are classified correctly | Pass with caution | Current open issues mostly concern Level 3, IDs, relations, schema, generated-view automation, or future website/search; these are next-phase work, not v0.1 blockers. |
 | Release language avoids overclaiming | Pass if launch copy follows the suggested wording | The repository wording is conservative; social posts and public announcements must remain conservative too. |
@@ -36,12 +36,18 @@ Do not present this release as a complete AI taxonomy, canonical Level 3 release
 
 None found in the current public documentation scope.
 
+## Completed during public-preview preparation
+
+1. Added `docs/public-preview-readiness.md`.
+2. Added `docs/public-preview-readiness-review.md`.
+3. Added `PUBLIC_REVIEW.md`.
+4. Linked the public review guide from `README.md`.
+
 ## Should fix before or shortly after public preview
 
-1. Add a short `PUBLIC_REVIEW.md` file or GitHub issue template that tells reviewers exactly what feedback is wanted for v0.1.
-2. Add a public release note or GitHub release draft for `v0.1-public-preview`.
-3. Make sure any public visual/poster prototype is labelled as a prototype unless it has passed design/export review.
-4. Keep draft PRs out of the public release narrative unless they are merged and intentionally included.
+1. Add a public release note or GitHub release draft for `v0.1-public-preview`.
+2. Make sure any public visual/poster prototype is labelled as a prototype unless it has passed design/export review.
+3. Keep draft PRs out of the public release narrative unless they are merged and intentionally included.
 
 ## Can wait
 
@@ -61,6 +67,7 @@ The following items should not block the first public preview:
 Public documentation reviewed:
 
 - `README.md`
+- `PUBLIC_REVIEW.md`
 - `docs/project-notes.md`
 - `taxonomy/README.md`
 - `taxonomy/level-3-draft-policy.md`
@@ -104,4 +111,4 @@ The AI Atlas poster product is launched.
 
 ## Recommended next step
 
-Create `PUBLIC_REVIEW.md` with a short reviewer guide and focused review questions. This will make the public preview easier to understand and reduce unfocused feedback about unfinished Level 3 work.
+Create a public release note or GitHub release draft for `v0.1-public-preview`.
