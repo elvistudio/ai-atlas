@@ -14,6 +14,10 @@ Level 3 work has not been promoted to the public canonical taxonomy yet. Early L
 
 See also: [Level 3 draft policy](taxonomy/level-3-draft-policy.md).
 
+## Public preview readiness
+
+AI Atlas v0.1 may be shown publicly as a public preview of the Level 1 and Level 2 taxonomy when the release framing, scope boundaries, generated views, and review request satisfy the [public preview readiness criteria](docs/public-preview-readiness.md).
+
 ## What this is
 
 AI Atlas is an open AI taxonomy project.
