@@ -1,0 +1,246 @@
+# Public L1/L2 Stable ID Storage Design
+
+Status: draft policy / under review / not canonical
+
+Source issue: [#22 — Formalize canonical taxonomy JSON](https://github.com/elvistudio/ai-atlas/issues/22)
+
+Related issues:
+
+- [#15 — Define stable ID convention for taxonomy nodes](https://github.com/elvistudio/ai-atlas/issues/15)
+- [#16 — Define relation target typing for structured taxonomy nodes](https://github.com/elvistudio/ai-atlas/issues/16)
+- [#18 — Normalize structured draft schema for Level 3 nodes](https://github.com/elvistudio/ai-atlas/issues/18)
+
+## Purpose
+
+Define where stable IDs for public canonical Level 1 and Level 2 concepts should live before broad typed-relation migration or Level 3 promotion.
+
+This draft does not assign IDs, modify canonical taxonomy files, update generated views, or authorize Level 3 promotion.
+
+## Problem
+
+The Surface Realization private pilot showed that relation targets need stable IDs for graph-readiness, but public canonical L1/L2 concepts currently have canonical names without approved stable IDs.
+
+The project therefore needs a storage decision before it can safely:
+
+- assign stable IDs to public L1/L2 concepts;
+- migrate private relation targets to typed relation objects;
+- validate canonical relation targets;
+- build a reliable relations graph;
+- promote any Level 3 draft to canonical status.
+
+## Requirements
+
+The chosen storage model should:
+
+- preserve the canonical taxonomy tree as the source of truth;
+- keep IDs stable when hierarchy placement, hierarchy depth, or concept type changes;
+- avoid mixing concept identity with parent placement;
+- be easy to validate automatically;
+- support readable diffs and expert review;
+- support generated Markdown, Markmap, Mermaid, Obsidian, and future website/search views;
+- support aliases, former names, provisional private IDs, deprecation, and successor mappings;
+- avoid broad repository churn during the first ID assignment.
+
+## Options considered
+
+### Option A — Store stable IDs directly in `taxonomy/ai-taxonomy-l1-l2.json`
+
+Add stable ID and identity metadata directly to each canonical L1/L2 node.
+
+Possible fields:
+
+```json
+{
+  "id": "ai:natural-language-processing",
+  "name": "Natural Language Processing",
+  "aliases": [],
+  "former_ids": [],
+  "provisional_ids": []
+}
+```
+
+Advantages:
+
+- canonical identity travels with the canonical node;
+- easiest for validators and generated views;
+- fewer files to synchronize;
+- relation targets can resolve directly against canonical JSON;
+- simplest long-term model for public machine-readable taxonomy.
+
+Disadvantages:
+
+- modifies the canonical taxonomy JSON;
+- creates a large first assignment diff;
+- requires careful review to avoid accidental taxonomy meaning changes;
+- future identity metadata could make the canonical file heavier.
+
+### Option B — Store stable IDs in a sidecar registry
+
+Create a separate file, for example:
+
+```text
+taxonomy/stable-ids.json
+```
+
+The registry maps canonical names or paths to stable IDs and identity metadata.
+
+Possible shape:
+
+```json
+{
+  "nodes": [
+    {
+      "id": "ai:natural-language-processing",
+      "canonical_name": "Natural Language Processing",
+      "canonical_path": [
+        "Natural Language and Speech",
+        "Natural Language Processing"
+      ],
+      "aliases": [],
+      "former_ids": [],
+      "provisional_ids": []
+    }
+  ]
+}
+```
+
+Advantages:
+
+- avoids immediate edits to canonical taxonomy JSON;
+- keeps identity metadata isolated and reviewable;
+- can be introduced as an experimental bridge;
+- can map private provisional IDs without changing taxonomy data.
+
+Disadvantages:
+
+- creates a second source that must be synchronized;
+- validators must check cross-file consistency;
+- canonical names and paths can drift from the registry;
+- generated views must merge data from multiple files;
+- harder for contributors to know where the canonical identity lives.
+
+### Option C — Generate stable IDs as metadata only
+
+Do not store stable IDs manually. Generate them from canonical names and paths during build or validation.
+
+Advantages:
+
+- no immediate canonical JSON changes;
+- low maintenance if names never change;
+- easy to prototype.
+
+Disadvantages:
+
+- generated IDs are not truly stable across renames;
+- deprecation and successor mappings become difficult;
+- aliases and provisional private IDs have no authoritative home;
+- relation targets cannot safely reference generated IDs unless generation rules become canonical;
+- weak fit for long-term graph and API use.
+
+## Recommended draft direction
+
+Use **Option A: store stable IDs directly in `taxonomy/ai-taxonomy-l1-l2.json`**, but only after a separate explicit ID-assignment PR.
+
+Reasoning:
+
+- AI Atlas treats canonical taxonomy files as the source of truth.
+- Stable identity is core taxonomy metadata, not merely generated output.
+- Relation target validation should resolve against canonical taxonomy data directly.
+- Generated views, graph exports, and future search should not need to infer or merge identity from an unstable sidecar.
+- Sidecar registries are useful for transition planning, but they should not become the long-term source of canonical identity.
+
+## Transitional model
+
+Before modifying canonical JSON, a temporary review artifact may be used to plan assignments.
+
+Recommended temporary file, if needed:
+
+```text
+taxonomy/policies/public-l1-l2-stable-id-assignment-draft.md
+```
+
+This file may list proposed IDs for review, but it must remain a policy draft and not a source of canonical IDs.
+
+Avoid creating a long-lived `taxonomy/stable-ids.json` unless reviewers explicitly choose the sidecar model.
+
+## First assignment PR rules
+
+A future L1/L2 stable ID assignment PR should:
+
+- modify only `taxonomy/ai-taxonomy-l1-l2.json` and any directly derived views if explicitly authorized;
+- add IDs without changing canonical names, hierarchy, ordering, concept type, or taxonomy meaning;
+- include a machine validation check for ID uniqueness;
+- include a review note mapping known private provisional IDs to proposed canonical IDs;
+- not migrate private Level 3 JSON relations in the same PR;
+- not promote any Level 3 draft;
+- not close #15 or #16 automatically.
+
+## Proposed minimal canonical fields
+
+For L1/L2 nodes, start with the smallest stable identity surface:
+
+```json
+{
+  "id": "ai:natural-language-processing",
+  "name": "Natural Language Processing"
+}
+```
+
+Additional identity metadata should be added only when needed:
+
+```json
+{
+  "aliases": [],
+  "former_ids": [],
+  "provisional_ids": []
+}
+```
+
+Do not add empty metadata arrays everywhere unless validators or generated views require uniform fields.
+
+## Validator implications
+
+After public L1/L2 IDs are assigned, validators should eventually:
+
+- require unique IDs across canonical taxonomy nodes;
+- reject duplicate IDs;
+- reject malformed IDs;
+- verify that typed relation targets with `target_status: "canonical"` resolve to canonical IDs;
+- warn on `canonical_pending_id` targets that can now be upgraded to `canonical`;
+- verify that Markdown and generated views remain synchronized with canonical JSON.
+
+## Impact on current issues
+
+### #22
+
+This issue should decide the storage model. The recommended direction is direct storage in canonical JSON after explicit review.
+
+### #15
+
+Stable ID convention can proceed using `ai:<slug>` as the preferred draft format, but actual IDs should not be considered approved until the L1/L2 assignment PR is reviewed.
+
+### #16
+
+`canonical_pending_id` remains valid until public canonical IDs are assigned. After assignment, relation targets should migrate toward `target_status: "canonical"` with `target_id`.
+
+### #18
+
+Structured draft schema can continue using provisional private IDs until public IDs and relation target rules are stable enough for migration.
+
+## Open questions
+
+- Should empty `aliases`, `former_ids`, or `provisional_ids` fields be required on every canonical node, or only when non-empty?
+- Should canonical Markdown views display IDs, hide them, or include them in comments/metadata blocks?
+- Should generated Markmap, Mermaid, and Obsidian outputs include stable IDs?
+- Should private provisional ID mappings live in canonical JSON, a migration note, or private review files?
+- Should the first ID assignment PR cover all public L1/L2 nodes or only the L1/L2 nodes referenced by current private pilots?
+
+## Current recommendation
+
+Proceed in this order:
+
+1. Review and approve or revise this storage recommendation.
+2. Prepare a separate L1/L2 stable ID assignment PR.
+3. Update #15 and #16 based on the accepted storage model.
+4. Update the private Surface Realization pilot to use the accepted relation target status pattern.
+5. Continue private structured schema normalization only after the ID and relation-target path is coherent.
