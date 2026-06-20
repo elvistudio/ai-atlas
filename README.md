@@ -18,6 +18,10 @@ See also: [Level 3 draft policy](taxonomy/level-3-draft-policy.md).
 
 AI Atlas v0.1 is open for focused review of the Level 1 and Level 2 taxonomy. See the [public review guide](PUBLIC_REVIEW.md) for review scope, questions, and feedback format.
 
+## Public preview release
+
+See the [AI Atlas v0.1 public preview release notes](docs/releases/v0.1-public-preview.md) for release scope, public announcement wording, and next steps.
+
 ## Public preview readiness
 
 AI Atlas v0.1 may be shown publicly as a public preview of the Level 1 and Level 2 taxonomy when the release framing, scope boundaries, generated views, and review request satisfy the [public preview readiness criteria](docs/public-preview-readiness.md).
