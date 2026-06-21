@@ -4,7 +4,7 @@ AI Atlas is an open taxonomy and knowledge-map project created by Alyaksandr Stz
 
 ## Open taxonomy
 
-The open taxonomy, Markdown documentation, JSON data, Obsidian notes, Markmap exports, Mermaid exports, and related educational content are licensed under CC BY-SA 4.0 unless stated otherwise.
+The open taxonomy, Markdown documentation, JSON data, Obsidian notes, Markmap exports, and related educational content are licensed under CC BY-SA 4.0 unless stated otherwise.
 
 ## Code
 

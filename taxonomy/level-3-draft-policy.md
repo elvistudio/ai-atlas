@@ -126,7 +126,7 @@ Canonical public generated views should remain aligned with the current canonica
 
 Until Level 3 is promoted:
 
-- public Markmap, Mermaid, and Obsidian views should remain Level 1–Level 2 only,
+- public Markmap and Obsidian views should remain Level 1–Level 2 only,
 - draft Level 3 views, if generated, should live separately from canonical public views,
 - draft Level 3 views must be clearly marked as draft,
 - Obsidian draft Level 3 notes should not be mixed into the canonical Obsidian vault unless promotion is approved,

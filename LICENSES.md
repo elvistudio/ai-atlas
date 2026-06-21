@@ -6,7 +6,7 @@ AI Atlas public content is licensed under Creative Commons Attribution-ShareAlik
 
 | Material | License |
 |---|---|
-| Taxonomy content, Markdown, JSON, Obsidian notes, Markmap exports, Mermaid exports, and public documentation | CC BY-SA 4.0 |
+| Taxonomy content, Markdown, JSON, Obsidian notes, Markmap exports, and public documentation | CC BY-SA 4.0 |
 | AI Atlas name, logo, brand assets, official paid print/PDF designs | Not automatically licensed for commercial reuse unless explicitly stated |
 
 ## Content license

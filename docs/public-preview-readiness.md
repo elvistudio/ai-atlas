@@ -104,7 +104,7 @@ Public generated views should not contradict the canonical taxonomy scope.
 
 Acceptance criteria:
 
-- Markmap, Mermaid, Obsidian, and poster/prototype views are either aligned with Level 1–Level 2 or clearly marked as draft/prototype.
+- Markmap, Obsidian, and poster/prototype views are either aligned with Level 1–Level 2 or clearly marked as draft/prototype.
 - No generated public view presents draft Level 3 as canonical.
 - Any visual metaphor is described as a visual aid, not as a dependency graph, learning path, or historical sequence unless explicitly designed as such.
 

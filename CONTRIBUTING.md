@@ -25,7 +25,7 @@ Good contributions:
 By contributing to this repository, you agree that your contributions will be licensed under the applicable AI Atlas project licenses:
 
 - code contributions under the MIT License,
-- taxonomy, documentation, Markdown, JSON, Obsidian, Markmap, Mermaid, and other content contributions under CC BY-SA 4.0.
+- taxonomy, documentation, Markdown, JSON, Obsidian, Markmap, and other content contributions under CC BY-SA 4.0.
 
 See:
 

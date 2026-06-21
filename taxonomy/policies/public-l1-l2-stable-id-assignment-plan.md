@@ -46,7 +46,7 @@ taxonomy/policies/public-l1-l2-stable-id-assignment-review.md
 Do not modify:
 
 - `taxonomy/ai-taxonomy-l1-l2.md` unless generated-view synchronization is explicitly included;
-- generated Markmap, Mermaid, Obsidian, or other view files;
+- generated Markmap, Obsidian, or other view files;
 - Level 3 drafts;
 - private repository files;
 - relation targets;

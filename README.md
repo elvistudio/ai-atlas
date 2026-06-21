@@ -46,7 +46,6 @@ For now, the canonical source is the Level 1 and Level 2 taxonomy in `taxonomy/`
 
 - [Taxonomy](taxonomy/)
 - [Markmap view](markmap/)
-- [Mermaid view](mermaid/)
 - [Obsidian vault](obsidian/)
 
 ## Licensing

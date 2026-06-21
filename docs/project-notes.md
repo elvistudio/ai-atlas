@@ -30,7 +30,6 @@ Supporting taxonomy documentation:
 Generated public views:
 
 - `markmap/`
-- `mermaid/`
 - `obsidian/`
 
 These public generated views should remain aligned with the current canonical taxonomy scope. Until Level 3 is promoted, canonical public generated views should remain Level 1–Level 2 only. Draft Level 3 views, if generated, should live separately and be clearly marked as draft.
