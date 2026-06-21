@@ -155,6 +155,34 @@ External references should use `target_status: "external_reference"`, retain a r
 
 Whether external URIs require a dedicated field remains an open question.
 
+## Review-derived migration guidance
+
+A private relation-target status review found:
+
+- 17 remaining plain relation targets in the private LLM branch package/context file;
+- 5 existing typed provisional relations needing follow-up;
+- 14 exact public L1/L2 name matches;
+- 2 future Language Model Adaptation references;
+- 1 ambiguous Evaluation reference.
+
+Until public L1/L2 ID acceptance and validator behavior are finalized, exact public L1/L2 name matches should use `canonical_pending_id` during private migration planning, not `canonical`.
+
+Use `canonical` only when:
+
+- the public target ID is accepted;
+- the ID is resolvable by validation;
+- validator behavior for canonical targets is implemented or explicitly approved.
+
+The accepted spelling is `private_draft`, not `private-draft`.
+
+Use `future_candidate` for future branches or candidates that are not yet drafted or canonical, including Language Model Adaptation if it remains a future branch.
+
+Use `unresolved` when equivalence is unclear.
+
+`Evaluation` must remain `unresolved` unless reviewers explicitly decide that it maps to `Evaluation, Measurement and Benchmarking`.
+
+The private LLM package/context file may be used as a first relation migration pilot only after package-vs-standalone source-of-truth handling is clear.
+
 ## Migration dependency
 
 Current public L1/L2 IDs appear to exist in canonical JSON. Before broad relation migration, validators should confirm that these IDs are unique, well-formed, and accepted as approved stable IDs.
