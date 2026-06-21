@@ -1,0 +1,2124 @@
+{
+  "elements": [
+    {
+      "id": "ai:artificial-intelligence",
+      "label": "Artificial Intelligence",
+      "hierarchy_level": 0,
+      "hierarchy_level_name": "Field",
+      "concept_type": "Field",
+      "stability": "stable",
+      "parent": null,
+      "description": "The broad field of creating systems that can perceive, learn, reason, plan, communicate, generate, decide, or act in ways associated with intelligence."
+    },
+    {
+      "id": "ai:symbolic-ai",
+      "label": "Symbolic AI",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "AI based on explicit symbols, rules, logic, and structured knowledge."
+    },
+    {
+      "id": "ai:machine-learning",
+      "label": "Machine Learning",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "AI systems that learn patterns from data rather than relying only on hand-written rules."
+    },
+    {
+      "id": "ai:search-planning-and-optimization",
+      "label": "Search, Planning and Optimization",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "Methods for finding good actions, paths, plans, or solutions across possible states."
+    },
+    {
+      "id": "ai:knowledge-and-reasoning",
+      "label": "Knowledge and Reasoning",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "Methods for representing facts, uncertainty, causality, explanations, and inference."
+    },
+    {
+      "id": "ai:robotics-and-embodied-ai",
+      "label": "Robotics and Embodied AI",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "AI systems that perceive, act, and learn in physical or embodied environments."
+    },
+    {
+      "id": "ai:natural-language-and-speech",
+      "label": "Natural Language and Speech",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "AI for understanding, generating, translating, retrieving, and speaking human language."
+    },
+    {
+      "id": "ai:computer-vision-and-perception",
+      "label": "Computer Vision and Perception",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "AI for interpreting images, video, scenes, objects, and sensory information."
+    },
+    {
+      "id": "ai:generative-ai",
+      "label": "Generative AI",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Cross-Cutting Area",
+      "stability": "emerging",
+      "parent": "Artificial Intelligence",
+      "description": "AI systems and methods that generate new text, images, audio, video, code, data, or other artifacts."
+    },
+    {
+      "id": "ai:foundation-models-and-general-purpose-ai",
+      "label": "Foundation Models and General-Purpose AI",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "emerging",
+      "parent": "Artificial Intelligence",
+      "description": "Large, broadly trained models and systems that can be adapted to many downstream tasks."
+    },
+    {
+      "id": "ai:agentic-and-multi-agent-systems",
+      "label": "Agentic and Multi-Agent Systems",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Major Area",
+      "stability": "emerging",
+      "parent": "Artificial Intelligence",
+      "description": "AI systems involving autonomous agents and multiple interacting agents."
+    },
+    {
+      "id": "ai:human-ai-interaction",
+      "label": "Human-AI Interaction",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Cross-Cutting Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "Human interaction with AI systems."
+    },
+    {
+      "id": "ai:ai-safety-alignment-and-governance",
+      "label": "AI Safety, Alignment and Governance",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Cross-Cutting Area",
+      "stability": "stable",
+      "parent": "Artificial Intelligence",
+      "description": "Cross-cutting work on making AI reliable, controllable, fair, secure, and socially governed."
+    },
+    {
+      "id": "ai:agi-and-future-ai",
+      "label": "AGI and Future AI",
+      "hierarchy_level": 1,
+      "hierarchy_level_name": "Major Area",
+      "concept_type": "Future Area",
+      "stability": "speculative",
+      "parent": "Artificial Intelligence",
+      "description": "Future-facing ideas about general intelligence, self-improving systems, and long-term AI trajectories."
+    },
+    {
+      "id": "ai:rule-based-systems",
+      "label": "Rule-Based Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Symbolic AI",
+      "description": "Rule-Based Systems is a Level 2 Method within Symbolic AI."
+    },
+    {
+      "id": "ai:expert-systems",
+      "label": "Expert Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Symbolic AI",
+      "description": "Expert Systems is a Level 2 System Pattern within Symbolic AI."
+    },
+    {
+      "id": "ai:logic-programming",
+      "label": "Logic Programming",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Symbolic AI",
+      "description": "Logic Programming is a Level 2 Paradigm within Symbolic AI."
+    },
+    {
+      "id": "ai:symbolic-knowledge-representation",
+      "label": "Symbolic Knowledge Representation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Symbolic AI",
+      "description": "Symbolic Knowledge Representation is a Level 2 Subfield within Symbolic AI."
+    },
+    {
+      "id": "ai:automated-reasoning",
+      "label": "Automated Reasoning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Symbolic AI",
+      "description": "Automated Reasoning is a Level 2 Subfield within Symbolic AI."
+    },
+    {
+      "id": "ai:constraint-satisfaction",
+      "label": "Constraint Satisfaction",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Symbolic AI",
+      "description": "Constraint Satisfaction is a Level 2 Method within Symbolic AI."
+    },
+    {
+      "id": "ai:knowledge-graphs",
+      "label": "Knowledge Graphs",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Symbolic AI",
+      "description": "Knowledge Graphs is a Level 2 System Pattern within Symbolic AI."
+    },
+    {
+      "id": "ai:neuro-symbolic-ai",
+      "label": "Neuro-Symbolic AI",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Symbolic AI",
+      "description": "Neuro-Symbolic AI is a Level 2 Paradigm within Symbolic AI."
+    },
+    {
+      "id": "ai:supervised-learning",
+      "label": "Supervised Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Supervised Learning is a Level 2 Paradigm within Machine Learning."
+    },
+    {
+      "id": "ai:unsupervised-learning",
+      "label": "Unsupervised Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Unsupervised Learning is a Level 2 Paradigm within Machine Learning."
+    },
+    {
+      "id": "ai:semi-supervised-learning",
+      "label": "Semi-Supervised Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Semi-Supervised Learning is a Level 2 Paradigm within Machine Learning."
+    },
+    {
+      "id": "ai:self-supervised-learning",
+      "label": "Self-Supervised Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Self-Supervised Learning is a Level 2 Paradigm within Machine Learning."
+    },
+    {
+      "id": "ai:reinforcement-learning",
+      "label": "Reinforcement Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Reinforcement Learning is a Level 2 Paradigm within Machine Learning."
+    },
+    {
+      "id": "ai:deep-learning",
+      "label": "Deep Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Deep Learning is a Level 2 Subfield within Machine Learning."
+    },
+    {
+      "id": "ai:representation-learning",
+      "label": "Representation Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Representation Learning is a Level 2 Paradigm within Machine Learning."
+    },
+    {
+      "id": "ai:transfer-learning",
+      "label": "Transfer Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Transfer Learning is a Level 2 Method within Machine Learning."
+    },
+    {
+      "id": "ai:federated-learning",
+      "label": "Federated Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Federated Learning is a Level 2 Method within Machine Learning."
+    },
+    {
+      "id": "ai:online-learning",
+      "label": "Online Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Online Learning is a Level 2 Method within Machine Learning."
+    },
+    {
+      "id": "ai:active-learning",
+      "label": "Active Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Active Learning is a Level 2 Method within Machine Learning."
+    },
+    {
+      "id": "ai:meta-learning",
+      "label": "Meta-Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Meta-Learning is a Level 2 Method within Machine Learning."
+    },
+    {
+      "id": "ai:ensemble-learning",
+      "label": "Ensemble Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Ensemble Learning is a Level 2 Method within Machine Learning."
+    },
+    {
+      "id": "ai:continual-learning",
+      "label": "Continual Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Machine Learning",
+      "description": "Continual Learning is a Level 2 Paradigm within Machine Learning."
+    },
+    {
+      "id": "ai:data-centric-ai",
+      "label": "Data-Centric AI",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "emerging",
+      "parent": "Machine Learning",
+      "description": "Data-Centric AI is a Level 2 Paradigm within Machine Learning."
+    },
+    {
+      "id": "ai:state-space-search",
+      "label": "State-Space Search",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Search, Planning and Optimization",
+      "description": "State-Space Search is a Level 2 Method within Search, Planning and Optimization."
+    },
+    {
+      "id": "ai:heuristic-search",
+      "label": "Heuristic Search",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Search, Planning and Optimization",
+      "description": "Heuristic Search is a Level 2 Method within Search, Planning and Optimization."
+    },
+    {
+      "id": "ai:adversarial-search",
+      "label": "Adversarial Search",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Search, Planning and Optimization",
+      "description": "Adversarial Search is a Level 2 Method within Search, Planning and Optimization."
+    },
+    {
+      "id": "ai:automated-planning",
+      "label": "Automated Planning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Search, Planning and Optimization",
+      "description": "Automated Planning is a Level 2 Method within Search, Planning and Optimization."
+    },
+    {
+      "id": "ai:scheduling",
+      "label": "Scheduling",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Search, Planning and Optimization",
+      "description": "Scheduling is a Level 2 Method within Search, Planning and Optimization."
+    },
+    {
+      "id": "ai:optimization",
+      "label": "Optimization",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Search, Planning and Optimization",
+      "description": "Optimization is a Level 2 Method within Search, Planning and Optimization."
+    },
+    {
+      "id": "ai:evolutionary-computation",
+      "label": "Evolutionary Computation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Search, Planning and Optimization",
+      "description": "Evolutionary Computation is a Level 2 Method within Search, Planning and Optimization."
+    },
+    {
+      "id": "ai:monte-carlo-tree-search",
+      "label": "Monte Carlo Tree Search",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Search, Planning and Optimization",
+      "description": "Monte Carlo Tree Search is a Level 2 Method within Search, Planning and Optimization."
+    },
+    {
+      "id": "ai:commonsense-reasoning",
+      "label": "Commonsense Reasoning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Knowledge and Reasoning",
+      "description": "Commonsense Reasoning is a Level 2 Subfield within Knowledge and Reasoning."
+    },
+    {
+      "id": "ai:probabilistic-reasoning",
+      "label": "Probabilistic Reasoning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Knowledge and Reasoning",
+      "description": "Probabilistic Reasoning is a Level 2 Method within Knowledge and Reasoning."
+    },
+    {
+      "id": "ai:causal-reasoning",
+      "label": "Causal Reasoning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Knowledge and Reasoning",
+      "description": "Causal Reasoning is a Level 2 Method within Knowledge and Reasoning."
+    },
+    {
+      "id": "ai:temporal-reasoning",
+      "label": "Temporal Reasoning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Knowledge and Reasoning",
+      "description": "Temporal Reasoning is a Level 2 Method within Knowledge and Reasoning."
+    },
+    {
+      "id": "ai:spatial-reasoning",
+      "label": "Spatial Reasoning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Knowledge and Reasoning",
+      "description": "Spatial Reasoning is a Level 2 Method within Knowledge and Reasoning."
+    },
+    {
+      "id": "ai:explainable-ai",
+      "label": "Explainable AI",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Evaluation Concept",
+      "stability": "stable",
+      "parent": "Knowledge and Reasoning",
+      "description": "Explainable AI is a Level 2 Evaluation Concept within Knowledge and Reasoning."
+    },
+    {
+      "id": "ai:knowledge-representation",
+      "label": "Knowledge Representation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Knowledge and Reasoning",
+      "description": "Knowledge Representation is a Level 2 Subfield within Knowledge and Reasoning."
+    },
+    {
+      "id": "ai:ontologies",
+      "label": "Ontologies",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Knowledge and Reasoning",
+      "description": "Ontologies is a Level 2 Method within Knowledge and Reasoning."
+    },
+    {
+      "id": "ai:control-systems",
+      "label": "Control Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Control Systems is a Level 2 Subfield within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:robot-perception",
+      "label": "Robot Perception",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Robot Perception is a Level 2 Subfield within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:localization-and-mapping",
+      "label": "Localization and Mapping",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Localization and Mapping is a Level 2 Method within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:motion-planning",
+      "label": "Motion Planning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Motion Planning is a Level 2 Method within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:manipulation",
+      "label": "Manipulation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Manipulation is a Level 2 Subfield within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:autonomous-vehicles",
+      "label": "Autonomous Vehicles",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Autonomous Vehicles is a Level 2 Application Area within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:human-robot-interaction",
+      "label": "Human-Robot Interaction",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Human-Robot Interaction is a Level 2 Subfield within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:robot-learning",
+      "label": "Robot Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Robot Learning is a Level 2 Subfield within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:embodied-agents",
+      "label": "Embodied Agents",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Robotics and Embodied AI",
+      "description": "Embodied Agents is a Level 2 System Pattern within Robotics and Embodied AI."
+    },
+    {
+      "id": "ai:natural-language-processing",
+      "label": "Natural Language Processing",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Natural Language and Speech",
+      "description": "Natural Language Processing is a Level 2 Subfield within Natural Language and Speech."
+    },
+    {
+      "id": "ai:speech-recognition",
+      "label": "Speech Recognition",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Natural Language and Speech",
+      "description": "Speech Recognition is a Level 2 Application Area within Natural Language and Speech."
+    },
+    {
+      "id": "ai:speech-synthesis",
+      "label": "Speech Synthesis",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Natural Language and Speech",
+      "description": "Speech Synthesis is a Level 2 Application Area within Natural Language and Speech."
+    },
+    {
+      "id": "ai:dialogue-systems",
+      "label": "Dialogue Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Natural Language and Speech",
+      "description": "Dialogue Systems is a Level 2 System Pattern within Natural Language and Speech."
+    },
+    {
+      "id": "ai:information-retrieval",
+      "label": "Information Retrieval",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Natural Language and Speech",
+      "description": "Information Retrieval is a Level 2 Subfield within Natural Language and Speech."
+    },
+    {
+      "id": "ai:machine-translation",
+      "label": "Machine Translation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Natural Language and Speech",
+      "description": "Machine Translation is a Level 2 Application Area within Natural Language and Speech."
+    },
+    {
+      "id": "ai:natural-language-generation",
+      "label": "Natural Language Generation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Natural Language and Speech",
+      "description": "Natural Language Generation is a Level 2 Application Area within Natural Language and Speech."
+    },
+    {
+      "id": "ai:language-understanding",
+      "label": "Language Understanding",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Natural Language and Speech",
+      "description": "Language Understanding is a Level 2 Subfield within Natural Language and Speech."
+    },
+    {
+      "id": "ai:image-classification",
+      "label": "Image Classification",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Computer Vision and Perception",
+      "description": "Image Classification is a Level 2 Application Area within Computer Vision and Perception."
+    },
+    {
+      "id": "ai:object-detection",
+      "label": "Object Detection",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Computer Vision and Perception",
+      "description": "Object Detection is a Level 2 Application Area within Computer Vision and Perception."
+    },
+    {
+      "id": "ai:image-segmentation",
+      "label": "Image Segmentation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Computer Vision and Perception",
+      "description": "Image Segmentation is a Level 2 Application Area within Computer Vision and Perception."
+    },
+    {
+      "id": "ai:video-understanding",
+      "label": "Video Understanding",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Computer Vision and Perception",
+      "description": "Video Understanding is a Level 2 Application Area within Computer Vision and Perception."
+    },
+    {
+      "id": "ai:3d-vision",
+      "label": "3D Vision",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Computer Vision and Perception",
+      "description": "3D Vision is a Level 2 Subfield within Computer Vision and Perception."
+    },
+    {
+      "id": "ai:multimodal-perception",
+      "label": "Multimodal Perception",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Computer Vision and Perception",
+      "description": "Multimodal Perception is a Level 2 Subfield within Computer Vision and Perception."
+    },
+    {
+      "id": "ai:scene-understanding",
+      "label": "Scene Understanding",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Computer Vision and Perception",
+      "description": "Scene Understanding is a Level 2 Application Area within Computer Vision and Perception."
+    },
+    {
+      "id": "ai:optical-character-recognition",
+      "label": "Optical Character Recognition",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Computer Vision and Perception",
+      "description": "Optical Character Recognition is a Level 2 Application Area within Computer Vision and Perception."
+    },
+    {
+      "id": "ai:text-generation",
+      "label": "Text Generation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Generative AI",
+      "description": "Text Generation is a Level 2 Application Area within Generative AI."
+    },
+    {
+      "id": "ai:image-generation",
+      "label": "Image Generation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Generative AI",
+      "description": "Image Generation is a Level 2 Application Area within Generative AI."
+    },
+    {
+      "id": "ai:audio-generation",
+      "label": "Audio Generation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Generative AI",
+      "description": "Audio Generation is a Level 2 Application Area within Generative AI."
+    },
+    {
+      "id": "ai:video-generation",
+      "label": "Video Generation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Generative AI",
+      "description": "Video Generation is a Level 2 Application Area within Generative AI."
+    },
+    {
+      "id": "ai:code-generation",
+      "label": "Code Generation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Generative AI",
+      "description": "Code Generation is a Level 2 Application Area within Generative AI."
+    },
+    {
+      "id": "ai:3d-generation",
+      "label": "3D Generation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Generative AI",
+      "description": "3D Generation is a Level 2 Application Area within Generative AI."
+    },
+    {
+      "id": "ai:synthetic-data-generation",
+      "label": "Synthetic Data Generation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Generative AI",
+      "description": "Synthetic Data Generation is a Level 2 Application Area within Generative AI."
+    },
+    {
+      "id": "ai:generative-modeling",
+      "label": "Generative Modeling",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Generative AI",
+      "description": "Generative Modeling is a Level 2 Paradigm within Generative AI."
+    },
+    {
+      "id": "ai:large-language-models",
+      "label": "Large Language Models",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Model Family",
+      "stability": "stable",
+      "parent": "Foundation Models and General-Purpose AI",
+      "description": "Large Language Models is a Level 2 Model Family within Foundation Models and General-Purpose AI."
+    },
+    {
+      "id": "ai:vision-foundation-models",
+      "label": "Vision Foundation Models",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Model Family",
+      "stability": "stable",
+      "parent": "Foundation Models and General-Purpose AI",
+      "description": "Vision Foundation Models is a Level 2 Model Family within Foundation Models and General-Purpose AI."
+    },
+    {
+      "id": "ai:multimodal-foundation-models",
+      "label": "Multimodal Foundation Models",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Model Family",
+      "stability": "stable",
+      "parent": "Foundation Models and General-Purpose AI",
+      "description": "Multimodal Foundation Models is a Level 2 Model Family within Foundation Models and General-Purpose AI."
+    },
+    {
+      "id": "ai:audio-foundation-models",
+      "label": "Audio Foundation Models",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Model Family",
+      "stability": "stable",
+      "parent": "Foundation Models and General-Purpose AI",
+      "description": "Audio Foundation Models is a Level 2 Model Family within Foundation Models and General-Purpose AI."
+    },
+    {
+      "id": "ai:video-foundation-models",
+      "label": "Video Foundation Models",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Model Family",
+      "stability": "stable",
+      "parent": "Foundation Models and General-Purpose AI",
+      "description": "Video Foundation Models is a Level 2 Model Family within Foundation Models and General-Purpose AI."
+    },
+    {
+      "id": "ai:code-foundation-models",
+      "label": "Code Foundation Models",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Model Family",
+      "stability": "emerging",
+      "parent": "Foundation Models and General-Purpose AI",
+      "description": "Code Foundation Models is a Level 2 Model Family within Foundation Models and General-Purpose AI."
+    },
+    {
+      "id": "ai:scientific-foundation-models",
+      "label": "Scientific Foundation Models",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Model Family",
+      "stability": "stable",
+      "parent": "Foundation Models and General-Purpose AI",
+      "description": "Scientific Foundation Models is a Level 2 Model Family within Foundation Models and General-Purpose AI."
+    },
+    {
+      "id": "ai:world-models",
+      "label": "World Models",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Model Family",
+      "stability": "stable",
+      "parent": "Foundation Models and General-Purpose AI",
+      "description": "World Models is a Level 2 Model Family within Foundation Models and General-Purpose AI."
+    },
+    {
+      "id": "ai:autonomous-agents",
+      "label": "Autonomous Agents",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "emerging",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Autonomous Agents is a Level 2 System Pattern within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:cooperative-multi-agent-systems",
+      "label": "Cooperative Multi-Agent Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Cooperative Multi-Agent Systems is a Level 2 System Pattern within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:competitive-multi-agent-systems",
+      "label": "Competitive Multi-Agent Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Competitive Multi-Agent Systems is a Level 2 System Pattern within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:agent-communication",
+      "label": "Agent Communication",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Agent Communication is a Level 2 Method within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:coordination-and-negotiation",
+      "label": "Coordination and Negotiation",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Coordination and Negotiation is a Level 2 Method within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:multi-agent-reinforcement-learning",
+      "label": "Multi-Agent Reinforcement Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Multi-Agent Reinforcement Learning is a Level 2 Method within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:swarm-intelligence",
+      "label": "Swarm Intelligence",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Paradigm",
+      "stability": "stable",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Swarm Intelligence is a Level 2 Paradigm within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:agent-societies",
+      "label": "Agent Societies",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Agent Societies is a Level 2 System Pattern within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:market-based-systems",
+      "label": "Market-Based Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Agentic and Multi-Agent Systems",
+      "description": "Market-Based Systems is a Level 2 System Pattern within Agentic and Multi-Agent Systems."
+    },
+    {
+      "id": "ai:ai-assistants",
+      "label": "AI Assistants",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Human-AI Interaction",
+      "description": "AI Assistants is a Level 2 System Pattern within Human-AI Interaction."
+    },
+    {
+      "id": "ai:recommender-systems",
+      "label": "Recommender Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Human-AI Interaction",
+      "description": "Recommender Systems is a Level 2 Application Area within Human-AI Interaction."
+    },
+    {
+      "id": "ai:human-in-the-loop-ai",
+      "label": "Human-in-the-Loop AI",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "System Pattern",
+      "stability": "stable",
+      "parent": "Human-AI Interaction",
+      "description": "Human-in-the-Loop AI is a Level 2 System Pattern within Human-AI Interaction."
+    },
+    {
+      "id": "ai:interactive-machine-learning",
+      "label": "Interactive Machine Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "stable",
+      "parent": "Human-AI Interaction",
+      "description": "Interactive Machine Learning is a Level 2 Method within Human-AI Interaction."
+    },
+    {
+      "id": "ai:personalization",
+      "label": "Personalization",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Human-AI Interaction",
+      "description": "Personalization is a Level 2 Application Area within Human-AI Interaction."
+    },
+    {
+      "id": "ai:decision-support-systems",
+      "label": "Decision Support Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Application Area",
+      "stability": "stable",
+      "parent": "Human-AI Interaction",
+      "description": "Decision Support Systems is a Level 2 Application Area within Human-AI Interaction."
+    },
+    {
+      "id": "ai:human-feedback-and-preference-learning",
+      "label": "Human Feedback and Preference Learning",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Method",
+      "stability": "emerging",
+      "parent": "Human-AI Interaction",
+      "description": "Human Feedback and Preference Learning is a Level 2 Method within Human-AI Interaction."
+    },
+    {
+      "id": "ai:ai-user-experience-and-trust",
+      "label": "AI User Experience and Trust",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Subfield",
+      "stability": "stable",
+      "parent": "Human-AI Interaction",
+      "description": "AI User Experience and Trust is a Level 2 Subfield within Human-AI Interaction."
+    },
+    {
+      "id": "ai:ai-alignment",
+      "label": "AI Alignment",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Safety Concept",
+      "stability": "stable",
+      "parent": "AI Safety, Alignment and Governance",
+      "description": "AI Alignment is a Level 2 Safety Concept within AI Safety, Alignment and Governance."
+    },
+    {
+      "id": "ai:robustness",
+      "label": "Robustness",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Safety Concept",
+      "stability": "stable",
+      "parent": "AI Safety, Alignment and Governance",
+      "description": "Robustness is a Level 2 Safety Concept within AI Safety, Alignment and Governance."
+    },
+    {
+      "id": "ai:interpretability",
+      "label": "Interpretability",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Evaluation Concept",
+      "stability": "stable",
+      "parent": "AI Safety, Alignment and Governance",
+      "description": "Interpretability is a Level 2 Evaluation Concept within AI Safety, Alignment and Governance."
+    },
+    {
+      "id": "ai:evaluation-measurement-and-benchmarking",
+      "label": "Evaluation, Measurement and Benchmarking",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Evaluation Concept",
+      "stability": "stable",
+      "parent": "AI Safety, Alignment and Governance",
+      "description": "Evaluation, Measurement and Benchmarking is a Level 2 Evaluation Concept within AI Safety, Alignment and Governance."
+    },
+    {
+      "id": "ai:bias-and-fairness",
+      "label": "Bias and Fairness",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Safety Concept",
+      "stability": "stable",
+      "parent": "AI Safety, Alignment and Governance",
+      "description": "Bias and Fairness is a Level 2 Safety Concept within AI Safety, Alignment and Governance."
+    },
+    {
+      "id": "ai:privacy-and-security",
+      "label": "Privacy and Security",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Safety Concept",
+      "stability": "stable",
+      "parent": "AI Safety, Alignment and Governance",
+      "description": "Privacy and Security is a Level 2 Safety Concept within AI Safety, Alignment and Governance."
+    },
+    {
+      "id": "ai:misuse-prevention",
+      "label": "Misuse Prevention",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Governance Concept",
+      "stability": "stable",
+      "parent": "AI Safety, Alignment and Governance",
+      "description": "Misuse Prevention is a Level 2 Governance Concept within AI Safety, Alignment and Governance."
+    },
+    {
+      "id": "ai:governance-and-policy",
+      "label": "Governance and Policy",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Governance Concept",
+      "stability": "stable",
+      "parent": "AI Safety, Alignment and Governance",
+      "description": "Governance and Policy is a Level 2 Governance Concept within AI Safety, Alignment and Governance."
+    },
+    {
+      "id": "ai:artificial-general-intelligence",
+      "label": "Artificial General Intelligence",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Future Concept",
+      "stability": "speculative",
+      "parent": "AGI and Future AI",
+      "description": "Artificial General Intelligence is a Level 2 Future Concept within AGI and Future AI."
+    },
+    {
+      "id": "ai:self-improving-systems",
+      "label": "Self-Improving Systems",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Future Concept",
+      "stability": "speculative",
+      "parent": "AGI and Future AI",
+      "description": "Self-Improving Systems is a Level 2 Future Concept within AGI and Future AI."
+    },
+    {
+      "id": "ai:ai-scientists",
+      "label": "AI Scientists",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Future Concept",
+      "stability": "speculative",
+      "parent": "AGI and Future AI",
+      "description": "AI Scientists is a Level 2 Future Concept within AGI and Future AI."
+    },
+    {
+      "id": "ai:human-ai-symbiosis",
+      "label": "Human-AI Symbiosis",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Future Concept",
+      "stability": "speculative",
+      "parent": "AGI and Future AI",
+      "description": "Human-AI Symbiosis is a Level 2 Future Concept within AGI and Future AI."
+    },
+    {
+      "id": "ai:superintelligence",
+      "label": "Superintelligence",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Future Concept",
+      "stability": "speculative",
+      "parent": "AGI and Future AI",
+      "description": "Superintelligence is a Level 2 Future Concept within AGI and Future AI."
+    },
+    {
+      "id": "ai:long-term-ai-futures",
+      "label": "Long-Term AI Futures",
+      "hierarchy_level": 2,
+      "hierarchy_level_name": "Main Subarea",
+      "concept_type": "Future Concept",
+      "stability": "speculative",
+      "parent": "AGI and Future AI",
+      "description": "Long-Term AI Futures is a Level 2 Future Concept within AGI and Future AI."
+    }
+  ],
+  "connections": [
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:symbolic-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:machine-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:search-planning-and-optimization",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:knowledge-and-reasoning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:robotics-and-embodied-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:natural-language-and-speech",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:computer-vision-and-perception",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:generative-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:foundation-models-and-general-purpose-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:agentic-and-multi-agent-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:human-ai-interaction",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:ai-safety-alignment-and-governance",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:artificial-intelligence",
+      "to": "ai:agi-and-future-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:symbolic-ai",
+      "to": "ai:rule-based-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:symbolic-ai",
+      "to": "ai:expert-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:symbolic-ai",
+      "to": "ai:logic-programming",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:symbolic-ai",
+      "to": "ai:symbolic-knowledge-representation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:symbolic-ai",
+      "to": "ai:automated-reasoning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:symbolic-ai",
+      "to": "ai:constraint-satisfaction",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:symbolic-ai",
+      "to": "ai:knowledge-graphs",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:symbolic-ai",
+      "to": "ai:neuro-symbolic-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:supervised-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:unsupervised-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:semi-supervised-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:self-supervised-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:reinforcement-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:deep-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:representation-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:transfer-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:federated-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:online-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:active-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:meta-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:ensemble-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:continual-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:machine-learning",
+      "to": "ai:data-centric-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:search-planning-and-optimization",
+      "to": "ai:state-space-search",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:search-planning-and-optimization",
+      "to": "ai:heuristic-search",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:search-planning-and-optimization",
+      "to": "ai:adversarial-search",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:search-planning-and-optimization",
+      "to": "ai:automated-planning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:search-planning-and-optimization",
+      "to": "ai:scheduling",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:search-planning-and-optimization",
+      "to": "ai:optimization",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:search-planning-and-optimization",
+      "to": "ai:evolutionary-computation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:search-planning-and-optimization",
+      "to": "ai:monte-carlo-tree-search",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:knowledge-and-reasoning",
+      "to": "ai:commonsense-reasoning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:knowledge-and-reasoning",
+      "to": "ai:probabilistic-reasoning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:knowledge-and-reasoning",
+      "to": "ai:causal-reasoning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:knowledge-and-reasoning",
+      "to": "ai:temporal-reasoning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:knowledge-and-reasoning",
+      "to": "ai:spatial-reasoning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:knowledge-and-reasoning",
+      "to": "ai:explainable-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:knowledge-and-reasoning",
+      "to": "ai:knowledge-representation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:knowledge-and-reasoning",
+      "to": "ai:ontologies",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:control-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:robot-perception",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:localization-and-mapping",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:motion-planning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:manipulation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:autonomous-vehicles",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:human-robot-interaction",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:robot-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:robotics-and-embodied-ai",
+      "to": "ai:embodied-agents",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:natural-language-and-speech",
+      "to": "ai:natural-language-processing",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:natural-language-and-speech",
+      "to": "ai:speech-recognition",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:natural-language-and-speech",
+      "to": "ai:speech-synthesis",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:natural-language-and-speech",
+      "to": "ai:dialogue-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:natural-language-and-speech",
+      "to": "ai:information-retrieval",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:natural-language-and-speech",
+      "to": "ai:machine-translation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:natural-language-and-speech",
+      "to": "ai:natural-language-generation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:natural-language-and-speech",
+      "to": "ai:language-understanding",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:computer-vision-and-perception",
+      "to": "ai:image-classification",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:computer-vision-and-perception",
+      "to": "ai:object-detection",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:computer-vision-and-perception",
+      "to": "ai:image-segmentation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:computer-vision-and-perception",
+      "to": "ai:video-understanding",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:computer-vision-and-perception",
+      "to": "ai:3d-vision",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:computer-vision-and-perception",
+      "to": "ai:multimodal-perception",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:computer-vision-and-perception",
+      "to": "ai:scene-understanding",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:computer-vision-and-perception",
+      "to": "ai:optical-character-recognition",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:generative-ai",
+      "to": "ai:text-generation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:generative-ai",
+      "to": "ai:image-generation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:generative-ai",
+      "to": "ai:audio-generation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:generative-ai",
+      "to": "ai:video-generation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:generative-ai",
+      "to": "ai:code-generation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:generative-ai",
+      "to": "ai:3d-generation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:generative-ai",
+      "to": "ai:synthetic-data-generation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:generative-ai",
+      "to": "ai:generative-modeling",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:foundation-models-and-general-purpose-ai",
+      "to": "ai:large-language-models",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:foundation-models-and-general-purpose-ai",
+      "to": "ai:vision-foundation-models",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:foundation-models-and-general-purpose-ai",
+      "to": "ai:multimodal-foundation-models",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:foundation-models-and-general-purpose-ai",
+      "to": "ai:audio-foundation-models",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:foundation-models-and-general-purpose-ai",
+      "to": "ai:video-foundation-models",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:foundation-models-and-general-purpose-ai",
+      "to": "ai:code-foundation-models",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:foundation-models-and-general-purpose-ai",
+      "to": "ai:scientific-foundation-models",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:foundation-models-and-general-purpose-ai",
+      "to": "ai:world-models",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:autonomous-agents",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:cooperative-multi-agent-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:competitive-multi-agent-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:agent-communication",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:coordination-and-negotiation",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:multi-agent-reinforcement-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:swarm-intelligence",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:agent-societies",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agentic-and-multi-agent-systems",
+      "to": "ai:market-based-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:human-ai-interaction",
+      "to": "ai:ai-assistants",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:human-ai-interaction",
+      "to": "ai:recommender-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:human-ai-interaction",
+      "to": "ai:human-in-the-loop-ai",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:human-ai-interaction",
+      "to": "ai:interactive-machine-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:human-ai-interaction",
+      "to": "ai:personalization",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:human-ai-interaction",
+      "to": "ai:decision-support-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:human-ai-interaction",
+      "to": "ai:human-feedback-and-preference-learning",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:human-ai-interaction",
+      "to": "ai:ai-user-experience-and-trust",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:ai-safety-alignment-and-governance",
+      "to": "ai:ai-alignment",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:ai-safety-alignment-and-governance",
+      "to": "ai:robustness",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:ai-safety-alignment-and-governance",
+      "to": "ai:interpretability",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:ai-safety-alignment-and-governance",
+      "to": "ai:evaluation-measurement-and-benchmarking",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:ai-safety-alignment-and-governance",
+      "to": "ai:bias-and-fairness",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:ai-safety-alignment-and-governance",
+      "to": "ai:privacy-and-security",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:ai-safety-alignment-and-governance",
+      "to": "ai:misuse-prevention",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:ai-safety-alignment-and-governance",
+      "to": "ai:governance-and-policy",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agi-and-future-ai",
+      "to": "ai:artificial-general-intelligence",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agi-and-future-ai",
+      "to": "ai:self-improving-systems",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agi-and-future-ai",
+      "to": "ai:ai-scientists",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agi-and-future-ai",
+      "to": "ai:human-ai-symbiosis",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agi-and-future-ai",
+      "to": "ai:superintelligence",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    },
+    {
+      "from": "ai:agi-and-future-ai",
+      "to": "ai:long-term-ai-futures",
+      "label": "contains",
+      "type": "parent-child",
+      "direction": "directed"
+    }
+  ]
+}
