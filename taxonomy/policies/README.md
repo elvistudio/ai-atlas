@@ -15,5 +15,6 @@ The files in this directory are policy drafts for review. They do not change can
 - [Process Stage Concept Type](process-stage-concept-type.md) — records Process Stage as experimental and defines current NLG candidate handling. Tracks [issue #20](https://github.com/ai-atlas-project/ai-atlas/issues/20).
 - [Level 3 Review and Promotion Process](level-3-review-and-promotion-process.md) — proposes private draft, public draft, and canonical promotion states and gates. Tracks [issue #21](https://github.com/ai-atlas-project/ai-atlas/issues/21).
 - [Public L1/L2 Stable ID Storage Design](public-l1-l2-stable-id-storage.md) — compares stable-ID storage options and recommends a review path for public L1/L2 IDs. Tracks [issue #22](https://github.com/ai-atlas-project/ai-atlas/issues/22).
+- [Canonical L1/L2 JSON Model](canonical-l1-l2-json-model.md) — documents the canonical public L0-L2 machine-readable source, concept fields, hierarchy consistency rules, ID lookup, and validation expectations. Tracks [issue #22](https://github.com/ai-atlas-project/ai-atlas/issues/22).
 
 These drafts should be reviewed and revised through their linked issues. Open issues remain the place for unresolved questions and policy decisions.
