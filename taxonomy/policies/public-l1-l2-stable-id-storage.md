@@ -37,7 +37,7 @@ The chosen storage model should:
 - avoid mixing concept identity with parent placement;
 - be easy to validate automatically;
 - support readable diffs and expert review;
-- support generated Markdown, Markmap, Mermaid, Obsidian, and future website/search views;
+- support generated Markdown, Markmap, Obsidian, and future website/search views;
 - support aliases, former names, provisional private IDs, deprecation, and successor mappings;
 - avoid broad repository churn during ID validation or future identity metadata expansion.
 
@@ -231,7 +231,7 @@ Structured draft schema can continue using provisional private IDs until public 
 
 - Should empty `aliases`, `former_ids`, or `provisional_ids` fields be required on every canonical node, or only when non-empty?
 - Should canonical Markdown views display IDs, hide them, or include them in comments/metadata blocks?
-- Should generated Markmap, Mermaid, and Obsidian outputs include stable IDs?
+- Should generated Markmap and Obsidian outputs include stable IDs?
 - Should private provisional ID mappings live in canonical JSON, a migration note, or private review files?
 - Should the first ID validation review cover all public L1/L2 nodes or only the L1/L2 nodes referenced by current private pilots?
 

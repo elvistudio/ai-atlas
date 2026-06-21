@@ -20,7 +20,6 @@ Please review the current public Level 1 and Level 2 taxonomy:
 Useful generated views:
 
 - `markmap/`
-- `mermaid/`
 - `obsidian/`
 
 These generated views should remain aligned with the current Level 1–Level 2 canonical taxonomy.
