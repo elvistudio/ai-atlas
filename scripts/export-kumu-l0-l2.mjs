@@ -39,6 +39,73 @@ const kumuPresentationByLevel = {
   },
 };
 
+function validateCanonicalSource(root, level1) {
+  if (!root || root.hierarchy_level !== 0 || !Array.isArray(level1)) {
+    throw new Error(
+      "Canonical taxonomy must contain a Level 0 root and a level_1 array.",
+    );
+  }
+
+  const level2 = [];
+  const expectedRootChildren = [];
+
+  for (const parent of level1) {
+    if (
+      parent.hierarchy_level !== 1 ||
+      parent.parent !== root.name ||
+      !Array.isArray(parent.level_2)
+    ) {
+      throw new Error(
+        `Invalid Level 1 hierarchy for "${parent.name ?? "unnamed concept"}".`,
+      );
+    }
+
+    expectedRootChildren.push(parent.name);
+
+    const expectedLevel2Children = [];
+
+    for (const child of parent.level_2) {
+      if (child.hierarchy_level !== 2 || child.parent !== parent.name) {
+        throw new Error(
+          `Invalid Level 2 hierarchy for "${child.name ?? "unnamed concept"}".`,
+        );
+      }
+
+      expectedLevel2Children.push(child.name);
+      level2.push(child);
+    }
+
+    if (
+      JSON.stringify(parent.children) !==
+      JSON.stringify(expectedLevel2Children)
+    ) {
+      throw new Error(
+        `Level 1 children do not match level_2 entries for "${parent.name}".`,
+      );
+    }
+  }
+
+  if (JSON.stringify(root.children) !== JSON.stringify(expectedRootChildren)) {
+    throw new Error("Level 0 children do not match level_1 entries.");
+  }
+
+  const concepts = [root, ...level1, ...level2];
+  const ids = concepts.map((concept) => concept.id);
+
+  if (
+    ids.some((id) => typeof id !== "string" || id.length === 0) ||
+    new Set(ids).size !== ids.length
+  ) {
+    throw new Error("Canonical concepts must have unique, non-empty IDs.");
+  }
+
+  if (concepts.some((concept) => concept.hierarchy_level > 2)) {
+    throw new Error("Kumu export must not contain concepts above Level 2.");
+  }
+
+  return concepts;
+}
+
 function toElement(concept) {
   const presentation = kumuPresentationByLevel[concept.hierarchy_level];
 
@@ -77,22 +144,7 @@ async function main() {
   const root = taxonomy.level_0;
   const level1 = taxonomy.level_1;
 
-  if (!root || !Array.isArray(level1)) {
-    throw new Error("Canonical taxonomy must contain level_0 and level_1.");
-  }
-
-  const level2 = level1.flatMap((concept) => {
-    if (!Array.isArray(concept.level_2)) {
-      throw new Error(`Level 1 concept "${concept.name}" has no level_2 array.`);
-    }
-
-    return concept.level_2;
-  });
-  const concepts = [root, ...level1, ...level2];
-
-  if (concepts.some((concept) => concept.hierarchy_level > 2)) {
-    throw new Error("Kumu export must not contain concepts above Level 2.");
-  }
+  const concepts = validateCanonicalSource(root, level1);
 
   const elements = concepts.map(toElement);
   const connections = [
