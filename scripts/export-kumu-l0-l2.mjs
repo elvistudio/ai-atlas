@@ -18,10 +18,41 @@ const outputPath = path.join(
   "ai-atlas-v0.1-l0-l2-kumu.json",
 );
 
+const kumuPresentationByLevel = {
+  0: {
+    display_level: "Level 0",
+    node_role: "Root",
+    kumu_size: 48,
+    kumu_color_group: "Root",
+  },
+  1: {
+    display_level: "Level 1",
+    node_role: "Major Area",
+    kumu_size: 34,
+    kumu_color_group: "Major Area",
+  },
+  2: {
+    display_level: "Level 2",
+    node_role: "Main Subarea",
+    kumu_size: 18,
+    kumu_color_group: "Main Subarea",
+  },
+};
+
 function toElement(concept) {
+  const presentation = kumuPresentationByLevel[concept.hierarchy_level];
+
+  if (!presentation) {
+    throw new Error(
+      `Unsupported hierarchy level ${concept.hierarchy_level} for "${concept.name}".`,
+    );
+  }
+
   return {
     id: concept.id,
     label: concept.name,
+    name: concept.name,
+    ...presentation,
     hierarchy_level: concept.hierarchy_level,
     hierarchy_level_name: concept.hierarchy_level_name,
     concept_type: concept.concept_type,
