@@ -20,6 +20,8 @@ Level 3 work has not been promoted to the public canonical taxonomy yet. Early L
 
 See also: [Level 3 draft policy](taxonomy/level-3-draft-policy.md).
 
+See also: [Level 3 draft status and roadmap](docs/roadmap/level-3-draft-status.md).
+
 ## Public review
 
 AI Atlas v0.1 is open for focused review of the Level 1 and Level 2 taxonomy. See the [public review guide](PUBLIC_REVIEW.md) for review scope, questions, and feedback format.
