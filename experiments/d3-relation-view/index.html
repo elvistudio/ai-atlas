@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Atlas · Experimental relation view</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <style>
+      :root {
+        color: #18363c;
+        background: #f4f6f2;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 320px; }
+      button, input { font: inherit; }
+      .shell { width: min(1500px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 40px; }
+      .warning { margin-bottom: 16px; padding: 12px 16px; border: 1px solid #d9a441; border-radius: 10px; color: #6b4b0d; background: #fff8df; font-size: 0.86rem; font-weight: 650; }
+      header { display: flex; justify-content: space-between; gap: 32px; align-items: end; padding: 20px 4px 24px; }
+      .eyebrow { margin: 0 0 9px; color: #337b75; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+      h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 4.4rem); line-height: 1; letter-spacing: -0.045em; }
+      header p { max-width: 650px; margin: 0; color: #66787a; line-height: 1.55; }
+      .modes { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid #d7dfd9; border-radius: 10px; background: white; }
+      .modes button { padding: 8px 11px; border: 0; border-radius: 7px; color: #5d7173; background: transparent; cursor: pointer; }
+      .modes button[aria-pressed="true"] { color: white; background: #245f63; }
+      .status { display: flex; justify-content: space-between; gap: 20px; margin: 0 4px 12px; color: #6d7e7f; font-size: 0.76rem; }
+      .canvas { position: relative; height: min(76vh, 900px); min-height: 620px; overflow: hidden; border: 1px solid #d7dfd9; border-radius: 16px; background: #fcfcf8; box-shadow: 0 18px 55px rgba(35,64,62,0.08); }
+      svg { display: block; width: 100%; height: 100%; }
+      .link { fill: none; stroke: #aab9b4; stroke-width: 1.25; }
+      .relation-link { stroke: #708f8b; stroke-width: 1.55; marker-end: url(#arrow); }
+      .edge-label { fill: #667b78; font-size: 8px; paint-order: stroke; stroke: #fcfcf8; stroke-width: 3px; stroke-linejoin: round; }
+      .node circle { stroke: white; stroke-width: 2px; }
+      .node text { fill: #29474b; font-size: 10px; font-weight: 600; paint-order: stroke; stroke: rgba(252,252,248,0.92); stroke-width: 3px; stroke-linejoin: round; }
+      .node .meta { fill: #748687; font-size: 7px; font-weight: 500; }
+      .tooltip { position: fixed; z-index: 10; width: min(330px, calc(100vw - 24px)); padding: 14px; pointer-events: none; opacity: 0; border-radius: 10px; color: #edf5f2; background: rgba(20,50,56,0.96); box-shadow: 0 16px 45px rgba(11,32,36,0.25); font-size: 0.76rem; line-height: 1.45; }
+      .tooltip.visible { opacity: 1; }
+      .tooltip strong { display: block; margin-bottom: 6px; font-size: 0.9rem; }
+      .tooltip em { display: block; margin-bottom: 7px; color: #9fc8c1; font-style: normal; }
+      .fallback { display: none; margin-bottom: 16px; padding: 15px; border: 1px solid #d7dfd9; border-radius: 10px; background: white; }
+      .fallback.visible { display: block; }
+      .fallback p { margin: 0 0 12px; color: #66787a; font-size: 0.82rem; }
+      .fallback label { display: inline-flex; flex-direction: column; gap: 5px; margin: 0 12px 8px 0; color: #405c60; font-size: 0.75rem; }
+      @media (max-width: 850px) {
+        header { align-items: start; flex-direction: column; }
+        .canvas { min-height: 700px; }
+        .status { flex-direction: column; gap: 4px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="warning">Experimental relation view. These links are not canonical hierarchy placement.</div>
+      <header>
+        <div>
+          <p class="eyebrow">AI Atlas · relation projection</p>
+          <h1>Alternative paths through AI</h1>
+          <p>Switch between the canonical Level 0–2 tree and curated, non-canonical relation projections for technical lineage and cross-cutting overlaps.</p>
+        </div>
+        <nav class="modes" aria-label="Visualization mode">
+          <button type="button" data-mode="hierarchy" aria-pressed="true">Canonical hierarchy</button>
+          <button type="button" data-mode="technical_lineage" aria-pressed="false">Technical lineage</button>
+          <button type="button" data-mode="cross_links" aria-pressed="false">Cross-cutting overlaps</button>
+        </nav>
+      </header>
+      <section class="fallback" id="fallback">
+        <p>Direct file access blocked local JSON loading. Select the canonical taxonomy and experimental relation files to continue.</p>
+        <label>Canonical taxonomy JSON <input id="taxonomy-file" type="file" accept=".json,application/json" /></label>
+        <label>Technical lineage JSON <input id="relations-file" type="file" accept=".json,application/json" /></label>
+      </section>
+      <div class="status">
+        <span id="mode-description">Canonical Level 0–2 parent/child hierarchy.</span>
+        <span id="counts">Loading data…</span>
+      </div>
+      <section class="canvas" aria-label="AI Atlas relation visualization">
+        <svg role="img" aria-label="AI Atlas graph"></svg>
+      </section>
+    </main>
+    <div class="tooltip" id="tooltip" role="tooltip"></div>
+    <script>
+      const taxonomyUrl = "../../taxonomy/ai-taxonomy-l1-l2.json";
+      const relationUrl = "./technical-lineage.json";
+      const modeDescriptions = {
+        hierarchy: "Canonical Level 0–2 parent/child hierarchy.",
+        technical_lineage: "Experimental technical-lineage and implementation-dependency projection.",
+        cross_links: "Experimental overlap, enabling, application, and governance projection."
+      };
+      const levelColors = new Map([[0, "#173f4b"], [1, "#2f7f79"], [2, "#d3965e"]]);
+      let taxonomy;
+      let relationOverlay;
+      let mode = "hierarchy";
+      let simulation;
+
+      const svg = d3.select("svg");
+      const tooltip = d3.select("#tooltip");
+      const width = 1400;
+      const height = 860;
+      svg.attr("viewBox", [0, 0, width, height]);
+      const zoomLayer = svg.append("g");
+      const scene = zoomLayer.append("g");
+      svg.call(d3.zoom().scaleExtent([0.35, 4]).on("zoom", (event) => zoomLayer.attr("transform", event.transform)));
+      const definitions = svg.append("defs");
+      definitions.append("marker")
+        .attr("id", "arrow")
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 18)
+        .attr("refY", 0)
+        .attr("markerWidth", 6)
+        .attr("markerHeight", 6)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("d", "M0,-5L10,0L0,5")
+        .attr("fill", "#708f8b");
+
+      function flattenTaxonomy(source) {
+        const root = source.level_0;
+        const level1 = source.level_1 ?? [];
+        const nodes = [root, ...level1, ...level1.flatMap((node) => node.level_2 ?? [])];
+        const byName = new Map(nodes.map((node) => [node.name, node]));
+        const byId = new Map(nodes.map((node) => [node.id, node]));
+        const hierarchyLinks = nodes
+          .filter((node) => node.parent)
+          .map((node) => {
+            const parent = byName.get(node.parent);
+            if (!parent) throw new Error(`Unresolved canonical parent "${node.parent}" for "${node.name}".`);
+            return { source: parent.id, target: node.id, relation_type: "canonical_parent_child" };
+          });
+        return { nodes, byId, hierarchyLinks };
+      }
+
+      function validateRelations(graph, overlay) {
+        if (overlay.canonical_hierarchy !== false || overlay.status !== "experimental") {
+          throw new Error("Relation overlay must declare experimental status and canonical_hierarchy: false.");
+        }
+        for (const relation of overlay.relations ?? []) {
+          if (!graph.byId.has(relation.source) || !graph.byId.has(relation.target)) {
+            throw new Error(`Unresolved relation: ${relation.source} → ${relation.target}.`);
+          }
+          if (!relation.relation_type || !Array.isArray(relation.view)) {
+            throw new Error("Every relation requires relation_type and view fields.");
+          }
+        }
+      }
+
+      function relationTooltip(event, relation) {
+        tooltip
+          .classed("visible", true)
+          .html(`<strong>${relation.relation_type}</strong><em>Experimental non-hierarchy relation</em>${relation.note ?? "No additional note."}`);
+        moveTooltip(event);
+      }
+
+      function nodeTooltip(event, node) {
+        tooltip
+          .classed("visible", true)
+          .html(`<strong>${node.name}</strong><em>Level ${node.hierarchy_level} · ${node.hierarchy_level_name}</em>${node.description}`);
+        moveTooltip(event);
+      }
+
+      function moveTooltip(event) {
+        tooltip
+          .style("left", `${Math.min(event.clientX + 14, innerWidth - 345)}px`)
+          .style("top", `${Math.min(event.clientY + 14, innerHeight - 190)}px`);
+      }
+
+      function hideTooltip() {
+        tooltip.classed("visible", false);
+      }
+
+      function renderHierarchy(graph) {
+        const root = d3.stratify().id((node) => node.id).parentId((node) => {
+          if (!node.parent) return null;
+          return [...graph.byId.values()].find((candidate) => candidate.name === node.parent)?.id;
+        })(graph.nodes);
+        d3.tree().size([height - 90, width - 360])(root);
+        const nodes = root.descendants();
+        nodes.forEach((node) => { node.x += 45; node.y += 90; });
+        const links = root.links();
+
+        scene.selectAll("*").remove();
+        scene.append("g").selectAll("path").data(links).join("path")
+          .attr("class", "link")
+          .attr("d", d3.linkHorizontal().x((node) => node.y).y((node) => node.x));
+
+        const node = scene.append("g").selectAll("g").data(nodes).join("g")
+          .attr("class", "node")
+          .attr("transform", (node) => `translate(${node.y},${node.x})`)
+          .on("mouseenter", (event, node) => nodeTooltip(event, node.data))
+          .on("mousemove", moveTooltip)
+          .on("mouseleave", hideTooltip);
+        node.append("circle")
+          .attr("r", (node) => node.depth === 0 ? 9 : node.depth === 1 ? 6 : 4)
+          .attr("fill", (node) => levelColors.get(node.data.hierarchy_level));
+        node.append("text").attr("x", 11).attr("dy", "0.32em").text((node) => node.data.name);
+        updateCounts(nodes.length, links.length);
+      }
+
+      function renderRelations(graph, relationView) {
+        const links = relationOverlay.relations
+          .filter((relation) => relation.view.includes(relationView))
+          .map((relation) => ({ ...relation }));
+        const nodeIds = new Set(links.flatMap((link) => [link.source, link.target]));
+        const nodes = graph.nodes.filter((node) => nodeIds.has(node.id)).map((node) => ({ ...node }));
+
+        scene.selectAll("*").remove();
+        const link = scene.append("g").selectAll("line").data(links).join("line")
+          .attr("class", "link relation-link")
+          .on("mouseenter", relationTooltip)
+          .on("mousemove", moveTooltip)
+          .on("mouseleave", hideTooltip);
+        const labels = scene.append("g").selectAll("text").data(links).join("text")
+          .attr("class", "edge-label")
+          .attr("text-anchor", "middle")
+          .text((link) => link.relation_type)
+          .on("mouseenter", relationTooltip)
+          .on("mousemove", moveTooltip)
+          .on("mouseleave", hideTooltip);
+        const node = scene.append("g").selectAll("g").data(nodes).join("g")
+          .attr("class", "node")
+          .on("mouseenter", nodeTooltip)
+          .on("mousemove", moveTooltip)
+          .on("mouseleave", hideTooltip);
+        node.append("circle")
+          .attr("r", (node) => node.hierarchy_level === 0 ? 12 : node.hierarchy_level === 1 ? 8 : 6)
+          .attr("fill", (node) => levelColors.get(node.hierarchy_level));
+        node.append("text").attr("x", 11).attr("dy", "-0.05em").text((node) => node.name);
+        node.append("text").attr("class", "meta").attr("x", 11).attr("dy", "1.25em").text((node) => node.concept_type);
+
+        simulation?.stop();
+        simulation = d3.forceSimulation(nodes)
+          .force("link", d3.forceLink(links).id((node) => node.id).distance(155).strength(0.8))
+          .force("charge", d3.forceManyBody().strength(-480))
+          .force("center", d3.forceCenter(width / 2, height / 2))
+          .force("collision", d3.forceCollide().radius(48))
+          .on("tick", () => {
+            link.attr("x1", (edge) => edge.source.x).attr("y1", (edge) => edge.source.y)
+              .attr("x2", (edge) => edge.target.x).attr("y2", (edge) => edge.target.y);
+            labels.attr("x", (edge) => (edge.source.x + edge.target.x) / 2)
+              .attr("y", (edge) => (edge.source.y + edge.target.y) / 2 - 5);
+            node.attr("transform", (item) => `translate(${item.x},${item.y})`);
+          });
+        node.call(d3.drag()
+          .on("start", (event, item) => {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            item.fx = item.x; item.fy = item.y;
+          })
+          .on("drag", (event, item) => { item.fx = event.x; item.fy = event.y; })
+          .on("end", (event, item) => {
+            if (!event.active) simulation.alphaTarget(0);
+            item.fx = null; item.fy = null;
+          }));
+        updateCounts(nodes.length, links.length);
+      }
+
+      function updateCounts(nodes, links) {
+        document.querySelector("#counts").textContent = `${nodes} nodes · ${links} edges`;
+      }
+
+      function render() {
+        if (!taxonomy || !relationOverlay) return;
+        simulation?.stop();
+        const graph = flattenTaxonomy(taxonomy);
+        document.querySelector("#mode-description").textContent = modeDescriptions[mode];
+        document.querySelectorAll("[data-mode]").forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
+        });
+        if (mode === "hierarchy") renderHierarchy(graph);
+        else renderRelations(graph, mode);
+      }
+
+      document.querySelectorAll("[data-mode]").forEach((button) => {
+        button.addEventListener("click", () => {
+          mode = button.dataset.mode;
+          render();
+        });
+      });
+
+      function readJsonFile(input) {
+        return new Promise((resolve, reject) => {
+          const file = input.files?.[0];
+          if (!file) return reject(new Error("Choose a JSON file."));
+          const reader = new FileReader();
+          reader.onload = () => {
+            try { resolve(JSON.parse(reader.result)); }
+            catch (error) { reject(error); }
+          };
+          reader.onerror = () => reject(reader.error);
+          reader.readAsText(file);
+        });
+      }
+
+      async function tryFileFallback() {
+        document.querySelector("#fallback").classList.add("visible");
+        const taxonomyInput = document.querySelector("#taxonomy-file");
+        const relationsInput = document.querySelector("#relations-file");
+        const maybeLoad = async () => {
+          if (!taxonomyInput.files?.length || !relationsInput.files?.length) return;
+          taxonomy = await readJsonFile(taxonomyInput);
+          relationOverlay = await readJsonFile(relationsInput);
+          const graph = flattenTaxonomy(taxonomy);
+          validateRelations(graph, relationOverlay);
+          document.querySelector("#fallback").classList.remove("visible");
+          render();
+        };
+        taxonomyInput.addEventListener("change", maybeLoad);
+        relationsInput.addEventListener("change", maybeLoad);
+      }
+
+      Promise.all([d3.json(taxonomyUrl), d3.json(relationUrl)])
+        .then(([loadedTaxonomy, loadedRelations]) => {
+          taxonomy = loadedTaxonomy;
+          relationOverlay = loadedRelations;
+          const graph = flattenTaxonomy(taxonomy);
+          validateRelations(graph, relationOverlay);
+          render();
+        })
+        .catch((error) => {
+          console.warn("Automatic JSON loading failed; enabling local file fallback.", error);
+          document.querySelector("#counts").textContent = "Select local JSON files to continue";
+          tryFileFallback();
+        });
+    </script>
+  </body>
+</html>

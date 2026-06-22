@@ -1,0 +1,148 @@
+{
+  "status": "experimental",
+  "canonical_hierarchy": false,
+  "description": "Experimental relation overlay for technical lineage, implementation dependencies, and cross-cutting relationships. These links are not canonical hierarchy placement.",
+  "relations": [
+    {
+      "source": "ai:artificial-intelligence",
+      "target": "ai:machine-learning",
+      "relation_type": "technical_lineage",
+      "view": ["technical_lineage"],
+      "note": "Common technical lineage view: AI includes machine learning as a major learning-based approach."
+    },
+    {
+      "source": "ai:machine-learning",
+      "target": "ai:deep-learning",
+      "relation_type": "technical_lineage",
+      "view": ["technical_lineage"],
+      "note": "Deep Learning is a major Machine Learning subarea in the canonical hierarchy."
+    },
+    {
+      "source": "ai:deep-learning",
+      "target": "ai:generative-ai",
+      "relation_type": "uses_methods_from",
+      "view": ["technical_lineage"],
+      "note": "Modern Generative AI commonly uses Deep Learning methods while remaining a Level 1 area in the canonical hierarchy."
+    },
+    {
+      "source": "ai:deep-learning",
+      "target": "ai:foundation-models-and-general-purpose-ai",
+      "relation_type": "enables",
+      "view": ["technical_lineage"],
+      "note": "Modern foundation models are strongly associated with deep learning architectures and training methods."
+    },
+    {
+      "source": "ai:foundation-models-and-general-purpose-ai",
+      "target": "ai:large-language-models",
+      "relation_type": "technical_lineage",
+      "view": ["technical_lineage"],
+      "note": "Large Language Models are a prominent foundation model family."
+    },
+    {
+      "source": "ai:large-language-models",
+      "target": "ai:natural-language-and-speech",
+      "relation_type": "applied_in",
+      "view": ["technical_lineage", "cross_links"],
+      "note": "Large language models are widely applied to natural-language tasks."
+    },
+    {
+      "source": "ai:foundation-models-and-general-purpose-ai",
+      "target": "ai:generative-ai",
+      "relation_type": "enables",
+      "view": ["technical_lineage", "cross_links"],
+      "note": "Foundation models often enable modern generative systems, though the categories are not identical."
+    },
+    {
+      "source": "ai:generative-ai",
+      "target": "ai:text-generation",
+      "relation_type": "has_output_area",
+      "view": ["technical_lineage", "cross_links"]
+    },
+    {
+      "source": "ai:generative-ai",
+      "target": "ai:image-generation",
+      "relation_type": "has_output_area",
+      "view": ["technical_lineage", "cross_links"]
+    },
+    {
+      "source": "ai:generative-ai",
+      "target": "ai:audio-generation",
+      "relation_type": "has_output_area",
+      "view": ["technical_lineage"]
+    },
+    {
+      "source": "ai:generative-ai",
+      "target": "ai:video-generation",
+      "relation_type": "has_output_area",
+      "view": ["technical_lineage"]
+    },
+    {
+      "source": "ai:image-generation",
+      "target": "ai:computer-vision-and-perception",
+      "relation_type": "overlaps_with",
+      "view": ["technical_lineage", "cross_links"],
+      "note": "Image generation and visual perception share representations and evaluation concerns without sharing hierarchy placement."
+    },
+    {
+      "source": "ai:text-generation",
+      "target": "ai:natural-language-generation",
+      "relation_type": "overlaps_with",
+      "view": ["cross_links"]
+    },
+    {
+      "source": "ai:natural-language-processing",
+      "target": "ai:large-language-models",
+      "relation_type": "uses_methods_from",
+      "view": ["cross_links"]
+    },
+    {
+      "source": "ai:vision-foundation-models",
+      "target": "ai:computer-vision-and-perception",
+      "relation_type": "applied_in",
+      "view": ["cross_links"]
+    },
+    {
+      "source": "ai:multimodal-foundation-models",
+      "target": "ai:text-generation",
+      "relation_type": "enables",
+      "view": ["cross_links"]
+    },
+    {
+      "source": "ai:multimodal-foundation-models",
+      "target": "ai:image-generation",
+      "relation_type": "enables",
+      "view": ["cross_links"]
+    },
+    {
+      "source": "ai:foundation-models-and-general-purpose-ai",
+      "target": "ai:agentic-and-multi-agent-systems",
+      "relation_type": "enables",
+      "view": ["cross_links"],
+      "note": "Foundation models can enable many modern agentic systems, but this is not a hierarchy edge."
+    },
+    {
+      "source": "ai:ai-safety-alignment-and-governance",
+      "target": "ai:generative-ai",
+      "relation_type": "governs_or_evaluates",
+      "view": ["cross_links"]
+    },
+    {
+      "source": "ai:ai-safety-alignment-and-governance",
+      "target": "ai:foundation-models-and-general-purpose-ai",
+      "relation_type": "governs_or_evaluates",
+      "view": ["cross_links"]
+    },
+    {
+      "source": "ai:human-ai-interaction",
+      "target": "ai:agentic-and-multi-agent-systems",
+      "relation_type": "overlaps_with",
+      "view": ["cross_links"]
+    },
+    {
+      "source": "ai:ai-safety-alignment-and-governance",
+      "target": "ai:agentic-and-multi-agent-systems",
+      "relation_type": "governs_or_evaluates",
+      "view": ["cross_links"]
+    }
+  ]
+}
