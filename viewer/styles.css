@@ -42,19 +42,19 @@ footer,
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: center;
-  padding: 14px 0 10px;
+  padding: 10px 0 8px;
 }
 
 .hero.compact {
-  padding-top: 12px;
+  padding-top: 10px;
 }
 
 .eyebrow {
-  margin: 0 0 0.32rem;
+  margin: 0 0 0.22rem;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -63,27 +63,31 @@ footer,
 h1,
 h2 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: -0.05em;
 }
 
 h1 {
   max-width: 720px;
-  font-size: clamp(2rem, 3vw, 3.25rem);
-  line-height: 0.92;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 2.05rem);
+  font-weight: 850;
+  letter-spacing: -0.045em;
+  line-height: 1;
 }
 
 h2 {
-  font-size: clamp(1.7rem, 2.6vw, 2.55rem);
-  line-height: 0.95;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.25rem, 1.7vw, 1.65rem);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
 }
 
 .lede {
   max-width: 720px;
-  margin: 0.45rem 0 0;
+  margin: 0.28rem 0 0;
   color: var(--muted);
-  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
-  line-height: 1.35;
+  font-size: clamp(0.82rem, 1vw, 0.94rem);
+  line-height: 1.25;
 }
 
 .actions {
@@ -139,7 +143,7 @@ select:hover {
 
 .layout.wide-map {
   grid-template-columns: minmax(0, 4.4fr) minmax(260px, 0.85fr);
-  min-height: calc(100vh - 132px);
+  min-height: calc(100vh - 112px);
 }
 
 .map-card,
@@ -153,7 +157,7 @@ select:hover {
 }
 
 .map-card {
-  min-height: calc(100vh - 132px);
+  min-height: calc(100vh - 112px);
   overflow: hidden;
 }
 
@@ -218,8 +222,8 @@ a:focus-visible {
 }
 
 .map-wrap.large {
-  height: calc(100vh - 238px);
-  min-height: 680px;
+  height: calc(100vh - 215px);
+  min-height: 700px;
 }
 
 #map {
@@ -236,18 +240,22 @@ a:focus-visible {
 }
 
 .details {
-  padding: 1.15rem;
-  min-height: calc(100vh - 132px);
+  padding: 1rem;
+  min-height: calc(100vh - 112px);
+}
+
+.details .eyebrow {
+  margin-bottom: 0.5rem;
 }
 
 .details dl {
-  margin: 1.1rem 0;
+  margin: 1rem 0;
   display: grid;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .details dl div {
-  padding: 0 0 0.7rem;
+  padding: 0 0 0.62rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -361,11 +369,13 @@ footer {
 }
 
 .doc-card h1 {
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.4rem, 5vw, 4rem);
 }
 
 .doc-card h2 {
   margin-top: 2rem;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
 }
 
