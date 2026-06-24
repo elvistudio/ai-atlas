@@ -8,6 +8,7 @@ const state = {
   query: "",
   conceptType: "",
   status: "",
+  mapTransform: d3.zoomIdentity,
 };
 
 const svg = d3.select("#map");
@@ -27,6 +28,8 @@ const nodeDescription = document.querySelector("#node-description");
 const feedbackLink = document.querySelector("#feedback-link");
 
 let simulation;
+let zoomBehavior;
+let viewportLayer;
 
 fetch(DATA_URL)
   .then((response) => {
@@ -67,6 +70,7 @@ resetButton.addEventListener("click", () => {
   state.query = "";
   state.conceptType = "";
   state.status = "";
+  state.mapTransform = d3.zoomIdentity;
   searchInput.value = "";
   typeFilter.value = "";
   statusFilter.value = "";
@@ -83,6 +87,7 @@ expandAllButton.addEventListener("click", () => {
 collapseAllButton.addEventListener("click", () => {
   state.expanded.clear();
   state.selectedId = "ai:artificial-intelligence";
+  state.mapTransform = d3.zoomIdentity;
   render();
 });
 
@@ -114,8 +119,9 @@ function render() {
   svg.selectAll("*").remove();
   svg.attr("viewBox", [-width / 2, -height / 2, width, height]);
 
-  const linkLayer = svg.append("g").attr("class", "links");
-  const nodeLayer = svg.append("g").attr("class", "nodes");
+  viewportLayer = svg.append("g").attr("class", "map-viewport");
+  const linkLayer = viewportLayer.append("g").attr("class", "links");
+  const nodeLayer = viewportLayer.append("g").attr("class", "nodes");
 
   const links = linkLayer
     .selectAll("line")
@@ -152,6 +158,8 @@ function render() {
     .attr("y", "0.32em")
     .text((node) => node.name);
 
+  setupMapNavigation(width, height);
+
   simulation = d3
     .forceSimulation(graph.nodes)
     .force(
@@ -179,6 +187,44 @@ function render() {
     });
 
   updateDetails(nodeById.get(state.selectedId));
+}
+
+function setupMapNavigation(width, height) {
+  zoomBehavior = d3
+    .zoom()
+    .scaleExtent([0.45, 3])
+    .translateExtent([
+      [-width * 2.4, -height * 2.4],
+      [width * 2.4, height * 2.4],
+    ])
+    .filter((event) => {
+      if (event.type === "wheel") {
+        return event.ctrlKey || event.metaKey;
+      }
+
+      return !event.button && !event.target.closest(".node");
+    })
+    .on("zoom", (event) => {
+      state.mapTransform = event.transform;
+      viewportLayer.attr("transform", state.mapTransform);
+    });
+
+  svg
+    .call(zoomBehavior)
+    .call(zoomBehavior.transform, state.mapTransform)
+    .on("dblclick.zoom", null)
+    .on("wheel.map-pan", handleWheelPan, { passive: false });
+}
+
+function handleWheelPan(event) {
+  if (event.ctrlKey || event.metaKey) {
+    return;
+  }
+
+  event.preventDefault();
+  const current = d3.zoomTransform(svg.node());
+  const next = current.translate(-event.deltaX / current.k, -event.deltaY / current.k);
+  svg.call(zoomBehavior.transform, next);
 }
 
 function buildGraph(taxonomy) {
