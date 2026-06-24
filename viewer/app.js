@@ -15,7 +15,6 @@ const svg = d3.select("#map");
 const searchInput = document.querySelector("#search");
 const typeFilter = document.querySelector("#type-filter");
 const statusFilter = document.querySelector("#status-filter");
-const resetButton = document.querySelector("#reset");
 const expandAllButton = document.querySelector("#expand-all");
 const collapseAllButton = document.querySelector("#collapse-all");
 const toggleSelectedButton = document.querySelector("#toggle-selected");
@@ -64,19 +63,6 @@ statusFilter.addEventListener("change", (event) => {
   render();
 });
 
-resetButton.addEventListener("click", () => {
-  state.selectedId = "ai:artificial-intelligence";
-  state.expanded.clear();
-  state.query = "";
-  state.conceptType = "";
-  state.status = "";
-  state.mapTransform = d3.zoomIdentity;
-  searchInput.value = "";
-  typeFilter.value = "";
-  statusFilter.value = "";
-  render();
-});
-
 expandAllButton.addEventListener("click", () => {
   for (const area of state.taxonomy.level_1) {
     state.expanded.add(area.id);
@@ -87,7 +73,13 @@ expandAllButton.addEventListener("click", () => {
 collapseAllButton.addEventListener("click", () => {
   state.expanded.clear();
   state.selectedId = "ai:artificial-intelligence";
+  state.query = "";
+  state.conceptType = "";
+  state.status = "";
   state.mapTransform = d3.zoomIdentity;
+  searchInput.value = "";
+  typeFilter.value = "";
+  statusFilter.value = "";
   render();
 });
 
