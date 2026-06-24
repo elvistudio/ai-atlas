@@ -20,7 +20,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.06), transparent 34rem),
+    radial-gradient(circle at 74% 20%, rgba(255, 255, 255, 0.055), transparent 34rem),
     linear-gradient(135deg, #050505 0%, #101010 55%, #050505 100%);
   color: var(--text);
   font-family:
@@ -33,8 +33,9 @@ a {
 
 .hero,
 .layout,
-footer {
-  width: min(1180px, calc(100vw - 32px));
+footer,
+.doc-page {
+  width: min(1380px, calc(100vw - 32px));
   margin: 0 auto;
 }
 
@@ -43,11 +44,15 @@ footer {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 2rem;
   align-items: end;
-  padding: 48px 0 28px;
+  padding: 38px 0 24px;
+}
+
+.hero.compact {
+  padding-top: 26px;
 }
 
 .eyebrow {
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.65rem;
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 700;
@@ -63,21 +68,21 @@ h2 {
 }
 
 h1 {
-  max-width: 760px;
-  font-size: clamp(3rem, 8vw, 6.8rem);
-  line-height: 0.86;
+  max-width: 620px;
+  font-size: clamp(2.6rem, 5.8vw, 5.2rem);
+  line-height: 0.9;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
   line-height: 0.95;
 }
 
 .lede {
-  max-width: 650px;
-  margin: 1.3rem 0 0;
+  max-width: 620px;
+  margin: 1rem 0 0;
   color: var(--muted);
-  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
   line-height: 1.45;
 }
 
@@ -90,12 +95,12 @@ h2 {
 
 .actions a,
 .details-actions a,
-button {
+button,
+select {
   border: 1px solid var(--line-strong);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.03);
   color: var(--text);
-  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1;
@@ -104,28 +109,41 @@ button {
 .actions a,
 .details-actions a {
   padding: 0.85rem 1rem;
+  text-decoration: none;
 }
 
-button {
+button,
+select {
   cursor: pointer;
   padding: 0.8rem 1rem;
 }
 
+select {
+  width: 100%;
+  appearance: none;
+}
+
 .actions a:hover,
 .details-actions a:hover,
-button:hover {
+button:hover,
+select:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 330px);
   gap: 1rem;
   align-items: stretch;
 }
 
+.layout.wide-map {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+}
+
 .map-card,
-.details {
+.details,
+.doc-card {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: rgba(12, 12, 12, 0.78);
@@ -134,7 +152,7 @@ button:hover {
 }
 
 .map-card {
-  min-height: 650px;
+  min-height: 780px;
   overflow: hidden;
 }
 
@@ -147,10 +165,28 @@ button:hover {
   border-bottom: 1px solid var(--line);
 }
 
+.toolbar.advanced {
+  grid-template-columns: minmax(260px, 1fr) minmax(160px, 210px) minmax(130px, 170px) auto;
+  align-items: end;
+}
+
+.control {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
 .search-label {
   color: var(--muted);
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 input[type="search"] {
@@ -167,12 +203,21 @@ input[type="search"]::placeholder {
   color: var(--dim);
 }
 
-input[type="search"]:focus {
+input[type="search"]:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
   border-color: rgba(255, 255, 255, 0.58);
+  outline: 2px solid rgba(255, 255, 255, 0.2);
+  outline-offset: 2px;
 }
 
 .map-wrap {
   height: 560px;
+}
+
+.map-wrap.large {
+  height: 680px;
 }
 
 #map {
@@ -225,6 +270,11 @@ dd {
   margin-top: 1.5rem;
 }
 
+.details-actions.stacked {
+  display: grid;
+  gap: 0.7rem;
+}
+
 footer {
   padding: 22px 0 44px;
   color: var(--dim);
@@ -256,6 +306,10 @@ footer {
   fill: #56524c;
 }
 
+.node.dimmed {
+  opacity: 0.16;
+}
+
 .node.selected circle {
   stroke: var(--focus);
   stroke-width: 3;
@@ -284,9 +338,78 @@ footer {
   font-weight: 600;
 }
 
+.doc-page {
+  padding: 32px 0 56px;
+}
+
+.doc-card {
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: clamp(1.3rem, 3vw, 2.4rem);
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.doc-card h1,
+.doc-card h2,
+.doc-card h3 {
+  color: var(--text);
+  letter-spacing: -0.035em;
+}
+
+.doc-card h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.doc-card h2 {
+  margin-top: 2rem;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.doc-card h3 {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.doc-card code,
+.doc-card pre {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+.doc-card code {
+  padding: 0.12rem 0.32rem;
+}
+
+.doc-card pre {
+  overflow: auto;
+  padding: 1rem;
+}
+
+.doc-card a {
+  color: var(--text);
+  text-decoration-color: var(--line-strong);
+}
+
+.load-error {
+  padding: 2rem;
+  color: var(--muted);
+}
+
+@media (max-width: 1100px) {
+  .toolbar.advanced {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .button-group {
+    justify-content: start;
+  }
+}
+
 @media (max-width: 920px) {
   .hero,
-  .layout {
+  .layout,
+  .layout.wide-map {
     grid-template-columns: 1fr;
   }
 
@@ -295,14 +418,14 @@ footer {
   }
 
   .map-card {
-    min-height: 560px;
+    min-height: 620px;
   }
 
-  .map-wrap {
-    height: 470px;
+  .map-wrap.large {
+    height: 500px;
   }
 
-  .toolbar {
+  .toolbar.advanced {
     grid-template-columns: 1fr;
   }
 }
