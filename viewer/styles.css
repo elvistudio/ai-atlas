@@ -219,6 +219,7 @@ a:focus-visible {
 
 .map-wrap {
   height: 560px;
+  overflow: hidden;
 }
 
 .map-wrap.large {
@@ -230,6 +231,13 @@ a:focus-visible {
   display: block;
   width: 100%;
   height: 100%;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+#map:active {
+  cursor: grabbing;
 }
 
 .hint {
