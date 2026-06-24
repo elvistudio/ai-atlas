@@ -22,6 +22,19 @@ See also: [Level 3 draft policy](taxonomy/level-3-draft-policy.md).
 
 See also: [Level 3 draft status and roadmap](docs/roadmap/level-3-draft-status.md).
 
+## Start here
+
+If you are new to AI Atlas, do not start with the JSON file.
+
+Use one of these entry points:
+
+- [Visual D3 viewer](viewer/) — explore the Level 1–Level 2 taxonomy without reading JSON.
+- [Human-readable taxonomy](taxonomy/ai-taxonomy-l1-l2.md) — read the current public hierarchy.
+- [Public review guide](PUBLIC_REVIEW.md) — see what kind of feedback is useful now.
+- [Release notes](docs/releases/v0.1-public-preview.md) — understand v0.1 scope and boundaries.
+
+The JSON file is the canonical structured source, mainly for validation, generation, and future tooling.
+
 ## Public review
 
 AI Atlas v0.1 is open for focused review of the Level 1 and Level 2 taxonomy. See the [public review guide](PUBLIC_REVIEW.md) for review scope, questions, and feedback format.
@@ -46,6 +59,7 @@ For now, the canonical source is the Level 1 and Level 2 taxonomy in `taxonomy/`
 
 ## Public outputs
 
+- [Visual D3 viewer](viewer/)
 - [Taxonomy](taxonomy/)
 - [Markmap view](markmap/)
 - [Obsidian vault](obsidian/)
