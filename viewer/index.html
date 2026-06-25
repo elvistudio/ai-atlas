@@ -17,10 +17,22 @@
         <h1 id="page-title">Explore the AI map.</h1>
       </div>
       <nav class="actions" aria-label="Project links">
-        <a href="doc.html?doc=taxonomy">Read taxonomy</a>
-        <a href="doc.html?doc=review">Review guide</a>
-        <a href="../taxonomy/ai-taxonomy-l1-l2.json">Read JSON</a>
-        <a href="https://github.com/ai-atlas-project/ai-atlas/issues/new">Give feedback</a>
+        <a href="doc.html?doc=taxonomy">
+          <span class="desktop-label">Read taxonomy</span>
+          <span class="mobile-label">Taxonomy</span>
+        </a>
+        <a href="doc.html?doc=review">
+          <span class="desktop-label">Review guide</span>
+          <span class="mobile-label">Guide</span>
+        </a>
+        <a href="../taxonomy/ai-taxonomy-l1-l2.json">
+          <span class="desktop-label">Read JSON</span>
+          <span class="mobile-label">JSON</span>
+        </a>
+        <a href="https://github.com/ai-atlas-project/ai-atlas/issues/new">
+          <span class="desktop-label">Give feedback</span>
+          <span class="mobile-label">Feedback</span>
+        </a>
       </nav>
     </header>
 
@@ -47,9 +59,18 @@
           </div>
 
           <div class="button-group" aria-label="Expansion controls">
-            <button id="collapse-all" type="button">Show overview</button>
-            <button id="expand-all" type="button">Show subareas</button>
-            <button id="recenter-map" type="button">Re-center</button>
+            <button id="collapse-all" type="button">
+              <span class="desktop-label">Show overview</span>
+              <span class="mobile-label">Overview</span>
+            </button>
+            <button id="expand-all" type="button">
+              <span class="desktop-label">Show subareas</span>
+              <span class="mobile-label">Subareas</span>
+            </button>
+            <button id="recenter-map" type="button">
+              <span class="desktop-label">Re-center</span>
+              <span class="mobile-label">Center</span>
+            </button>
           </div>
         </div>
         <div class="map-wrap large">
@@ -86,7 +107,8 @@
         </aside>
 
         <p class="hint">
-          Drag empty space to pan. Click nodes to inspect. Use Re-center if the map moves out of view.
+          <span class="desktop-hint">Drag empty space to pan. Click nodes to inspect. Use Re-center if the map moves out of view.</span>
+          <span class="mobile-hint">Drag the map to pan. Tap concepts to inspect. Use Center to return to AI.</span>
         </p>
       </section>
     </main>
