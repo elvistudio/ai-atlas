@@ -18,6 +18,8 @@ const statusFilter = document.querySelector("#status-filter");
 const expandAllButton = document.querySelector("#expand-all");
 const collapseAllButton = document.querySelector("#collapse-all");
 const toggleSelectedButton = document.querySelector("#toggle-selected");
+const conceptCard = document.querySelector("#concept-card");
+const closeCardButton = document.querySelector("#close-card");
 
 const detailsTitle = document.querySelector("#details-title");
 const nodeLevel = document.querySelector("#node-level");
@@ -80,6 +82,7 @@ collapseAllButton.addEventListener("click", () => {
   searchInput.value = "";
   typeFilter.value = "";
   statusFilter.value = "";
+  showConceptCard();
   render();
 });
 
@@ -94,6 +97,16 @@ toggleSelectedButton.addEventListener("click", () => {
   }
 
   render();
+});
+
+closeCardButton.addEventListener("click", () => {
+  hideConceptCard();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    hideConceptCard();
+  }
 });
 
 function render() {
@@ -137,6 +150,7 @@ function render() {
     .on("click", (_event, node) => {
       state.selectedId = node.id;
       updateDetails(node);
+      showConceptCard();
       nodeLayer.selectAll("g").attr("class", (item) => nodeClass(item));
     });
 
@@ -375,7 +389,7 @@ function updateDetails(node) {
   if (!node) return;
 
   detailsTitle.textContent = node.name;
-  nodeLevel.textContent = `Level ${node.hierarchy_level} · ${node.hierarchy_level_name}`;
+  nodeLevel.textContent = `Level ${node.hierarchy_level} - ${node.hierarchy_level_name}`;
   nodeType.textContent = node.concept_type || "Not specified";
   nodeStatus.textContent = node.stability || "Not specified";
   nodeDescription.textContent = node.description || "No description yet.";
@@ -392,6 +406,14 @@ function updateDetails(node) {
     body: `Concept: ${node.name}\n\nFeedback:\n`,
   });
   feedbackLink.href = `${FEEDBACK_URL}?${params.toString()}`;
+}
+
+function showConceptCard() {
+  conceptCard.hidden = false;
+}
+
+function hideConceptCard() {
+  conceptCard.hidden = true;
 }
 
 function findNodeById(id) {
