@@ -44,6 +44,7 @@ fetch(DATA_URL)
     state.taxonomy = taxonomy;
     populateFilters(taxonomy);
     render();
+    setInitialConceptCardVisibility();
   })
   .catch((error) => {
     showLoadError(error);
@@ -439,6 +440,18 @@ function showConceptCard() {
 
 function hideConceptCard() {
   conceptCard.hidden = true;
+}
+
+function setInitialConceptCardVisibility() {
+  if (isMobileViewport()) {
+    hideConceptCard();
+  } else {
+    showConceptCard();
+  }
+}
+
+function isMobileViewport() {
+  return window.matchMedia("(max-width: 700px)").matches;
 }
 
 function findNodeById(id) {
