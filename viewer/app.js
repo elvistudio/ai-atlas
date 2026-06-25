@@ -34,6 +34,7 @@ const feedbackLink = document.querySelector("#feedback-link");
 let simulation;
 let zoomBehavior;
 let viewportLayer;
+let focusTimeout;
 
 fetch(DATA_URL)
   .then((response) => {
@@ -120,7 +121,7 @@ toggleSelectedButton.addEventListener("click", () => {
   }
 
   render();
-  requestAnimationFrame(() => focusRenderedNode(selected.id));
+  scheduleFocusOnNode(selected.id);
 });
 
 closeCardButton.addEventListener("click", () => {
@@ -297,6 +298,11 @@ function toggleRootView() {
   render();
 }
 
+function scheduleFocusOnNode(nodeId) {
+  window.clearTimeout(focusTimeout);
+  focusTimeout = window.setTimeout(() => focusRenderedNode(nodeId), 280);
+}
+
 function focusRenderedNode(nodeId) {
   if (!zoomBehavior) return;
 
@@ -308,14 +314,14 @@ function focusRenderedNode(nodeId) {
   if (!node || node.hierarchy_level === 0) {
     state.mapTransform = d3.zoomIdentity;
   } else {
-    const x = Number.isFinite(node.x) ? node.x : 0;
-    const y = Number.isFinite(node.y) ? node.y : 0;
+    const x = Number.isFinite(node.x) ? node.x : xFor(node, svg.node().clientWidth || 1000);
+    const y = Number.isFinite(node.y) ? node.y : yFor(node, svg.node().clientHeight || 680);
     state.mapTransform = d3.zoomIdentity.translate(-x, -y);
   }
 
   svg
     .transition()
-    .duration(220)
+    .duration(260)
     .call(zoomBehavior.transform, state.mapTransform);
 }
 
