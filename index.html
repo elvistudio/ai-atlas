@@ -2,193 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=viewer/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI Atlas</title>
     <meta
       name="description"
       content="AI Atlas is an open, community-reviewed taxonomy and knowledge map of modern Artificial Intelligence."
     />
-    <link rel="stylesheet" href="viewer/styles.css" />
-    <link rel="stylesheet" href="viewer/footer-icons.css" />
-    <style>
-      .landing-page {
-        width: min(1180px, calc(100vw - 32px));
-        min-height: calc(100vh - 96px);
-        margin: 0 auto;
-        display: grid;
-        align-items: center;
-        padding: clamp(2rem, 5vw, 5rem) 0;
-      }
-
-      .landing-card {
-        border: 1px solid var(--line);
-        border-radius: 32px;
-        background:
-          radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.08), transparent 22rem),
-          rgba(12, 12, 12, 0.76);
-        box-shadow: 0 24px 90px rgba(0, 0, 0, 0.55);
-        padding: clamp(1.4rem, 5vw, 4rem);
-      }
-
-      .landing-kicker {
-        margin: 0 0 0.7rem;
-        color: var(--muted);
-        font-size: 0.72rem;
-        font-weight: 800;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-      }
-
-      .landing-title {
-        max-width: 920px;
-        font-size: clamp(3rem, 10vw, 7.2rem);
-        line-height: 0.88;
-        letter-spacing: -0.075em;
-      }
-
-      .landing-lede {
-        max-width: 760px;
-        margin: 1.2rem 0 0;
-        color: var(--muted);
-        font-size: clamp(1rem, 2vw, 1.35rem);
-        line-height: 1.42;
-      }
-
-      .landing-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.72rem;
-        margin-top: 2rem;
-      }
-
-      .landing-actions a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 46px;
-        padding: 0.82rem 1rem;
-        border: 1px solid var(--line-strong);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.03);
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 760;
-        line-height: 1;
-        text-decoration: none;
-      }
-
-      .landing-actions a.primary {
-        background: var(--text);
-        color: var(--bg);
-        border-color: var(--text);
-      }
-
-      .landing-actions a:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .landing-actions a.primary:hover {
-        background: #d9d4ca;
-        border-color: #d9d4ca;
-      }
-
-      .landing-meta {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.8rem;
-        margin-top: 2rem;
-      }
-
-      .landing-meta div {
-        border: 1px solid rgba(244, 241, 234, 0.1);
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.025);
-        padding: 0.95rem;
-      }
-
-      .landing-meta dt {
-        margin-bottom: 0.36rem;
-      }
-
-      .landing-meta dd {
-        color: var(--muted);
-        font-size: 0.88rem;
-        line-height: 1.38;
-      }
-
-      @media (max-width: 760px) {
-        .landing-page {
-          width: min(100vw - 18px, 1180px);
-          min-height: auto;
-          padding: 0.55rem 0 1rem;
-        }
-
-        .landing-card {
-          border-radius: 22px;
-          padding: 1.2rem;
-        }
-
-        .landing-title {
-          font-size: clamp(2.6rem, 15vw, 4.4rem);
-        }
-
-        .landing-actions {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 0.55rem;
-        }
-
-        .landing-meta {
-          grid-template-columns: 1fr;
-          gap: 0.55rem;
-        }
-      }
-    </style>
+    <link rel="canonical" href="viewer/" />
+    <script>
+      window.location.replace("viewer/");
+    </script>
   </head>
   <body>
-    <main class="landing-page">
-      <section class="landing-card" aria-labelledby="page-title">
-        <p class="landing-kicker">AI Atlas / v0.1 public preview</p>
-        <h1 id="page-title" class="landing-title">A map of modern AI.</h1>
-        <p class="landing-lede">
-          AI Atlas is an open, community-reviewed taxonomy and knowledge map of modern Artificial Intelligence.
-          Explore the Level 1-Level 2 public preview, review the taxonomy, and suggest improvements on GitHub.
-        </p>
-
-        <nav class="landing-actions" aria-label="Primary site links">
-          <a class="primary" href="viewer/">Explore the AI map</a>
-          <a href="viewer/doc.html?doc=review">Review guide</a>
-          <a href="viewer/doc.html?doc=taxonomy">Read taxonomy</a>
-          <a href="viewer/doc.html?doc=json">Read JSON</a>
-          <a href="https://github.com/ai-atlas-project/ai-atlas/issues/new">Give feedback</a>
-        </nav>
-
-        <dl class="landing-meta">
-          <div>
-            <dt>Scope</dt>
-            <dd>Level 1 and Level 2 public preview only. Level 3 remains draft/review work.</dd>
-          </div>
-          <div>
-            <dt>Source</dt>
-            <dd>The public GitHub repository and taxonomy files remain the canonical source of truth.</dd>
-          </div>
-          <div>
-            <dt>Contact</dt>
-            <dd><a href="mailto:hello@ai-atlas-project.org">hello@ai-atlas-project.org</a></dd>
-          </div>
-        </dl>
-      </section>
-    </main>
-
-    <footer class="site-footer" aria-label="Site footer">
-      <p>Managed by ai-atlas-project.org · AI Atlas v0.1 public preview.</p>
-      <nav class="footer-links" aria-label="Footer links">
-        <a href="https://github.com/ai-atlas-project/ai-atlas">GitHub repository</a>
-        <a href="https://www.linkedin.com/in/astzhalkouski/">Alyaksandr Stzhalkouski</a>
-        <a href="viewer/doc.html?doc=review">Review guide</a>
-        <a href="viewer/doc.html?doc=json">Formatted JSON</a>
-        <a href="https://github.com/ai-atlas-project/ai-atlas/issues/new">Feedback</a>
-      </nav>
-    </footer>
+    <p>
+      Redirecting to <a href="viewer/">AI Atlas viewer</a>…
+    </p>
   </body>
 </html>
