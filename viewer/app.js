@@ -20,6 +20,8 @@ const statusFilter = document.querySelector("#status-filter");
 const expandAllButton = document.querySelector("#expand-all");
 const collapseAllButton = document.querySelector("#collapse-all");
 const recenterMapButton = document.querySelector("#recenter-map");
+const zoomInButton = document.querySelector("#zoom-in");
+const zoomOutButton = document.querySelector("#zoom-out");
 const toggleSelectedButton = document.querySelector("#toggle-selected");
 const conceptCard = document.querySelector("#concept-card");
 const closeCardButton = document.querySelector("#close-card");
@@ -98,6 +100,14 @@ collapseAllButton.addEventListener("click", () => {
 
 recenterMapButton.addEventListener("click", () => {
   recenterMap();
+});
+
+zoomInButton.addEventListener("click", () => {
+  zoomMap(1.22);
+});
+
+zoomOutButton.addEventListener("click", () => {
+  zoomMap(1 / 1.22);
 });
 
 toggleSelectedButton.addEventListener("click", () => {
@@ -223,7 +233,7 @@ function render() {
 function setupMapNavigation(width, height) {
   zoomBehavior = d3
     .zoom()
-    .scaleExtent([0.45, 3])
+    .scaleExtent([0.45, 3.4])
     .translateExtent([
       [-width * 2.4, -height * 2.4],
       [width * 2.4, height * 2.4],
@@ -256,6 +266,15 @@ function handleWheelPan(event) {
   const current = d3.zoomTransform(svg.node());
   const next = current.translate(-event.deltaX / current.k, -event.deltaY / current.k);
   svg.call(zoomBehavior.transform, next);
+}
+
+function zoomMap(factor) {
+  if (!zoomBehavior) return;
+
+  svg
+    .transition()
+    .duration(180)
+    .call(zoomBehavior.scaleBy, factor);
 }
 
 function recenterMap() {
@@ -316,7 +335,7 @@ function focusRenderedNode(nodeId) {
   } else {
     const x = Number.isFinite(node.x) ? node.x : xFor(node, svg.node().clientWidth || 1000);
     const y = Number.isFinite(node.y) ? node.y : yFor(node, svg.node().clientHeight || 680);
-    state.mapTransform = d3.zoomIdentity.translate(-x, -y);
+    state.mapTransform = d3.zoomIdentity.translate(-x, -y).scale(Math.max(state.mapTransform.k, 1));
   }
 
   svg
