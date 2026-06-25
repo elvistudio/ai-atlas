@@ -97,6 +97,11 @@ h2 {
   justify-content: end;
 }
 
+.mobile-label,
+.mobile-hint {
+  display: none;
+}
+
 .actions a,
 .details-actions a,
 button,
@@ -496,5 +501,242 @@ footer {
 
   .concept-card dl {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero,
+  .layout,
+  footer,
+  .doc-page {
+    width: min(100vw - 14px, 1680px);
+  }
+
+  .hero {
+    gap: 0.48rem;
+    padding: 8px 0 6px;
+  }
+
+  .hero.compact {
+    padding-top: 8px;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.16rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.13em;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    letter-spacing: -0.04em;
+  }
+
+  h2 {
+    font-size: 1.12rem;
+  }
+
+  .actions {
+    flex-wrap: nowrap;
+    justify-content: start;
+    gap: 0.38rem;
+    overflow-x: auto;
+    padding: 0 0 0.2rem;
+    margin-right: -0.35rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .actions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .actions a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    white-space: nowrap;
+    padding: 0.52rem 0.66rem;
+    font-size: 0.74rem;
+  }
+
+  .desktop-label,
+  .desktop-hint {
+    display: none;
+  }
+
+  .mobile-label,
+  .mobile-hint {
+    display: inline;
+  }
+
+  .map-card {
+    border-radius: 18px;
+  }
+
+  .toolbar.advanced {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+    align-items: end;
+    padding: 0.5rem;
+  }
+
+  .search-control,
+  .button-group {
+    grid-column: 1 / -1;
+  }
+
+  .search-label {
+    font-size: 0.58rem;
+  }
+
+  input[type="search"],
+  select,
+  button {
+    min-height: 42px;
+    font-size: 0.76rem;
+  }
+
+  input[type="search"] {
+    padding: 0.58rem 0.72rem;
+  }
+
+  select {
+    padding: 0.58rem 0.7rem;
+  }
+
+  .button-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.35rem;
+  }
+
+  .button-group button {
+    width: 100%;
+    padding: 0.56rem 0.38rem;
+  }
+
+  .map-wrap.large {
+    height: 62vh;
+    height: 62dvh;
+    min-height: 380px;
+  }
+
+  .hint {
+    padding: 0.45rem 0.68rem 0.65rem;
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+
+  .concept-card {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-height: 60vh;
+    max-height: 60dvh;
+    padding: 1rem 0.9rem max(1rem, env(safe-area-inset-bottom));
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 22px 22px 0 0;
+    background: rgba(10, 10, 10, 0.94);
+    box-shadow: 0 -22px 70px rgba(0, 0, 0, 0.68);
+    z-index: 10;
+  }
+
+  .concept-card::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 4px;
+    margin: 0 auto 0.8rem;
+    border-radius: 999px;
+    background: rgba(244, 241, 234, 0.24);
+  }
+
+  .concept-card-header {
+    align-items: center;
+  }
+
+  .icon-button {
+    min-height: 36px;
+    padding: 0.4rem 0.58rem;
+  }
+
+  .concept-card dl {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+    margin: 0.75rem 0;
+  }
+
+  .concept-card dl div {
+    padding: 0.5rem 0.56rem;
+  }
+
+  .description {
+    font-size: 0.86rem;
+    line-height: 1.42;
+  }
+
+  .details-actions a,
+  .details-actions button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 42px;
+    text-align: center;
+  }
+
+  .node text {
+    font-size: 0.66rem;
+  }
+
+  .node.level-2 text {
+    font-size: 0.54rem;
+  }
+
+  footer {
+    padding: 8px 0 12px;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero,
+  .layout,
+  footer,
+  .doc-page {
+    width: min(100vw - 10px, 1680px);
+  }
+
+  h1 {
+    font-size: 1.15rem;
+  }
+
+  .toolbar.advanced {
+    gap: 0.4rem;
+    padding: 0.44rem;
+  }
+
+  .actions a {
+    min-height: 36px;
+    padding: 0.48rem 0.58rem;
+  }
+
+  .map-wrap.large {
+    height: 58vh;
+    height: 58dvh;
+    min-height: 340px;
+  }
+
+  .concept-card {
+    max-height: 64vh;
+    max-height: 64dvh;
   }
 }
