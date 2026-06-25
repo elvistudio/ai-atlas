@@ -11,9 +11,13 @@ const state = {
   status: "",
   rootOnly: false,
   mapTransform: d3.zoomIdentity,
+  controlsCollapsed: false,
 };
 
 const svg = d3.select("#map");
+const mapCard = document.querySelector(".map-card");
+const mapWrap = document.querySelector(".map-wrap");
+const controlsToggleButton = document.querySelector("#controls-toggle");
 const searchInput = document.querySelector("#search");
 const typeFilter = document.querySelector("#type-filter");
 const statusFilter = document.querySelector("#status-filter");
@@ -50,6 +54,7 @@ fetch(DATA_URL)
     populateFilters(taxonomy);
     render();
     setInitialConceptCardVisibility();
+    setControlsCollapsed(false);
   })
   .catch((error) => {
     showLoadError(error);
@@ -108,6 +113,31 @@ zoomInButton.addEventListener("click", () => {
 
 zoomOutButton.addEventListener("click", () => {
   zoomMap(1 / 1.22);
+});
+
+controlsToggleButton.addEventListener("click", () => {
+  setControlsCollapsed(!state.controlsCollapsed);
+});
+
+mapWrap.addEventListener("pointerdown", () => {
+  if (isMobileViewport() && !state.controlsCollapsed) {
+    setControlsCollapsed(true);
+  }
+});
+
+svg.node().addEventListener("keydown", (event) => {
+  if (event.metaKey || event.ctrlKey || event.altKey) return;
+
+  if (event.key === "+" || event.key === "=") {
+    event.preventDefault();
+    zoomMap(1.22);
+  } else if (event.key === "-" || event.key === "_") {
+    event.preventDefault();
+    zoomMap(1 / 1.22);
+  } else if (event.key === "0") {
+    event.preventDefault();
+    recenterMap();
+  }
 });
 
 toggleSelectedButton.addEventListener("click", () => {
@@ -295,6 +325,12 @@ function recenterMap() {
     .transition()
     .duration(220)
     .call(zoomBehavior.transform, state.mapTransform);
+}
+
+function setControlsCollapsed(collapsed) {
+  state.controlsCollapsed = collapsed;
+  mapCard.classList.toggle("controls-collapsed", collapsed);
+  controlsToggleButton.setAttribute("aria-expanded", String(!collapsed));
 }
 
 function toggleRootView() {
