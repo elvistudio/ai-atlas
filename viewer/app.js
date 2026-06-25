@@ -1,13 +1,15 @@
 const DATA_URL = "../taxonomy/ai-taxonomy-l1-l2.json";
 const FEEDBACK_URL = "https://github.com/ai-atlas-project/ai-atlas/issues/new";
+const ROOT_ID = "ai:artificial-intelligence";
 
 const state = {
   taxonomy: null,
-  selectedId: "ai:artificial-intelligence",
+  selectedId: ROOT_ID,
   expanded: new Set(),
   query: "",
   conceptType: "",
   status: "",
+  rootOnly: false,
   mapTransform: d3.zoomIdentity,
 };
 
@@ -51,23 +53,27 @@ fetch(DATA_URL)
   });
 
 searchInput.addEventListener("input", (event) => {
+  state.rootOnly = false;
   state.query = event.target.value.trim().toLowerCase();
   render();
 });
 
 typeFilter.addEventListener("change", (event) => {
+  state.rootOnly = false;
   state.conceptType = event.target.value;
   expandParentsForActiveFilters();
   render();
 });
 
 statusFilter.addEventListener("change", (event) => {
+  state.rootOnly = false;
   state.status = event.target.value;
   expandParentsForActiveFilters();
   render();
 });
 
 expandAllButton.addEventListener("click", () => {
+  state.rootOnly = false;
   for (const area of state.taxonomy.level_1) {
     state.expanded.add(area.id);
   }
@@ -75,8 +81,9 @@ expandAllButton.addEventListener("click", () => {
 });
 
 collapseAllButton.addEventListener("click", () => {
+  state.rootOnly = false;
   state.expanded.clear();
-  state.selectedId = "ai:artificial-intelligence";
+  state.selectedId = ROOT_ID;
   state.query = "";
   state.conceptType = "";
   state.status = "";
@@ -94,8 +101,18 @@ recenterMapButton.addEventListener("click", () => {
 
 toggleSelectedButton.addEventListener("click", () => {
   const selected = findNodeById(state.selectedId);
-  if (!selected || selected.hierarchy_level !== 1) return;
+  if (!selected) return;
 
+  if (selected.hierarchy_level === 0) {
+    toggleRootView();
+    return;
+  }
+
+  if (selected.hierarchy_level !== 1 || !(selected.level_2 || []).length) {
+    return;
+  }
+
+  state.rootOnly = false;
   if (state.expanded.has(selected.id)) {
     state.expanded.delete(selected.id);
   } else {
@@ -103,6 +120,7 @@ toggleSelectedButton.addEventListener("click", () => {
   }
 
   render();
+  requestAnimationFrame(() => focusRenderedNode(selected.id));
 });
 
 closeCardButton.addEventListener("click", () => {
@@ -124,7 +142,7 @@ function render() {
   const nodeById = new Map(graph.nodes.map((node) => [node.id, node]));
 
   if (!nodeById.has(state.selectedId)) {
-    state.selectedId = "ai:artificial-intelligence";
+    state.selectedId = ROOT_ID;
   }
 
   svg.selectAll("*").remove();
@@ -240,7 +258,7 @@ function handleWheelPan(event) {
 }
 
 function recenterMap() {
-  state.selectedId = "ai:artificial-intelligence";
+  state.selectedId = ROOT_ID;
   state.mapTransform = d3.zoomIdentity;
   showConceptCard();
 
@@ -259,12 +277,58 @@ function recenterMap() {
     .call(zoomBehavior.transform, state.mapTransform);
 }
 
+function toggleRootView() {
+  if (state.rootOnly) {
+    state.rootOnly = false;
+  } else {
+    state.rootOnly = true;
+    state.expanded.clear();
+    state.query = "";
+    state.conceptType = "";
+    state.status = "";
+    searchInput.value = "";
+    typeFilter.value = "";
+    statusFilter.value = "";
+  }
+
+  state.selectedId = ROOT_ID;
+  state.mapTransform = d3.zoomIdentity;
+  showConceptCard();
+  render();
+}
+
+function focusRenderedNode(nodeId) {
+  if (!zoomBehavior) return;
+
+  const node = svg
+    .selectAll(".nodes g")
+    .filter((item) => item.id === nodeId)
+    .datum();
+
+  if (!node || node.hierarchy_level === 0) {
+    state.mapTransform = d3.zoomIdentity;
+  } else {
+    const x = Number.isFinite(node.x) ? node.x : 0;
+    const y = Number.isFinite(node.y) ? node.y : 0;
+    state.mapTransform = d3.zoomIdentity.translate(-x, -y);
+  }
+
+  svg
+    .transition()
+    .duration(220)
+    .call(zoomBehavior.transform, state.mapTransform);
+}
+
 function buildGraph(taxonomy) {
   const nodes = [];
   const links = [];
   const root = taxonomy.level_0;
 
   nodes.push({ ...root, depth: 0 });
+
+  if (state.rootOnly && !hasActiveFilters()) {
+    return { nodes, links };
+  }
 
   for (const [index, area] of taxonomy.level_1.entries()) {
     const areaNode = { ...area, depth: 1, angleIndex: index, siblingCount: taxonomy.level_1.length };
@@ -420,7 +484,10 @@ function updateDetails(node) {
   nodeStatus.textContent = node.stability || "Not specified";
   nodeDescription.textContent = node.description || "No description yet.";
 
-  if (node.hierarchy_level === 1) {
+  if (node.hierarchy_level === 0) {
+    toggleSelectedButton.hidden = false;
+    toggleSelectedButton.textContent = state.rootOnly ? "Show overview" : "Collapse to AI only";
+  } else if (node.hierarchy_level === 1 && (node.level_2 || []).length) {
     toggleSelectedButton.hidden = false;
     toggleSelectedButton.textContent = state.expanded.has(node.id) ? "Collapse this area" : "Expand this area";
   } else {
