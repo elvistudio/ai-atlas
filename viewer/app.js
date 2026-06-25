@@ -17,6 +17,7 @@ const typeFilter = document.querySelector("#type-filter");
 const statusFilter = document.querySelector("#status-filter");
 const expandAllButton = document.querySelector("#expand-all");
 const collapseAllButton = document.querySelector("#collapse-all");
+const recenterMapButton = document.querySelector("#recenter-map");
 const toggleSelectedButton = document.querySelector("#toggle-selected");
 const conceptCard = document.querySelector("#concept-card");
 const closeCardButton = document.querySelector("#close-card");
@@ -84,6 +85,10 @@ collapseAllButton.addEventListener("click", () => {
   statusFilter.value = "";
   showConceptCard();
   render();
+});
+
+recenterMapButton.addEventListener("click", () => {
+  recenterMap();
 });
 
 toggleSelectedButton.addEventListener("click", () => {
@@ -231,6 +236,17 @@ function handleWheelPan(event) {
   const current = d3.zoomTransform(svg.node());
   const next = current.translate(-event.deltaX / current.k, -event.deltaY / current.k);
   svg.call(zoomBehavior.transform, next);
+}
+
+function recenterMap() {
+  state.mapTransform = d3.zoomIdentity;
+
+  if (!zoomBehavior) return;
+
+  svg
+    .transition()
+    .duration(220)
+    .call(zoomBehavior.transform, state.mapTransform);
 }
 
 function buildGraph(taxonomy) {
