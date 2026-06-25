@@ -16,7 +16,7 @@
         <p class="eyebrow">AI Atlas / v0.1 public preview</p>
         <h1 id="page-title">Explore the AI map.</h1>
         <p class="lede">
-          Browse the Level 1–Level 2 taxonomy visually. You do not need to read JSON to review AI Atlas.
+          Browse the Level 1-Level 2 taxonomy visually. You do not need to read JSON to review AI Atlas.
         </p>
       </div>
       <nav class="actions" aria-label="Project links">
@@ -31,17 +31,17 @@
         <div class="toolbar advanced">
           <div class="control search-control">
             <label class="search-label" for="search">Search concepts</label>
-            <input id="search" type="search" placeholder="Try “Machine Learning”, “Robotics”, “Safety”…" />
+            <input id="search" type="search" placeholder="Try Machine Learning, Robotics, Safety..." />
           </div>
 
-          <div class="control">
+          <div class="control filter-control">
             <label class="search-label" for="type-filter">Concept type</label>
             <select id="type-filter">
               <option value="">All types</option>
             </select>
           </div>
 
-          <div class="control">
+          <div class="control filter-control">
             <label class="search-label" for="status-filter">Status</label>
             <select id="status-filter">
               <option value="">All statuses</option>
@@ -56,41 +56,45 @@
         <div class="map-wrap large">
           <svg id="map" role="img" aria-label="AI Atlas Level 0 to Level 2 taxonomy graph"></svg>
         </div>
+
+        <aside id="concept-card" class="concept-card" aria-labelledby="details-title">
+          <div class="concept-card-header">
+            <p class="eyebrow">Selected concept</p>
+            <button id="close-card" class="icon-button" type="button" aria-label="Close selected concept card">Close</button>
+          </div>
+          <h2 id="details-title">Artificial Intelligence</h2>
+          <dl>
+            <div>
+              <dt>Level</dt>
+              <dd id="node-level">Level 0 - Field</dd>
+            </div>
+            <div>
+              <dt>Concept type</dt>
+              <dd id="node-type">Field</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd id="node-status">stable</dd>
+            </div>
+          </dl>
+          <p id="node-description" class="description">
+            The broad field of creating systems that can perceive, learn, reason, plan, communicate, generate, decide, or act in ways associated with intelligence.
+          </p>
+          <div class="details-actions stacked">
+            <button id="toggle-selected" type="button" hidden>Expand this area</button>
+            <a id="feedback-link" href="https://github.com/ai-atlas-project/ai-atlas/issues/new">Suggest feedback</a>
+          </div>
+        </aside>
+
         <p class="hint">
           Drag empty space to pan. Click nodes to inspect. Use Show subareas for Level 2.
         </p>
       </section>
-
-      <aside class="details" aria-labelledby="details-title">
-        <p class="eyebrow">Selected concept</p>
-        <h2 id="details-title">Artificial Intelligence</h2>
-        <dl>
-          <div>
-            <dt>Level</dt>
-            <dd id="node-level">Level 0 · Field</dd>
-          </div>
-          <div>
-            <dt>Concept type</dt>
-            <dd id="node-type">Field</dd>
-          </div>
-          <div>
-            <dt>Status</dt>
-            <dd id="node-status">stable</dd>
-          </div>
-        </dl>
-        <p id="node-description" class="description">
-          The broad field of creating systems that can perceive, learn, reason, plan, communicate, generate, decide, or act in ways associated with intelligence.
-        </p>
-        <div class="details-actions stacked">
-          <button id="toggle-selected" type="button" hidden>Expand this area</button>
-          <a id="feedback-link" href="https://github.com/ai-atlas-project/ai-atlas/issues/new">Suggest feedback</a>
-        </div>
-      </aside>
     </main>
 
     <footer>
       <p>
-        This viewer is a visual aid for AI Atlas v0.1. The GitHub repository and canonical taxonomy files remain the source of truth. Level 3 is draft/review work only and is not canonical yet.
+        AI Atlas v0.1 viewer - Level 1-2 public preview - Canonical source remains GitHub.
       </p>
     </footer>
 
