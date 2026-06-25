@@ -418,7 +418,8 @@ footer {
 }
 
 .node text {
-  pointer-events: none;
+  cursor: pointer;
+  pointer-events: auto;
   fill: var(--text);
   paint-order: stroke;
   stroke: #050505;
@@ -664,9 +665,13 @@ footer {
 
   .toolbar.advanced {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.45rem;
+    gap: 0.34rem;
     align-items: end;
-    padding: 0.5rem;
+    padding: 0.38rem;
+  }
+
+  .control {
+    gap: 0.16rem;
   }
 
   .search-control,
@@ -675,33 +680,33 @@ footer {
   }
 
   .search-label {
-    font-size: 0.58rem;
+    font-size: 0.54rem;
   }
 
   input[type="search"],
   select,
   button {
-    min-height: 42px;
-    font-size: 0.76rem;
+    min-height: 38px;
+    font-size: 0.74rem;
   }
 
   input[type="search"] {
-    padding: 0.58rem 0.72rem;
+    padding: 0.48rem 0.66rem;
   }
 
   select {
-    padding: 0.58rem 0.7rem;
+    padding: 0.48rem 0.64rem;
   }
 
   .button-group {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.35rem;
+    gap: 0.28rem;
   }
 
   .button-group button {
     width: 100%;
-    padding: 0.56rem 0.38rem;
+    padding: 0.46rem 0.34rem;
   }
 
   .map-wrap.large {
@@ -862,8 +867,8 @@ footer {
   }
 
   .toolbar.advanced {
-    gap: 0.4rem;
-    padding: 0.44rem;
+    gap: 0.3rem;
+    padding: 0.34rem;
   }
 
   .actions a {

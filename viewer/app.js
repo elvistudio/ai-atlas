@@ -119,8 +119,8 @@ controlsToggleButton.addEventListener("click", () => {
   setControlsCollapsed(!state.controlsCollapsed);
 });
 
-mapWrap.addEventListener("pointerdown", () => {
-  if (isMobileViewport() && !state.controlsCollapsed) {
+mapWrap.addEventListener("pointerdown", (event) => {
+  if (isMobileViewport() && !state.controlsCollapsed && !event.target.closest(".node")) {
     setControlsCollapsed(true);
   }
 });
@@ -309,7 +309,7 @@ function zoomMap(factor) {
 
 function recenterMap() {
   state.selectedId = ROOT_ID;
-  state.mapTransform = d3.zoomIdentity;
+  state.mapTransform = centeredRootTransform();
   showConceptCard();
 
   const selected = findNodeById(state.selectedId);
@@ -331,6 +331,30 @@ function setControlsCollapsed(collapsed) {
   state.controlsCollapsed = collapsed;
   mapCard.classList.toggle("controls-collapsed", collapsed);
   controlsToggleButton.setAttribute("aria-expanded", String(!collapsed));
+}
+
+function centeredRootTransform() {
+  if (!isMobileViewport() || !svg.node()) {
+    return d3.zoomIdentity;
+  }
+
+  const rootNode = svg
+    .selectAll(".nodes g")
+    .filter((node) => node.id === ROOT_ID)
+    .datum();
+
+  if (!rootNode) {
+    return d3.zoomIdentity;
+  }
+
+  const width = svg.node().clientWidth || 1000;
+  const height = svg.node().clientHeight || 680;
+  const x = Number.isFinite(rootNode.x) ? rootNode.x : xFor(rootNode, width);
+  const y = Number.isFinite(rootNode.y) ? rootNode.y : yFor(rootNode, height);
+  const targetX = -width * 0.28;
+  const targetY = -height * 0.32;
+
+  return d3.zoomIdentity.translate(targetX - x, targetY - y);
 }
 
 function toggleRootView() {
