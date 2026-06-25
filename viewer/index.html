@@ -38,7 +38,11 @@
 
     <main class="layout wide-map">
       <section class="map-card" aria-label="Interactive AI Atlas taxonomy map">
-        <div class="toolbar advanced">
+        <button id="controls-toggle" class="controls-toggle" type="button" aria-expanded="true" aria-controls="map-controls">
+          <span class="controls-toggle-icon" aria-hidden="true">☰</span>
+          <span>Controls</span>
+        </button>
+        <div id="map-controls" class="toolbar advanced">
           <div class="control search-control">
             <label class="search-label" for="search">Search concepts</label>
             <input id="search" type="search" placeholder="Try Machine Learning, Robotics, Safety..." />
@@ -67,8 +71,10 @@
               <span class="desktop-label">Show subareas</span>
               <span class="mobile-label">Subareas</span>
             </button>
-            <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
-            <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+            <span class="zoom-button-group" aria-label="Zoom controls">
+              <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+              <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+            </span>
             <button id="recenter-map" type="button">
               <span class="desktop-label">Re-center</span>
               <span class="mobile-label">Center</span>
@@ -76,7 +82,7 @@
           </div>
         </div>
         <div class="map-wrap large">
-          <svg id="map" role="img" aria-label="AI Atlas Level 0 to Level 2 taxonomy graph"></svg>
+          <svg id="map" tabindex="0" role="img" aria-label="AI Atlas Level 0 to Level 2 taxonomy graph"></svg>
         </div>
 
         <aside id="concept-card" class="concept-card" aria-labelledby="details-title">
@@ -110,8 +116,8 @@
         </aside>
 
         <p class="hint">
-          <span class="desktop-hint">Drag empty space to pan. Use + / − or pinch/trackpad gestures to zoom.</span>
-          <span class="mobile-hint">Drag to pan. Pinch or use + / − to zoom. Use Center to return to AI.</span>
+          <span class="desktop-hint">Focus the map, then use + / − / 0. Pinch or trackpad gestures also zoom.</span>
+          <span class="mobile-hint">Drag to pan. Pinch or use + / − to zoom. Tap Controls to reopen tools.</span>
         </p>
       </section>
     </main>
