@@ -490,6 +490,88 @@ footer {
   text-decoration-color: var(--line-strong);
 }
 
+.use-cases-page {
+  padding-top: 12px;
+}
+
+.use-section {
+  margin-top: 16px;
+}
+
+.use-section:first-child {
+  margin-top: 0;
+}
+
+.use-section h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.use-section p,
+.use-section li {
+  line-height: 1.55;
+}
+
+.use-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1.1rem;
+}
+
+.use-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.use-grid article,
+.term-list div {
+  min-width: 0;
+  padding: 0.9rem;
+  border: 1px solid rgba(244, 241, 234, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.026);
+}
+
+.use-grid article > :last-child,
+.use-section > :last-child,
+.term-list div > :last-child {
+  margin-bottom: 0;
+}
+
+.term-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.1rem 0 0;
+}
+
+.term-list dd {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.caveat {
+  color: var(--dim);
+  font-size: 0.88rem;
+}
+
+.pair-list {
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.limitation-block {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.052);
+}
+
+.feedback-section {
+  display: grid;
+  gap: 0.75rem;
+}
+
 .json-doc {
   max-width: 1180px;
 }
@@ -833,6 +915,16 @@ footer {
 
   .doc-card {
     margin-top: 12px;
+  }
+
+  .use-grid,
+  .use-grid.compact,
+  .term-list {
+    grid-template-columns: 1fr;
+  }
+
+  .pair-list {
+    columns: 1;
   }
 
   .json-header {
