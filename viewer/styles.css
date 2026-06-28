@@ -586,6 +586,49 @@ footer {
   gap: 0.75rem;
 }
 
+.common-terms-page {
+  max-width: 1120px;
+}
+
+.terms-grid {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.1rem;
+}
+
+.term-card {
+  padding: 1rem;
+  border: 1px solid rgba(244, 241, 234, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.026);
+}
+
+.term-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  font-size: 1.08rem;
+  letter-spacing: -0.025em;
+}
+
+.term-card dl {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.term-card dl div {
+  min-width: 0;
+  padding: 0.72rem;
+  border: 1px solid rgba(244, 241, 234, 0.08);
+  border-radius: 13px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.term-card dd + dd {
+  margin-top: 0.45rem;
+}
+
 .json-doc {
   max-width: 1180px;
 }
@@ -930,7 +973,8 @@ footer {
 
   .use-grid,
   .use-grid.compact,
-  .term-list {
+  .term-list,
+  .term-card dl {
     grid-template-columns: 1fr;
   }
 
